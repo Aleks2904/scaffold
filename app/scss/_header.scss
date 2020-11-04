@@ -1,0 +1,81 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100vw;
+    background-color: $WHITE;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover{
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-link {
+        display: block;
+
+        outline: none;
+
+        &:focus > .header__logo-img,
+        &:hover > .header__logo-img{
+            fill: red;
+            transform: scale(1.3);
+
+            transition: fill 0.3s, transform 0.3s;
+        }
+    }
+
+    &__logo-img {
+        width: 80px;
+        height: 80px;
+
+        transition: fill 0.3s, transform 0.3s;
+    }
+
+    &__nav {
+        @include px1024{
+            margin: 0 auto;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+    }
+
+    &__nav-item {
+        &:focus > .header__nav-link,
+        &:hover > .header__nav-link{
+            background: linear-gradient(0deg, rgba(34,174,195,1) 39%, rgba(177,253,45,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            border-image: linear-gradient(90deg, rgba(117,187,55,1) 9%, rgba(146,246,53,1) 50%, rgba(69,216,252,1) 100%);
+            border-image-slice: 1;
+
+            transform: scale(1.1);
+
+            transition: transform 0.4s;
+        }
+
+        @include px1024{
+            &:not(:last-child){
+                margin-right: 5%;
+            }
+        }
+
+    }
+
+    &__nav-link {
+        display: block;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 5px;
+
+        transition: background 0.3s, border-image 0.3s, transform 0.3s;
+    }
+}

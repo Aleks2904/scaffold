@@ -10,9 +10,13 @@
 </head>
 <body>
     <header class="header">
+        <h1 class="visually-hidden">
+            главный заголовок
+        </h1>
+
         <div class="container header__container">
-            <a href="#" class="header__logo" aria-label="обновить страницу">
-                <svg class="icon-box" viewbox="0 0 1920 1920">
+            <a href="#" class="header__logo-link" aria-label="обновить страницу">
+                <svg class="header__logo-img" viewbox="0 0 1920 1920">
                     <use xlink:href="img/symbol/sprite.svg#logo"></use>
                 </svg>
             </a>
@@ -54,7 +58,63 @@
     </header>
 
     <main class="main">
+        <section class="presentation section">
+            <div id="js-swiper-presentation" class="swiper-container presentation__slide-container">
+                <ul class="swiper-wrapper presentation__slide-list">
+                    <li class="swiper-slide presentation__slide-item">
+                        <img class="presentation__img" src="img/presentation/slide/slide-1.jpg" alt="cat">
+                    </li>
 
+                    <li class="swiper-slide">
+                        <img class="presentation__img" src="img/presentation/slide/slide-2.jpg" alt="cat">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img class="presentation__img" src="img/presentation/slide/slide-3.jpg" alt="cat">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="presentation__content-block">
+                <h2 class="presentation__title">
+                    Название сайта
+                </h2>
+
+                <div id="js-swiper-text" class="swiper-container presentation__text-container">
+                    <ul class="swiper-wrapper presentation__text-list">
+                        <li class="swiper-slide presentation__text-item presentation__text-item_active">
+                            <p class="presentation__text-discription">
+                                Здесь будет какой то текст
+                            </p>
+                        </li>
+        
+                        <li class="swiper-slide presentation__text-item">
+                            <p class="presentation__text-discription">
+                                ну а пока котята, они милей !
+                            </p>
+                        </li>
+
+                        <li class="swiper-slide presentation__text-item">
+                            <p class="presentation__text-discription">
+                                Не правда ли ?
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="aboutUs section">
+            <div class="container">
+                <h2 class="aboutUs__title">
+                    Какой то заголовок
+                </h2>
+    
+                <p class="aboutUs__discription">
+                    Описание компании
+                </p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

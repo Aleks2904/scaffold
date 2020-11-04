@@ -1,0 +1,20 @@
+.aboutUs{
+    height: 100vh;
+
+    @include px1400{
+        padding-top: 20vh;
+    }
+
+    &__title {
+        @include px1400{
+            font-size: 32px;
+            margin-bottom: 10vh;
+        }
+    }
+
+    &__discription {
+        @include px1400{
+            font-size: 22px;
+        }
+    }
+}

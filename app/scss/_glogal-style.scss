@@ -1,13 +1,6 @@
-$YELLOW: #FF9900;
-$BLACK :#333333;
-$GRAY: #ECECEC;
-$DARK-GRAY: #D2D2D2;
+$RED: red;
+$BLACK: black;
 $WHITE: white;
-$FOOTER: #222222;
-$WHITE-GRAY: #CACACA;
-$SVG-COLOR: #7C7C7C;
-$DARK-GRAY2: #414141;
-$DARK-GRAY3: #595959;;
 
 $paddingXContainer1920: 75px;
 $paddingXContainer768: 50px;
@@ -16,16 +9,16 @@ $paddingXContainer320: 15px;
 .container{
     margin: 0 auto;
 
-    @media (min-width: 1920px) {
+    @include px1400{
         max-width: 1920px;
         padding: 0 $paddingXContainer1920;
     }
 
-    @media (min-width: 768px) and (max-width: 1919px) {
+    @include px768-1399 {
         padding: 0 $paddingXContainer768;
     }
 
-    @media (max-width: 767px) {
+    @include px767 {
         padding: 0 $paddingXContainer320;
     }
 }
