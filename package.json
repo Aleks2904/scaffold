@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-  },
-
+  "bugs": {},
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "clean-css": "^4.2.3",
