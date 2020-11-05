@@ -28,6 +28,9 @@ const jsFiles = [
         //scroll
     'app/js/scroll.js',
 
+        //header
+    'app/js/nav-header.js',
+
         //presentation
     'app/js/swiper-presentation.js',
 ]

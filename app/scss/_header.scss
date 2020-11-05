@@ -5,7 +5,13 @@
     width: 100vw;
     background-color: $WHITE;
     opacity: 0.5;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, background-color 0.3s;
+
+    &_active{
+        background-color: rgba($color: white, $alpha: 0);
+        opacity: 1;
+        transition: opacity 0.3s, background-color 0.3s;
+    }
 
     &:hover{
         opacity: 1;
@@ -38,14 +44,162 @@
         transition: fill 0.3s, transform 0.3s;
     }
 
+    &__nav-open-btn{
+        @include px1024{
+            display: none;
+        }
+
+        @include px1023{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            margin-left: auto;
+
+            width: 50px;
+            height: 40px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+            &:hover{
+                align-items: flex-end;
+            }
+
+            &:hover > .header__nav-open-burger,
+            &:focus > .header__nav-open-burger{
+                background-color: red;
+                
+                &:nth-child(2){
+                    width: 50%;
+                }
+                &:nth-child(3){
+                    width: 30%;
+                }
+
+                transition: width 0.3s, background-color 0.3s;
+            }
+        }
+    }
+
+    &__nav-open-burger{
+        display: block;
+        width: 75%;
+        height: 2.2px;
+        background-color: black;
+
+        pointer-events: none;
+
+        transition: width 0.3s, background-color 0.3s;
+    }
+
     &__nav {
+        &_active{
+            display: block !important;
+        }
+
         @include px1024{
             margin: 0 auto;
+        }
+
+        @include px1023{
+            display: none;
+
+            position: fixed;
+
+            background-color: $WHITE;
+            right: 0;
+            top: 0;
+
+            height: 100vh;
+
+            opacity: 1;
+        }
+
+        @include px768-1023{
+            width: 50vw;
+        }
+
+        @include px767{
+            width: 100vw;
+        }
+    }
+
+    &__nav-close-btn{
+        @include px1024{
+            display: none;
+        }
+
+        @include px1023{
+            position: relative;
+
+            margin-top: 2vh;
+            margin-right: 2vw;
+            margin-bottom: 10vh;
+            margin-left: auto;
+
+            padding: 0;
+
+            display: block;
+
+            outline: none;
+            border: none;
+
+            cursor: pointer;
+
+            background-color: transparent;
+            width: 50px;
+            height: 50px;
+
+            &:hover > .header__nav-close-burger,
+            &:hover > .header__nav-close-burger,
+            &:focus > .header__nav-close-burger,
+            &:focus > .header__nav-close-burger{
+                background-color: red;
+
+                transition: background-color 0.3s ;
+            }
+        }
+    }
+
+    &__nav-close-burger{
+        @include px1023{
+            display: block;
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            width: 70%;
+            height: 2px;
+
+            background-color: black;
+
+            transition: background-color 0.3s ;
+
+            &:nth-child(1){
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &:nth-child(2){
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
         }
     }
 
     &__nav-list {
         display: flex;
+
+        @include px1024{
+            
+        }
+
+        @include px1023{
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__nav-item {
@@ -66,6 +220,12 @@
         @include px1024{
             &:not(:last-child){
                 margin-right: 5%;
+            }
+        }
+
+        @include px1023{
+            &:not(:last-child){
+                margin-bottom: 2vh;
             }
         }
 

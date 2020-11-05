@@ -1,6 +1,5 @@
 $(document).ready(function(){
-        $.scrollify({
-            section: ".section",
-        });
-
+    $.scrollify({
+        section: '.section',
+    });
 });

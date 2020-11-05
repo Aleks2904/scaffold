@@ -5,6 +5,10 @@
         padding-top: 20vh;
     }
 
+    @include px1399{
+        padding-top: 20vh;
+    }
+
     &__title {
         @include px1400{
             font-size: 32px;
