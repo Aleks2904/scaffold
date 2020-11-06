@@ -185,7 +185,10 @@
     &__response {
         transform: translateX(-120%);
         opacity: 0;
-        color: $WHITE;
+
+        @include px1399{
+            color: $WHITE;
+        }
 
         transition: transform 0.5s, opacity 0.5s;
 
