@@ -1,6 +1,8 @@
 $RED: red;
 $BLACK: black;
 $WHITE: white;
+$YELLOW: #FF9900;
+$DARK-GRAY: #D2D2D2;
 
 $paddingXContainer1920: 75px;
 $paddingXContainer768: 50px;
@@ -20,6 +22,44 @@ $paddingXContainer320: 15px;
 
     @include px767 {
         padding: 0 $paddingXContainer320;
+    }
+}
+
+@mixin title{
+    @include px1400{
+        font-size: 32px;
+        margin-bottom: 10vh;
+    }
+
+    @include px1024-1399{
+        font-size: 32px;
+        margin-bottom: 8vh;
+    }
+
+    @include px768-1023{
+        font-size: 32px;
+        margin-bottom: 7vh;
+    }
+
+    @include px767{
+        font-size: 26px;
+        margin-bottom: 5vh;
+    }
+}
+
+@mixin section{
+    padding-bottom: 15px;
+
+    @include px1400{
+        padding-top: 15vh;
+    }
+
+    @include px768-1399{
+        padding-top: 10vh;
+    }
+
+    @include px767{
+        padding-top: 15vh;
     }
 }
 

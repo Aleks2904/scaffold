@@ -1,0 +1,209 @@
+.services {
+    @include section;
+
+    @include px1399{
+        position: relative;
+
+        background-image: url('../img/castom_img/desctop/desct_1.jpg');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+    }
+
+    &__wrap{
+        @include px1400{
+            display: none;
+        }
+
+        @include px1399{
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                height: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $BLACK;
+                opacity: 0.4;
+                z-index: 4;
+            }
+        }
+    }
+
+    &__container{
+        position: relative;
+        display: block;
+        z-index: 5;
+    }
+
+    &__title {
+        @include title;
+
+        @include px1399{
+            color: white;
+        }
+    }
+
+    &__list {
+        border-top: 2px solid gray;
+    }
+
+    &__item{
+        border-bottom: 2px solid gray;
+
+        @include px1400{
+            padding: 30px 0;
+        }
+
+        padding: 20px 0;
+    }
+
+    &__btn-services {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        cursor: pointer;
+
+        &:hover > .services__item-btn-icon,
+        &:focus > .services__item-btn-icon,
+        &:active > .services__item-btn-icon{
+            background-color: $DARK-GRAY;
+            opacity: 1;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+
+        &:hover > .services__title-services,
+        &:focus > .services__title-services{
+            color: $YELLOW;
+            transition: color 0.3s;
+        }
+    }
+
+    &__title-services {
+        transition: color 0.3s;
+        text-align: left;
+
+        @include px1400{
+            font-size: 22px;
+            max-width: 70%;
+        }
+
+        @include px1399{
+            font-size: 18px;
+            color: white;
+            max-width: 70%;
+        }
+
+        @include px767{
+            font-size: 16px;
+            color: white;
+            max-width: 84%;
+        }
+    }
+
+    &__item-btn-icon {
+        display: block;
+        position: relative;
+        border-radius: 50%;
+        background-color: gray;
+
+        opacity: 0.4;
+
+        width: 50px;
+        height: 50px;
+
+        transition: background-color 0.3s, opacity 0.3s;
+
+        &_rotate{
+            transform: rotate(45deg);
+            transition: transform 0.3s;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            width: 75%;
+            height: 2px;
+
+            background-color: black;
+
+            transform: translate(-50%, -50%);
+
+        }
+
+        &::after{
+            content: "";
+            display: block;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            width: 75%;
+            height: 2px;
+
+            background-color: black;
+
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+
+    &__container-response {
+        display: none;
+        overflow: hidden;
+
+        @include px1400{
+            padding-top: 31px;
+        }
+
+        @include px1024-1399{
+            padding-top: 33px;   
+        }
+
+        @include px768-1023{
+            padding-top: 24px;   
+        }
+
+        @include px767{
+            padding-top: 22px;   
+        }
+    }
+
+    &__response {
+        transform: translateX(-120%);
+        opacity: 0;
+        color: $WHITE;
+
+        transition: transform 0.5s, opacity 0.5s;
+
+        &_active1{
+            transform: translateX(0%);
+            opacity: 1;
+
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        &_active2{
+            transform: translateX(120%);
+            opacity: 0;
+
+            transition: transform 0.5s, opacity 0.5s;
+        }
+    }
+
+    &__wrap {
+    }
+}

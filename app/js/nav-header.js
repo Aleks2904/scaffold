@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     window.onresize = function(){
         const width = document.documentElement.clientWidth;
+        
         if(width >= 1024){
             close();
         }

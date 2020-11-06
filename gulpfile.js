@@ -33,6 +33,9 @@ const jsFiles = [
 
         //presentation
     'app/js/swiper-presentation.js',
+
+        //servisec
+    'app/js/servisec.js',
 ]
 
 const cssFiles = [

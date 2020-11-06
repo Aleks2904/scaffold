@@ -2,7 +2,7 @@
     position: relative;
 
     &__slide-container {
-        height: 99.9vh;
+        height: 99.8vh;
     }
 
     &__slide-list {
@@ -20,7 +20,6 @@
 
     &__content-block {
         position: absolute;
-        top: 40vh;
         left: 50%;
 
         width: 100vw;
@@ -28,6 +27,14 @@
         transform: translate(-50%, -50%);
 
         z-index: 2;
+
+        @include px768{
+            top: 40vh;
+        }
+
+        @include  px767{
+            top: 50vh;
+        }
     }
 
     &__title {
@@ -36,6 +43,31 @@
 
         @include px1400{
             font-size: 40px;
+            letter-spacing: 1px;
+
+            margin-bottom: 10vh;
+        }
+
+        @include px1024-1399{
+            font-size: 34px;
+            letter-spacing: 1px;
+
+            margin-bottom: 10vh;
+        }
+
+        @include px768-1023{
+            font-size: 34px;
+            width: 80%;
+            margin: 0 auto;
+            letter-spacing: 1px;
+
+            margin-bottom: 10vh;
+        }
+
+        @include px767{
+            font-size: 20px;
+            width: 80%;
+            margin: 0 auto;
             letter-spacing: 1px;
 
             margin-bottom: 10vh;
@@ -55,10 +87,30 @@
 
     &__text-discription {
         text-align: center;
+        margin: 0 auto;
 
-        @include px1400{
+        @include px1024{
             font-size: 30px;
             letter-spacing: 0.5px;
+            max-width: 70%;
+        }
+
+        @include px1024-1399{
+            font-size: 30px;
+            letter-spacing: 0.5px;
+            max-width: 70%;
+        }
+
+        @include px768-1023{
+            font-size: 28px;
+            letter-spacing: 0.5px;
+            max-width: 85%;
+        }
+
+        @include px767{
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            max-width: 90%;
         }
     }
 }

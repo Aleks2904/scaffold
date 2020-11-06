@@ -11,7 +11,7 @@
 <body>
     <header id="js-header" class="header">
         <h1 class="visually-hidden">
-            главный заголовок
+            Компенсационное лесовосстановление
         </h1>
 
         <div class="container header__container">
@@ -73,7 +73,16 @@
             <div id="js-swiper-presentation" class="swiper-container presentation__slide-container">
                 <ul class="swiper-wrapper presentation__slide-list">
                     <li class="swiper-slide presentation__slide-item">
-                        <img class="presentation__img" src="img/presentation/slide/slide-1.jpg" alt="cat">
+                        <picture>
+                        <!--    <source type="image/webp" media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.webp">
+                            <source type="image/webp" media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.webp">
+                            <source type="image/webp" srcset="img/block-1/im_foto.webp">
+    
+                            <source media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.png">
+                            <source media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.png">-->
+        
+                            <img class="presentation__img" src="img/presentation/slide/slide-1.jpg" alt="cat">
+                        </picture>
                     </li>
 
                     <li class="swiper-slide">
@@ -88,30 +97,12 @@
 
             <div class="presentation__content-block">
                 <h2 class="presentation__title">
-                    Название сайта
+                    Компенсационное лесовосстановление
                 </h2>
 
-                <div id="js-swiper-text" class="swiper-container presentation__text-container">
-                    <ul class="swiper-wrapper presentation__text-list">
-                        <li class="swiper-slide presentation__text-item presentation__text-item_active">
-                            <p class="presentation__text-discription">
-                                Здесь будет какой то текст
-                            </p>
-                        </li>
-        
-                        <li class="swiper-slide presentation__text-item">
-                            <p class="presentation__text-discription">
-                                ну а пока котята, они милей !
-                            </p>
-                        </li>
-
-                        <li class="swiper-slide presentation__text-item">
-                            <p class="presentation__text-discription">
-                                Не правда ли ?
-                            </p>
-                        </li>
-                    </ul>
-                </div>
+                <p class="presentation__text-discription">
+                    Компенсационное лесовосстановление&nbsp;&mdash; ключевой компонент программы воспроизводства природных ресурсов, осуществляемой на&nbsp;основании подготовленного заранее проекта лесовосстановления.
+                </p>
             </div>
         </section>
 
@@ -122,56 +113,294 @@
                 </h2>
     
                 <p class="aboutUs__discription">
-                    Описание компании
+                    С&nbsp;1&nbsp;января 2019&nbsp;г. вступил в&nbsp;силу Федеральный закон о&nbsp;компенсационном лесовосстановлении (ФЗ&nbsp;от&nbsp;19.07. 2018 года &#8470;&nbsp;212-ФЗ &laquo;О&nbsp;внесении изменений в&nbsp;Лесной кодекс Российской Федерации и&nbsp;отдельные законодательные акты Российской Федерации в&nbsp;части совершенствования воспроизводства лесов и&nbsp;лесоразведения&raquo;).
+                </p>
+
+                <p class="aboutUs__discription">
+                    В&nbsp;соответствии с&nbsp;данным законом лица, использующие леса для геологического изучения недр, разработки месторождений полезных ископаемых; для строительства и&nbsp;эксплуатации водохранилищ, иных искусственных водных объектов, а&nbsp;также гидротехнических сооружений; для возведения, реконструкции, эксплуатации линейных объектов; для переработки древесины и&nbsp;иных лесных ресурсов обязаны будут проводить лесовосстановление и&nbsp;лесоразведение на&nbsp;площади, равной площади вырубленных лесных насаждений. При этом такое компенсационное лесовосстановление должно быть проведено в&nbsp;границах территории соответствующего субъекта Российской Федерации в&nbsp;срок не&nbsp;позднее 1&nbsp;года после произведенной рубки или после изменения разрешенного вида использования участка.
+                </p>
+
+                <p class="aboutUs__discription">
+                    ООО &laquo;Красноярский лесопитомник&raquo; оказывает полный комплекс услуг по&nbsp;компенсационному лесовосстановлению, начиная от&nbsp;подбора и&nbsp;проектирования лесного участка и&nbsp;до&nbsp;сдачи работ уполномоченному органу в&nbsp;области лесного хозяйства.
+                </p>
+
+                <p class="aboutUs__discription">
+                    Оказание услуг осуществляется на&nbsp;основании договора и&nbsp;в&nbsp;соответствии с&nbsp;доверенностью выданной заказчиком.    
                 </p>
             </div>
         </section>
 
         <section class="services section">
-            <div class="container">
-               <h2>
+            <div class="container services__container">
+               <h2 class="services__title">
                    Что мы можем вам предложить ?
                </h2>
 
-               <p>
-                   когда нибудь сдесь будет список услуг
-               </p>
+               <ul class="services__list">
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services1" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Определение площади компенсационного лесовосстановления и&nbsp;подача заявления о&nbsp;намерении провести работы по&nbsp;лесовосстановлению
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services1" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services2" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Подбор участков для компенсационное лесовосстановление
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services2" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services3" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Обследование участка и&nbsp;определение способа лесовосстановления
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services3" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services4" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Подготовка проекта лесовосстановления и&nbsp;его согласование в&nbsp;органах исполнительной власти субъекта&nbsp;РФ
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services4" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services5" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Подготовка почвы под посадку лесных культур
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services5" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services6" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Заготовка семян хвойных пород  
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services6" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services7" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Посев семян, посадка сеянцев или саженцев 
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services7" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services8" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Организация приемки лесных культур 
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services8" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services9" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                саженцы
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services9" class="services__container-response">
+                            <p class="services__response">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe excepturi aspernatur rem! Quo ipsam qui commodi, eos voluptate esse voluptatem ipsa quisquam obcaecati sint, minus in nesciunt, quaerat inventore.
+                                Esse, rem iure quasi adipisci suscipit quas? Nemo ipsam facilis enim obcaecati odit autem est molestias. Magnam odio quo, ipsum aut mollitia tempore atque repellendus accusantium. Quasi voluptas cum rem.
+                                Natus tempora in aut atque sed veritatis, hic dolor quo voluptatum officiis iusto inventore dolorum sit voluptatem esse aliquid eaque cumque? Magnam beatae quia sit non expedita! Excepturi, quidem cupiditate.
+                            </p>
+                        </div>
+                    </li>
+               </ul>
+            </div>
+
+            <div class="services__wrap"></div>
+        </section>
+
+        <section class="price section">
+            <div class="container">
+                <h2 class="price__title">
+                    Цены
+                </h2>
+
+                <p class="price__list-discription">
+                    Стоимость услуг договорная, зависит от множества факторов:
+                </p>
+
+                <ul class="price__list">
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - удаленность участка от объектов инфраструктуры
+                        </p>
+                    </li>
+
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - наличие подъездных путей 
+                        </p>
+                    </li>
+
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - рельефа 
+                        </p>
+                    </li>
+
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - доступность участка для механизированной обработки 
+                        </p>
+                    </li>
+
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - степени захламленности 
+                        </p>
+                    </li>
+
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - объема и срока исполнения работ 
+                        </p>
+                    </li>
+
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - способа лесовосстановления (посев, посадка) 
+                        </p>
+                    </li>
+
+                    <li class="price__item">
+                        <p class="price__item-discription">
+                            - от вида посадочного материала (ОКС, ЗКС) 
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="price__discription">
+                    Услуги проводятся в соответствии с Лесным кодексом Российской Федерации по правилам, способам и методами, установленными действующим законодательством.  
+                </p>
             </div>
         </section>
-<!--
-        <section class="reloatin">
-            <div class="container">
-                <div>
-                    <h3>
-                        хотите что бы мы с вами связались ?
-                    </h3>
-
-                    <form action="#">
-                        <label>
-                            Представтесь пожалуйста
-
-                            <input type="text" placeholder="Ф.И.О">
-                        </label>
-
-                        <label>
-                            Введите ваш телефон
-                            
-                            <input type="tel" placeholder="телефон">
-                        </label>
-
-                        <label>
-                            Введите ваш email
-                            
-                            <input type="email" placeholder="email">
-                        </label>
-                    </form>
-                </div>
-            </div>
-        </section>-->
     </main>
 
-    <footer class="footer">
+    <footer class="footer section">
+        <div class="container footer__container">
+            <h2 class="footer__title">
+                Наши контакты:
+            </h2>
 
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <p class="footer__item-disscription">
+                        Г. Красноярск, ул. Шумяцкого, 10 , 3 этаж, офис 307 
+                    </p>
+                </li>
+
+                <li class="footer__item">
+                    <a href="mailto:kraspitomnik@mail.ru" class="footer__item-link">
+                        kraspitomnik@mail.ru
+                    </a>
+                </li>
+
+                <li class="footer__item">
+                    <a href="tel:89029104384" class="footer__item-link">
+                        8-902-910-43-84
+                    </a>
+                </li>
+            </ul>
+
+            <p class="footer__copywriter">
+                &#169; ООО «Красноярский лесопитомник» 
+            </p>
+        </div>
     </footer>
 
     <script src="js/all.js"></script>

@@ -1,24 +1,37 @@
 .aboutUs{
-    height: 100vh;
-
-    @include px1400{
-        padding-top: 20vh;
-    }
-
-    @include px1399{
-        padding-top: 20vh;
-    }
+    @include section;
 
     &__title {
-        @include px1400{
-            font-size: 32px;
-            margin-bottom: 10vh;
-        }
+        @include title;
     }
 
     &__discription {
         @include px1400{
             font-size: 22px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px1024-1399{
+            font-size: 22px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px768-1023{
+            font-size: 20px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px767{
+            font-size: 18px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
         }
     }
 }

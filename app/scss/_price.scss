@@ -1,0 +1,41 @@
+.price {
+    @include section;
+
+    &__title {
+        @include title;
+    }
+
+    &__list-discription {
+        @include px1400{
+            margin-bottom: 1vh;
+
+            font-size: 30px;
+        }
+    }
+
+    &__list {
+        &:not(:last-child){
+            margin-bottom: 4vh;
+        }
+    }
+
+    &__item {
+        &:not(:last-child){
+            @include px1400{
+                margin-bottom: 3vh;
+            }
+        }
+    }
+
+    &__item-discription {
+        @include px1400{
+            font-size: 22px;
+        }
+    }
+
+    &__discription {
+        @include px1400{
+            font-size: 22px;
+        }
+    }
+}
