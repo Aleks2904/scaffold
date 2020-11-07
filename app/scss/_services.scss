@@ -2,12 +2,24 @@
     @include section;
 
     @include px1399{
-        position: relative;
-
         background-image: url('../img/castom_img/desctop/desct_1.jpg');
         background-size: cover;
 
         background-repeat: no-repeat;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 200%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $BLACK;
+            opacity: 0.4;
+            z-index: 4;
+        }
     }
 
     &__wrap{
@@ -16,19 +28,19 @@
         }
 
         @include px1399{
-            &::after{
-                content: '';
-                display: block;
-                position: absolute;
-                height: 100%;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: $BLACK;
-                opacity: 0.4;
-                z-index: 4;
-            }
+            // &::after{
+            //     content: '';
+            //     display: block;
+            //     position: absolute;
+            //     height: 100%;
+            //     top: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     left: 0;
+            //     background-color: $BLACK;
+            //     opacity: 0.4;
+            //     z-index: 4;
+            // }
         }
     }
 
@@ -36,6 +48,14 @@
         position: relative;
         display: block;
         z-index: 5;
+
+        @include px1400{
+            padding-bottom: 10vh;
+        }
+
+        @include px767{
+            padding-bottom: 10vh;
+        }
     }
 
     &__title {

@@ -1,0 +1,1 @@
+pageslider(document.getElementById('wrap'), function(){});

@@ -97,7 +97,7 @@
 
     &__nav {
         &_active{
-            display: block !important;
+            display: flex !important;
         }
 
         @include px1024{
@@ -106,6 +106,7 @@
 
         @include px1023{
             display: none;
+            flex-direction: column;
 
             position: fixed;
 
@@ -134,6 +135,7 @@
 
         @include px1023{
             position: relative;
+            order: -1;
 
             margin-top: 2vh;
             margin-right: 2vw;
@@ -191,6 +193,7 @@
 
     &__nav-list {
         display: flex;
+        order: 1;
 
         @include px1024{
             

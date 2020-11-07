@@ -21,12 +21,14 @@ var gulp         = require('gulp'), // Подключаем Gulp
 const jsFiles = [ 
         //libs
     'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/jquery-scrollify/jquery.scrollify.js',
+    //'node_modules/jquery-scrollify/jquery.scrollify.js',
+    'app/js/wheel-indicator.js',
+    'app/js/oliwpageslider.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'app/js/webp.js',
 
         //scroll
-    'app/js/scroll.js',
+    'app/js/scroll-castom.js',
 
         //header
     'app/js/nav-header.js',

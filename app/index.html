@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="css/all.css">
 
@@ -10,10 +10,6 @@
 </head>
 <body>
     <header id="js-header" class="header">
-        <h1 class="visually-hidden">
-            Компенсационное лесовосстановление
-        </h1>
-
         <div class="container header__container">
             <a href="#" class="header__logo-link" aria-label="обновить страницу">
                 <svg class="header__logo-img" viewbox="0 0 1920 1920">
@@ -28,48 +24,48 @@
             </button>
 
             <nav id="js-nav-header" class="header__nav">
-                <button id="js-header-btn-close" type="button" class="header__nav-close-btn" aria-label="закрыть меню" aria-controls="js-nav-header" aria-expanded="true">
-                    <span class="header__nav-close-burger"></span>
-                    <span class="header__nav-close-burger"></span>
-                </button>
-
-                <ul class="header__nav-list">
+                <ul id="pageslider__nav" class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">
+                        <a href="#home" class="header__nav-link">
                             навигация
                         </a>
                     </li>
 
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">
+                        <a href="#second" class="header__nav-link">
                             навигация
                         </a>
                     </li>
 
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">
+                        <a href="#third" class="header__nav-link">
                             навигация
                         </a>
                     </li>
 
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">
+                        <a href="#fourth" class="header__nav-link">
                             навигация
                         </a>
                     </li>
 
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">
+                        <a href="#last" class="header__nav-link">
                             навигация
                         </a>
                     </li>
                 </ul>
+
+               <button id="js-header-btn-close" type="button" class="header__nav-close-btn" aria-label="закрыть меню" aria-controls="js-nav-header" aria-expanded="true">
+                    <span class="header__nav-close-burger"></span>
+                    <span class="header__nav-close-burger"></span>
+                </button>
             </nav>
         </div>
     </header>
 
-    <main class="main">
-        <section class="presentation section">
+    <main id="wrap" class="main">
+        <section class="presentation page">
             <div id="js-swiper-presentation" class="swiper-container presentation__slide-container">
                 <ul class="swiper-wrapper presentation__slide-list">
                     <li class="swiper-slide presentation__slide-item">
@@ -96,9 +92,9 @@
             </div>
 
             <div class="presentation__content-block">
-                <h2 class="presentation__title">
+                <h1 class="presentation__title">
                     Компенсационное лесовосстановление
-                </h2>
+                </h1>
 
                 <p class="presentation__text-discription">
                     Компенсационное лесовосстановление&nbsp;&mdash; ключевой компонент программы воспроизводства природных ресурсов, осуществляемой на&nbsp;основании подготовленного заранее проекта лесовосстановления.
@@ -106,7 +102,7 @@
             </div>
         </section>
 
-        <section class="aboutUs section">
+        <section class="aboutUs page">
             <div class="container">
                 <h2 class="aboutUs__title">
                     Какой то заголовок
@@ -130,13 +126,13 @@
             </div>
         </section>
 
-        <section class="services section">
+        <section class="services page">
             <div class="container services__container">
-               <h2 class="services__title">
-                   Что мы можем вам предложить ?
-               </h2>
+            <h2 class="services__title">
+                Что мы можем вам предложить ?
+            </h2>
 
-               <ul class="services__list">
+            <ul class="services__list">
                     <li class="services__item">
                         <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services1" aria-expanded="false">
                             <h3 class="services__title-services">
@@ -298,13 +294,13 @@
                             </p>
                         </div>
                     </li>
-               </ul>
+            </ul>
             </div>
 
             <div class="services__wrap"></div>
         </section>
 
-        <section class="price section">
+        <section class="price page">
             <div class="container">
                 <h2 class="price__title">
                     Цены
@@ -369,42 +365,49 @@
                 </p>
             </div>
         </section>
+
+        <section class="footer page">
+            <div class="container footer__container">
+                <h2 class="footer__title">
+                    Наши контакты:
+                </h2>
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <p class="footer__item-disscription">
+                            Г. Красноярск, ул. Шумяцкого, 10 , 3 этаж, офис 307 
+                        </p>
+                    </li>
+
+                    <li class="footer__item">
+                        <p class="footer__item-disscription">
+                            E-mail:
+
+                            <a href="mailto:kraspitomnik@mail.ru" class="footer__item-link">
+                                kraspitomnik@mail.ru
+                            </a>
+                        </p>
+                    </li>
+
+                    <li class="footer__item">
+                        <p class="footer__item-disscription">
+                            Phone:
+
+                            <a href="tel:89029104384" class="footer__item-link">
+                                8-902-910-43-84
+                            </a>
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="footer__copywriter">
+                    &#169; ООО «Красноярский лесопитомник» 
+                </p>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer section">
-        <div class="container footer__container">
-            <h2 class="footer__title">
-                Наши контакты:
-            </h2>
-
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <p class="footer__item-disscription">
-                        Г. Красноярск, ул. Шумяцкого, 10 , 3 этаж, офис 307 
-                    </p>
-                </li>
-
-                <li class="footer__item">
-                    <a href="mailto:kraspitomnik@mail.ru" class="footer__item-link">
-                        kraspitomnik@mail.ru
-                    </a>
-                </li>
-
-                <li class="footer__item">
-                    <a href="tel:89029104384" class="footer__item-link">
-                        8-902-910-43-84
-                    </a>
-                </li>
-            </ul>
-
-            <p class="footer__copywriter">
-                &#169; ООО «Красноярский лесопитомник» 
-            </p>
-        </div>
-    </footer>
-
     <script src="js/all.js"></script>
-
 </body>
 </html>
 

@@ -26,9 +26,11 @@ $paddingXContainer320: 15px;
 }
 
 @mixin title{
+    font-weight: 800;
+
     @include px1400{
-        font-size: 32px;
-        margin-bottom: 10vh;
+        font-size: 45px;
+        margin-bottom: 8vh;
     }
 
     @include px1024-1399{
@@ -48,14 +50,14 @@ $paddingXContainer320: 15px;
 }
 
 @mixin section{
-    padding-bottom: 15px;
+    height: 100vh;
 
     @include px1400{
-        padding-top: 15vh;
+        padding-top: 17vh;
     }
 
     @include px768-1399{
-        padding-top: 10vh;
+        padding-top: 13vh;
     }
 
     @include px767{

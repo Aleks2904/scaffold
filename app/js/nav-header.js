@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function(){
           btnClose = document.querySelector('#js-header-btn-close'),
           nav = document.querySelector('#js-nav-header'),
           body = document.querySelector('body'),
-          header = document.querySelector('#js-header');
+          header = document.querySelector('#js-header'),
+          link = document.querySelectorAll('.header__nav-link');
 
     btnOpen.addEventListener('click', function(e){
         e.preventDefault();
@@ -14,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function(){
         btnOpen.setAttribute('aria-expanded', 'true');
         btnClose.setAttribute('aria-expanded', 'false');
 
+    })
+
+    link.forEach(function(e){
+        e.addEventListener('click', function(){
+            close();
+        })
     })
 
     function close(){

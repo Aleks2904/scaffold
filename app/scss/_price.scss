@@ -6,36 +6,71 @@
     }
 
     &__list-discription {
-        @include px1400{
-            margin-bottom: 1vh;
+        @include px768{
+            margin-bottom: 2vh;
 
             font-size: 30px;
+            font-weight: 600;
         }
+
+        @include px767{
+            margin-bottom: 2vh;
+
+            font-size: 22px;
+            font-weight: 600;
+        }
+
     }
 
     &__list {
-        &:not(:last-child){
+        @include px768{
             margin-bottom: 4vh;
+            margin-left: 1.5vw;
         }
+
+        @include px767{
+            margin-bottom: 4vh;
+            margin-left: 1.5vw;
+        }
+
     }
 
     &__item {
         &:not(:last-child){
-            @include px1400{
+            @include px768{
                 margin-bottom: 3vh;
             }
+
+            @include px767{
+                margin-bottom: 3vh;
+            }
+
         }
     }
 
     &__item-discription {
-        @include px1400{
+        font-style: italic;
+
+        @include px768{
             font-size: 22px;
         }
+
+        @include px767{
+            font-size: 18px;
+        }
+
     }
 
     &__discription {
-        @include px1400{
-            font-size: 22px;
+        @include px768{
+            font-size: 26px;
+            font-weight: 600;
         }
+
+        @include px767{
+            font-size: 18px;
+            font-weight: 600;
+        }
+
     }
 }
