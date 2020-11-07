@@ -1,12 +1,17 @@
 .aboutUs{
     @include section;
 
+    @include px1400{
+        padding-bottom: 6vh;
+    }
+
     &__title {
         @include title;
     }
 
     &__discription {
         font-weight: 600;
+
         @include px1400{
             font-size: 28px;
             &:not(:last-child){
