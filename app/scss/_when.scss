@@ -30,7 +30,7 @@
         }
 
         @include px767{
-            font-size: 18px;
+            font-size: 17px;
             &:not(:last-child){
                 margin-bottom: 3vh;
             }
