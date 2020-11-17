@@ -28,18 +28,35 @@
 
         outline: none;
 
-        &:focus > .header__logo-img,
-        &:hover > .header__logo-img{
-            fill: red;
-            transform: scale(1.3);
+        width: 100px;
+        height: 100px;
 
-            transition: fill 0.3s, transform 0.3s;
+        background-image: url("../img/svg/logo.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        transition: background-image 0.3s, transform 0.3s;
+
+        @include px1400 {
+            margin: 10px 0; 
+        }
+
+        &:focus,
+        &:hover{
+            transform: scale(1.2);
+            background-image: url("../img/svg/logo-active.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            transition: background-image 0.3s, transform 0.3s;
         }
     }
 
     &__logo-img {
-        width: 80px;
-        height: 80px;
+        width: 100%;
+        height: 100%;
 
         transition: fill 0.3s, transform 0.3s;
     }
