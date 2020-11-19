@@ -99,7 +99,7 @@
 
         color: wheat;
 
-        white-space: nowrap;
+        //white-space: nowrap;
 
         @include px1400{
             font-size: 45px;
@@ -135,7 +135,7 @@
 
         &_company{
             font-family:'TimesNewItalic', sans-serif;
-            white-space: nowrap;
+           // white-space: nowrap;
         }
     }
 
