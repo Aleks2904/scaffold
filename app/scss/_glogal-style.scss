@@ -3,6 +3,7 @@ $BLACK: black;
 $WHITE: white;
 $YELLOW: #FF9900;
 $DARK-GRAY: #D2D2D2;
+$BG: #E6E6FA;
 
 $paddingXContainer1920: 75px;
 $paddingXContainer768: 50px;
@@ -50,19 +51,10 @@ $paddingXContainer320: 15px;
 }
 
 @mixin section{
-    height: 100vh;
+   min-height: 100vh;
 
-    @include px1400{
-        padding-top: 17vh;
-    }
-
-    @include px768-1399{
-        padding-top: 13vh;
-    }
-
-    @include px767{
-        padding-top: 15vh;
-    }
+    display: flex;
+    align-items: center;
 }
 
 .open-modal{

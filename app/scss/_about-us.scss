@@ -1,16 +1,36 @@
 .aboutUs{
     @include section;
 
-    @include px1400{
-        padding-bottom: 6vh;
-    }
-
     &__title {
         @include title;
+
+        @include px1400{
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px1024-1399{
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px768-1023{
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px767{
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
     }
 
-    &__discription {
-        font-weight: 600;
+    &__title-discription{
+        font-weight: 800;
 
         @include px1400{
             font-size: 28px;
@@ -38,6 +58,42 @@
             &:not(:last-child){
                 margin-bottom: 3vh;
             }
+        }
+    }
+
+    &__discription {
+        font-weight: 400;
+
+        @include px1400{
+            font-size: 28px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px1024-1399{
+            font-size: 24px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px768-1023{
+            font-size: 20px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        @include px767{
+            font-size: 18px;
+            &:not(:last-child){
+                margin-bottom: 3vh;
+            }
+        }
+
+        &_company{
+            font-family:'TimesNewItalic', sans-serif;
         }
     }
 }

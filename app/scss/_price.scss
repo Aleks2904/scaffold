@@ -1,6 +1,10 @@
 .price {
     @include section;
 
+    display: flex;
+    align-items:center;
+    padding: 0 !important;
+
     &__title {
         @include title;
     }
@@ -49,7 +53,7 @@
     }
 
     &__item-discription {
-        font-style: italic;
+        font-family:'TimesNewItalic', sans-serif;
 
         @include px768{
             font-size: 22px;

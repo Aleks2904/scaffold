@@ -52,46 +52,6 @@
         }
     }
 
-    &__main-title{
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 800;
-
-        color: wheat;
-
-        @include px1400{
-            font-size: 45px;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include px1024-1399{
-            font-size: 34px;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include px768-1023{
-            font-size: 34px;
-            width: 80%;
-            margin: 0 auto;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include px767{
-            font-size: 20px;
-            width: 80%;
-            margin: 0 auto;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-    }
-
     &__title {
         text-align: center;
         text-transform: uppercase;
@@ -129,6 +89,53 @@
             letter-spacing: 1px;
 
             margin-bottom: 10vh;
+        }
+    }
+
+    &__main-title{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 800;
+
+        color: wheat;
+
+        white-space: nowrap;
+
+        @include px1400{
+            font-size: 45px;
+            letter-spacing: 1px;
+
+            margin-bottom: 10vh;
+        }
+
+        @include px1024-1399{
+            font-size: 34px;
+            letter-spacing: 1px;
+
+            margin-bottom: 10vh;
+        }
+
+        @include px768-1023{
+            font-size: 34px;
+            width: 80%;
+            margin: 0 auto;
+            letter-spacing: 1px;
+
+            margin-bottom: 10vh;
+        }
+
+        @include px767{
+            font-size: 20px;
+            width: 80%;
+            margin: 0 auto;
+            letter-spacing: 1px;
+
+            margin-bottom: 10vh;
+        }
+
+        &_company{
+            font-family:'TimesNewItalic', sans-serif;
+            white-space: nowrap;
         }
     }
 

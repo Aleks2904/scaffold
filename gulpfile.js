@@ -85,44 +85,44 @@ function img() {
         .pipe(gulp.dest('dist/img'))
 }
 
-function svgSp() {
-    return gulp.src('app/img/svg/**/*') 
+// function svgSp() {
+//     return gulp.src('app/img/svg/**/*') 
 
-    .pipe(svgMin({
-        js2svg: {
-            pretty: true
-        }
-    }))
-/*
-    .pipe(cheerio({
-        run: function($) {
-           $('[fill]').removeAttr('fill'); 
-           $('[stroke]').removeAttr('stroke'); 
-           $('[style]').removeAttr('style'); 
-        },
-        parserOptions: {xmlMode: true}
-    }))
+//     .pipe(svgMin({
+//         js2svg: {
+//             pretty: true
+//         }
+//     }))
 
-    .pipe(replace('&gt;', '>'))
-*/    
-    .pipe(svgSprite({
-        mode:{
-            symbol: {
-                sprite: "sprite.svg"
-            }
-        }
-    }))
+//     .pipe(cheerio({
+//         run: function($) {
+//            $('[fill]').removeAttr('fill'); 
+//            $('[stroke]').removeAttr('stroke'); 
+//            $('[style]').removeAttr('style'); 
+//         },
+//         parserOptions: {xmlMode: true}
+//     }))
 
-    .pipe(gulp.dest('app/img')) 
-}
+//     .pipe(replace('&gt;', '>'))
+    
+//     .pipe(svgSprite({
+//         mode:{
+//             symbol: {
+//                 sprite: "sprite.svg"
+//             }
+//         }
+//     }))
 
-gulp.task('svg', function(){
-    return gulp.src('app/img/svg/**/*.svg') 
-      .pipe(svgmin()) // Recommend using svg min to optimize svg files first
-      .pipe(sassInlineSvg({
-        destDir: 'app/scss'
-      }));
-});
+//     .pipe(gulp.dest('app/img')) 
+// }
+
+// gulp.task('svg', function(){
+//     return gulp.src('app/img/svg/**/*.svg') 
+//       .pipe(svgmin()) // Recommend using svg min to optimize svg files first
+//       .pipe(sassInlineSvg({
+//         destDir: 'app/scss'
+//       }));
+// });
 
 function watch() {
 
@@ -167,5 +167,5 @@ gulp.task('styles', styles);
 gulp.task('img', img);
 gulp.task('watch', watch);
 
-gulp.task('default', gulp.series(clean, gulp.parallel(styles, scripts, svgSp, 'svg'), 'watch'));
-gulp.task('build', gulp.series(clean, img, styles, scripts, svgSp, 'svg', 'prebuild'));
+gulp.task('default', gulp.series(clean, gulp.parallel(styles, scripts/*, svgSp, 'svg'*/), 'watch'));
+gulp.task('build', gulp.series(clean, img, styles, scripts, /*, svgSp, 'svg',*/ 'prebuild'));

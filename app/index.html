@@ -11,7 +11,7 @@
 <body>
     <header id="js-header" class="header">
         <div class="container header__container">
-            <a href="#" class="header__logo-link" aria-label="обновить страницу"></a>
+            <a href="#home" class="header__logo-link" aria-label="обновить страницу"></a>
 
             <button id="js-header-btn-open" type="button" class="header__nav-open-btn" aria-label="открыть" aria-controls="js-nav-header" aria-expanded="false">
                 <span class="header__nav-open-burger"></span>
@@ -50,6 +50,12 @@
                             навигация
                         </a>
                     </li>
+
+                    <li>
+                        <a href="#new-services" class="header__nav-link">
+                            навигация
+                        </a>
+                    </li>
                 </ul>
 
                <button id="js-header-btn-close" type="button" class="header__nav-close-btn" aria-label="закрыть меню" aria-controls="js-nav-header" aria-expanded="true">
@@ -66,35 +72,79 @@
                 <ul class="swiper-wrapper presentation__slide-list">
                     <li class="swiper-slide presentation__slide-item">
                         <picture>
-                        <!--    <source type="image/webp" media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.webp">
-                            <source type="image/webp" media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.webp">
-                            <source type="image/webp" srcset="img/block-1/im_foto.webp">
-    
-                            <source media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.png">
-                            <source media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.png">-->
+                            <source type="image/webp" media="(min-width: 1920px)" srcset="img/presentation/2k+/2k_1.webp">
+                            <source media="(min-width: 1920px)" srcset="img/presentation/2k+/2k_1.jpg">
+
+                            <source type="image/webp" media="(min-width: 1200px)" srcset="img/presentation/1920/1920_1.webp">
+                            <source media="(min-width: 1200px)" srcset="img/presentation/1920/1920_1.jpg">
+
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="img/presentation/1200/1200_1.webp">
+                            <source media="(min-width: 1024px)" srcset="img/presentation/1200/1200_1.jpg">
+
+                            <source type="image/webp" media="(min-width: 800px)" srcset="img/presentation/1024/1024_1.webp">
+                            <source media="(min-width: 800px)" srcset="img/presentation/1024/1024_1.jpg">
+
+                            <source type="image/webp" media="(max-width: 799px)" srcset="img/presentation/800/800_1.webp">
+                            <source media="(max-width: 799px)" srcset="img/presentation/800/800_1.jpg">
         
-                            <img class="presentation__img" src="img/presentation/slide/slide-1.jpg" alt="cat">
+                            <img class="presentation__img" src="img/presentation/1920/1920_1.jpg" alt="cat">
                         </picture>
                     </li>
 
                     <li class="swiper-slide">
-                        <img class="presentation__img" src="img/presentation/slide/slide-2.jpg" alt="cat">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1920px)" srcset="img/presentation/2k+/2k_2.webp">
+                            <source media="(min-width: 1920px)" srcset="img/presentation/2k+/2k_2.jpg">
+
+                            <source type="image/webp" media="(min-width: 1200px)" srcset="img/presentation/1920/1920_2.webp">
+                            <source media="(min-width: 1200px)" srcset="img/presentation/1920/1920_2.jpg">
+
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="img/presentation/1200/1200_2.webp">
+                            <source media="(min-width: 1024px)" srcset="img/presentation/1200/1200_2.jpg">
+
+                            <source type="image/webp" media="(min-width: 800px)" srcset="img/presentation/1024/1024_2.webp">
+                            <source media="(min-width: 800px)" srcset="img/presentation/1024/1024_2.jpg">
+
+                            <source type="image/webp" media="(max-width: 799px)" srcset="img/presentation/800/800_2.webp">
+                            <source media="(max-width: 799px)" srcset="img/presentation/800/800_2.jpg">
+        
+                            <img class="presentation__img" src="img/presentation/1920/1920_2.jpg" alt="cat">
+                        </picture>
                     </li>
 
                     <li class="swiper-slide">
-                        <img class="presentation__img" src="img/presentation/slide/slide-3.jpg" alt="cat">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1920px)" srcset="img/presentation/2k+/2k_3.webp">
+                            <source media="(min-width: 1920px)" srcset="img/presentation/2k+/2k_3.jpg">
+
+                            <source type="image/webp" media="(min-width: 1200px)" srcset="img/presentation/1920/1920_3.webp">
+                            <source media="(min-width: 1200px)" srcset="img/presentation/1920/1920_3.jpg">
+
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="img/presentation/1200/1200_3.webp">
+                            <source media="(min-width: 1024px)" srcset="img/presentation/1200/1200_3.jpg">
+
+                            <source type="image/webp" media="(min-width: 800px)" srcset="img/presentation/1024/1024_3.webp">
+                            <source media="(min-width: 800px)" srcset="img/presentation/1024/1024_3.jpg">
+
+                            <source type="image/webp" media="(max-width: 799px)" srcset="img/presentation/800/800_3.webp">
+                            <source media="(max-width: 799px)" srcset="img/presentation/800/800_3.jpg">
+        
+                            <img class="presentation__img" src="img/presentation/1920/1920_3.jpg" alt="cat">
+                        </picture>
                     </li>
                 </ul>
             </div>
 
             <div class="presentation__content-block">
-                <h1 class="presentation__main-title">
-                    ООО «Красноярский лесопитомник» 
-                </h1>
-                
                 <h2 class="presentation__title">
-                    Компенсационное лесовосстановление
+                    Наша компания занимается компенсационным лесовосстановлением
                 </h2>
+
+                <h1 class="presentation__main-title">
+                    ООО <span class="presentation__main-title_company">
+                            «Красноярский лесопитомник» 
+                        </span>
+                </h1>
 
                 <p class="presentation__text-discription">
                     Компенсационное лесовосстановление&nbsp;&mdash; ключевой компонент программы воспроизводства природных ресурсов, осуществляемой на&nbsp;основании подготовленного заранее проекта лесовосстановления.
@@ -103,24 +153,24 @@
         </section>
 
         <section class="aboutUs page">
-            <div class="container">
-                <h2 class="aboutUs__title visually-hidden">
+            <div class="aboutUs__container container">
+                <h2 class="visually-hidden">
                     Чем мы занимаемся?
                 </h2>
     
-                <p class="aboutUs__title-discription aboutUs__discription">
+                <p class="aboutUs__title">
                     Основной сферой деятельности нашей организации является лесное хозяйство. 
                 </p>
 
                 <p class="aboutUs__discription">
-                    ООО &laquo;Красноярский лесопитомник&raquo; оказывает полный комплекс услуг по&nbsp;компенсационному лесовосстановлению, начиная от&nbsp;подбора и&nbsp;проектирования лесного участка и&nbsp;до&nbsp;сдачи работ уполномоченному органу в&nbsp;области лесного хозяйства. 
+                    ООО <span class="aboutUs__discription_company">&laquo;Красноярский лесопитомник&raquo;</span> оказывает полный комплекс услуг по&nbsp;компенсационному лесовосстановлению, начиная от&nbsp;подбора и&nbsp;проектирования лесного участка и&nbsp;до&nbsp;сдачи работ уполномоченному органу в&nbsp;области лесного хозяйства. 
                 </p>
 
-                <p class="aboutUs__discription">
+                <p class="aboutUs__title-discription">
                     Оказание услуг осуществляется на&nbsp;основании договора и&nbsp;в&nbsp;соответствии с&nbsp;доверенностью выданной заказчиком. 
                 </p>
 
-                <p class="aboutUs__discription">
+                <p class="aboutUs__title-discription">
                     Услуги проводятся в&nbsp;соответствии с&nbsp;Лесным кодексом Российской Федерации по&nbsp;правилам, способам и&nbsp;методами, установленными действующим законодательством.
                 </p>
             </div>
@@ -133,7 +183,7 @@
                 </h2>
 
                 <p class="when__discription">
-                    С&nbsp;1&nbsp;января 2019&nbsp;г. вступил в&nbsp;силу Федеральный закон о&nbsp;компенсационном лесовосстановлении (ФЗ&nbsp;от&nbsp;19.07. 2018 года &#8470;&nbsp;212-ФЗ &laquo;О&nbsp;внесении изменений в&nbsp;Лесной кодекс Российской Федерации и&nbsp;отдельные законодательные акты Российской Федерации в&nbsp;части совершенствования воспроизводства лесов и&nbsp;лесоразведения&raquo;). 
+                    С&nbsp;1&nbsp;января 2019&nbsp;г. вступил в&nbsp;силу Федеральный закон о&nbsp;компенсационном лесовосстановлении (ФЗ&nbsp;от&nbsp;19.07. 2018 года &#8470;&nbsp;212-ФЗ <span class="when__discription_name">&laquo;О&nbsp;внесении изменений в&nbsp;Лесной кодекс Российской Федерации и&nbsp;отдельные законодательные акты Российской Федерации в&nbsp;части совершенствования воспроизводства лесов и&nbsp;лесоразведения&raquo;</span>). 
                 </p>
 
                 <p class="when__discription">
@@ -143,169 +193,153 @@
         </section>
 
         <section class="services page">
-            <div class="container services__container">
-                <h2 class="services__title">
+            <div class="container">
+                <h2 class="visually-hidden">
                     Что мы можем вам предложить ?
                 </h2>
 
                 <ul class="services__list">
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services1" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Определение площади компенсационного лесовосстановления и&nbsp;подача заявления о&nbsp;намерении провести работы по&nbsp;лесовосстановлению
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services1" class="services__container-response">
-                                <p class="services__response">
-                                    Согласно действующему законодательству (Постановление Правительства РФ&nbsp;от&nbsp;07.05.2019 &#8470;&nbsp;566) лица, осуществляющие рубку лесных насаждений в&nbsp;соответствии со&nbsp;ст. 43-46&nbsp;ЛК РФ, и&nbsp;лица, обратившиеся с&nbsp;ходатайством или заявлением об&nbsp;изменении целевого назначении лесного участка в&nbsp;течение 10&nbsp;дней с&nbsp;даты окончания срока действия лесной декларации или с&nbsp;даты принятия акта о&nbsp;переводе земель или земельных участков обязаны обратиться в&nbsp;орган исполнительной власти субъекта&nbsp;РФ с&nbsp;заявлением о&nbsp;намерении провести работы по&nbsp;лесовосстановлению или лесоразведению. В&nbsp;заявлении помимо сведений об&nbsp;организации и&nbsp;данных лесной декларации должны быть указаны площадь проведения работ по&nbsp;лесовосстановлению и&nbsp;сведения об&nbsp;участках, на&nbsp;которых будут проводиться работы по&nbsp;лесовосстановлению и&nbsp;лесоразведению. 
-                                </p>
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services1" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Определение площади компенсационного лесовосстановления и&nbsp;подача заявления о&nbsp;намерении провести работы по&nbsp;лесовосстановлению
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services1" class="services__container-response">
+                            <p class="services__response">
+                                Согласно действующему законодательству (Постановление Правительства РФ&nbsp;от&nbsp;07.05.2019 &#8470;&nbsp;566) лица, осуществляющие рубку лесных насаждений в&nbsp;соответствии со&nbsp;ст. 43-46&nbsp;ЛК РФ, и&nbsp;лица, обратившиеся с&nbsp;ходатайством или заявлением об&nbsp;изменении целевого назначении лесного участка в&nbsp;течение 10&nbsp;дней с&nbsp;даты окончания срока действия лесной декларации или с&nbsp;даты принятия акта о&nbsp;переводе земель или земельных участков обязаны обратиться в&nbsp;орган исполнительной власти субъекта&nbsp;РФ с&nbsp;заявлением о&nbsp;намерении провести работы по&nbsp;лесовосстановлению или лесоразведению. В&nbsp;заявлении помимо сведений об&nbsp;организации и&nbsp;данных лесной декларации должны быть указаны площадь проведения работ по&nbsp;лесовосстановлению и&nbsp;сведения об&nbsp;участках, на&nbsp;которых будут проводиться работы по&nbsp;лесовосстановлению и&nbsp;лесоразведению. 
+                            </p>
 
-                                <p class="services__response">
-                                    Наша компания оказывает услуги по&nbsp;определению площади участков лесовосстановления, которые&nbsp;Вы должны создать в&nbsp;соответствии с&nbsp;Федеральным законом от&nbsp;19.07.2018 года &#8470;&nbsp;212-ФЗ.
-                                </p>
+                            <p class="services__response">
+                                Наша компания оказывает услуги по&nbsp;определению площади участков лесовосстановления, которые&nbsp;Вы должны создать в&nbsp;соответствии с&nbsp;Федеральным законом от&nbsp;19.07.2018 года &#8470;&nbsp;212-ФЗ.
+                            </p>
 
-                                <p class="services__response">
-                                    Далее мы&nbsp;подбираем для Вас подходящие участки, составляем заявку о&nbsp;намерении провести работы по&nbsp;лесовосстановлению и&nbsp;лесоразведению и&nbsp;направляем её&nbsp;в&nbsp;орган исполнительной власти субъекта&nbsp;РФ, уполномоченный в&nbsp;области лесных отношений.
-                                </p>
-                            </div>
-                        </li>
+                            <p class="services__response">
+                                Далее мы&nbsp;подбираем для Вас подходящие участки, составляем заявку о&nbsp;намерении провести работы по&nbsp;лесовосстановлению и&nbsp;лесоразведению и&nbsp;направляем её&nbsp;в&nbsp;орган исполнительной власти субъекта&nbsp;РФ, уполномоченный в&nbsp;области лесных отношений.
+                            </p>
+                        </div>
+                    </li>
 
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services2" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Подбор участков под компенсационное лесовосстановление и&nbsp;определение способа лесовосстановления
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services2" class="services__container-response">
-                                <p class="services__response">
-                                    На&nbsp;этом этапе возникает наибольшее количество вопросов. Зачастую списки участков, сформированные органами исполнительной власти субъектов&nbsp;РФ, составлены, как правило, без учета натурного обследования и&nbsp;по&nbsp;устаревшим материалам лесоустройства. В&nbsp;результате чего, при выборе участка, возникает множество различных трудностей. 
-                                </p>
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services2" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Подбор участков под компенсационное лесовосстановление и&nbsp;определение способа лесовосстановления
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services2" class="services__container-response">
+                            <p class="services__response">
+                                На&nbsp;этом этапе возникает наибольшее количество вопросов. Зачастую списки участков, сформированные органами исполнительной власти субъектов&nbsp;РФ, составлены, как правило, без учета натурного обследования и&nbsp;по&nbsp;устаревшим материалам лесоустройства. В&nbsp;результате чего, при выборе участка, возникает множество различных трудностей. 
+                            </p>
 
-                                <p class="services__response">
-                                    ООО &laquo;Красноярский лесопитомник&raquo; располагает достоверной информацией о&nbsp;пригодности и&nbsp;доступности участков, подходящих для проведения лесокультурных работ на&nbsp;территории Красноярского края. Правильно подобранный участок гарантирует соблюдение всех условий для создания лесных культур, предусмотренных правилами лесовосстановления, а&nbsp;также позволяет сократить расходы по&nbsp;посадке леса.
-                                </p>
+                            <p class="services__response">
+                                ООО &laquo;Красноярский лесопитомник&raquo; располагает достоверной информацией о&nbsp;пригодности и&nbsp;доступности участков, подходящих для проведения лесокультурных работ на&nbsp;территории Красноярского края. Правильно подобранный участок гарантирует соблюдение всех условий для создания лесных культур, предусмотренных правилами лесовосстановления, а&nbsp;также позволяет сократить расходы по&nbsp;посадке леса.
+                            </p>
 
-                                <p class="services__response">
-                                    После подбора и&nbsp;обследования заполняется карточка лесовосстановления, в&nbsp;которую вносятся все подробные показатели выбранного участка, от&nbsp;которых зависит выбор способа лесовосстановления и&nbsp;культивируемая порода. 
-                                </p>
+                            <p class="services__response">
+                                После подбора и&nbsp;обследования заполняется карточка лесовосстановления, в&nbsp;которую вносятся все подробные показатели выбранного участка, от&nbsp;которых зависит выбор способа лесовосстановления и&nbsp;культивируемая порода. 
+                            </p>
 
-                                <p class="services__response">
-                                    Карточка обследования участка является неотъемлемым частью при составлении проекта лесовосстановления.
-                                </p>
-                            </div>
-                        </li>
+                            <p class="services__response">
+                                Карточка обследования участка является неотъемлемым частью при составлении проекта лесовосстановления.
+                            </p>
+                        </div>
+                    </li>
 
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services4" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Подготовка проекта лесовосстановления и&nbsp;его согласование в&nbsp;органах исполнительной власти субъекта&nbsp;РФ
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services4" class="services__container-response">
-                                <p class="services__response">
-                                    Наша компания занимается подготовкой проекта лесовосстановления в&nbsp;соответствии с&nbsp;требованиями Правил лесовосстановления и&nbsp;формой проекта, утверждённой местным органом исполнительной власти субъекта&nbsp;РФ, уполномоченного в&nbsp;области лесных отношений.
-                                </p>
-                            </div>
-                        </li>
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services4" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Подготовка проекта лесовосстановления и&nbsp;его согласование в&nbsp;органах исполнительной власти субъекта&nbsp;РФ
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services4" class="services__container-response">
+                            <p class="services__response">
+                                Наша компания занимается подготовкой проекта лесовосстановления в&nbsp;соответствии с&nbsp;требованиями Правил лесовосстановления и&nbsp;формой проекта, утверждённой местным органом исполнительной власти субъекта&nbsp;РФ, уполномоченного в&nbsp;области лесных отношений.
+                            </p>
+                        </div>
+                    </li>
 
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services5" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Подготовка почвы под посадку лесных культур 
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services5" class="services__container-response">
-                                <p class="services__response">
-                                    Наши специалисты выезжают на&nbsp;место и&nbsp;занимаются подготовкой участка. Производится расчистка участка от&nbsp;нежелательной растительности и&nbsp;в&nbsp;зависимости от&nbsp;типа почвы, рельефа и&nbsp;механического состава выбирается способ подготовки почвы. 
-                                </p>
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services5" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Подготовка почвы под посадку лесных культур 
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services5" class="services__container-response">
+                            <p class="services__response">
+                                Наши специалисты выезжают на&nbsp;место и&nbsp;занимаются подготовкой участка. Производится расчистка участка от&nbsp;нежелательной растительности и&nbsp;в&nbsp;зависимости от&nbsp;типа почвы, рельефа и&nbsp;механического состава выбирается способ подготовки почвы. 
+                            </p>
 
-                                <p class="services__response">
-                                    Из-за весенней распутицы и&nbsp;сжатых сроков чаще всего применяют предварительную осеннюю обработку почвы под лесные культуры следующего года. Исходя из&nbsp;этого, планировать данные работы нужно заблаговременно.
-                                </p>
-                            </div>
-                        </li>
+                            <p class="services__response">
+                                Из-за весенней распутицы и&nbsp;сжатых сроков чаще всего применяют предварительную осеннюю обработку почвы под лесные культуры следующего года. Исходя из&nbsp;этого, планировать данные работы нужно заблаговременно.
+                            </p>
+                        </div>
+                    </li>
 
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services6" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Заготовка семян хвойных пород  
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services6" class="services__container-response">
-                                <p class="services__response">
-                                    Заготовка семян выполняется согласно действующему законодательству и&nbsp;с&nbsp;учетом лесосеменного районирования.
-                                </p>
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services6" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Заготовка семян хвойных пород  
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services6" class="services__container-response">
+                            <p class="services__response">
+                                Заготовка семян выполняется согласно действующему законодательству и&nbsp;с&nbsp;учетом лесосеменного районирования.
+                            </p>
 
-                                <p class="services__response">
-                                    <span class="services__response_special">
-                                        Для выращивания посадочного материала и&nbsp;создания лесных культур методом посева семян должны использоваться только районированные семена, соответствующие требованиям, установленным Федеральным законом от&nbsp;17.12.1997г. &#8470;&nbsp;149-ФЗ &laquo;О&nbsp;семеноводстве&raquo;
-                                    </span>
-                                </p>
-                            </div>
-                        </li>
+                            <p class="services__response">
+                                <span class="services__response_special">
+                                    Для выращивания посадочного материала и&nbsp;создания лесных культур методом посева семян должны использоваться только районированные семена, соответствующие требованиям, установленным Федеральным законом от&nbsp;17.12.1997г. &#8470;&nbsp;149-ФЗ &laquo;О&nbsp;семеноводстве&raquo;
+                                </span>
+                            </p>
+                        </div>
+                    </li>
 
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services7" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Посев семян, посадка сеянцев или саженцев
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services7" class="services__container-response">
-                                <p class="services__response">
-                                    ООО &quot;Красноярский лесопитомник в&nbsp;соответствии с&nbsp;проектом лесовосстановления выполняет посев, посадку сеянцами или саженцами.
-                                </p>
-                            </div>
-                        </li>
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services7" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Посев семян, посадка сеянцев или саженцев
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services7" class="services__container-response">
+                            <p class="services__response">
+                                ООО &quot;Красноярский лесопитомник в&nbsp;соответствии с&nbsp;проектом лесовосстановления выполняет посев, посадку сеянцами или саженцами.
+                            </p>
+                        </div>
+                    </li>
 
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services8" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Организация приемки лесных культур 
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services8" class="services__container-response">
-                                <p class="services__response">
-                                    После проведения работ по&nbsp;лесовосстановлению или лесоразведению в&nbsp;течение 10&nbsp;рабочих дней направляется в&nbsp;уполномоченный орган либо уполномоченный федеральный орган исполнительной власти, либо уполномоченный орган местного самоуправления в&nbsp;зависимости от&nbsp;категории земель, на&nbsp;которых проведены работы по&nbsp;лесовосстановлению (гослесфонд, земли ООПТ или земли населённых пунктов), отчет о&nbsp;воспроизводстве лесов и&nbsp;лесоразведении по&nbsp;форме 1-ВЛ для проведения приемки работ по&nbsp;лесовосстановлению или лесоразведению.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li class="services__item">
-                            <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services9" aria-expanded="false">
-                                <h3 class="services__title-services">
-                                    Сеянцы с&nbsp;закрытой корневой системой
-                                </h3>
-        
-                                <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
-                            </button>
-        
-                            <div id="services9" class="services__container-response">
-                                <p class="services__response">
-                                    ООО &quot;Красноярский лесопитомник набирает заявки на&nbsp;выращивание сеянцев сосны обыкновенной с&nbsp;закрытой корневой системой на&nbsp;весну 2022&nbsp;года.
-                                </p>
-                            </div>
-                        </li>
+                    <li class="services__item">
+                        <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services8" aria-expanded="false">
+                            <h3 class="services__title-services">
+                                Организация приемки лесных культур 
+                            </h3>
+    
+                            <span class="services__item-btn-icon" aria-label="декоротивный элемент"></span>
+                        </button>
+    
+                        <div id="services8" class="services__container-response">
+                            <p class="services__response">
+                                После проведения работ по&nbsp;лесовосстановлению или лесоразведению в&nbsp;течение 10&nbsp;рабочих дней направляется в&nbsp;уполномоченный орган либо уполномоченный федеральный орган исполнительной власти, либо уполномоченный орган местного самоуправления в&nbsp;зависимости от&nbsp;категории земель, на&nbsp;которых проведены работы по&nbsp;лесовосстановлению (гослесфонд, земли ООПТ или земли населённых пунктов), отчет о&nbsp;воспроизводстве лесов и&nbsp;лесоразведении по&nbsp;форме 1-ВЛ для проведения приемки работ по&nbsp;лесовосстановлению или лесоразведению.
+                            </p>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
@@ -314,7 +348,7 @@
 
         <section class="price page">
             <div class="container">
-                <h2 class="price__title">
+                <h2 class="price__title visually-hidden">
                     Цены
                 </h2>
 
@@ -377,12 +411,36 @@
                 </p>
             </div>
         </section>
+
+        <section class="new-services page">
+            <div class="container">
+                <h2 class="new-services__title">
+                    Сеянцы с закрытой корневой системой
+                </h2>
+
+                <p class="new-services__discription">
+                    7&nbsp;мая 2019 года постановлением Правительства РФ&nbsp;был принят новый порядок проведения работ по&nbsp;
+                    <span class="new-services__discription_company">
+                        &laquo;компенсационному&raquo; 
+                    </span>
+                    лесовосстановлению, в&nbsp;соответствии с&nbsp;которым, лицам осуществляющим рубку лесных насаждений предписано до&nbsp;2022 года при лесовосстановлении перейти на&nbsp;использование сеянцев с&nbsp;закрытой корневой системой.
+                </p>
+
+                <p class="new-services__discription">
+                    ООО 
+                    <span class="new-services__discription_company">
+                        &laquo;Красноярский лесопитомник&raquo;
+                    </span> 
+                    набирает заявки на&nbsp;выращивание сеянцев сосны обыкновенной с&nbsp;закрытой корневой системой на&nbsp;весну 2022&nbsp;года.
+                </p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container footer__container">
             <h2 class="footer__title">
-                наши контакты
+                контакты
             </h2>
 
             <ul class="footer__list">

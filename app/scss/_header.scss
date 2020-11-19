@@ -4,7 +4,7 @@
     z-index: 9999;
     width: 100vw;
     background-color: $DARK-GRAY;
-    opacity: 0.5;
+    opacity: 0.8;
     transition: opacity 0.3s, background-color 0.3s;
 
     &_active{
@@ -28,24 +28,23 @@
 
         outline: none;
 
-        width: 100px;
-        height: 100px;
-
-        background-image: url("../img/svg/logo.svg");
+        background-image: url("../img/svg/logoHeader.svg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 100%;
 
         transition: background-image 0.3s, transform 0.3s;
 
         @include px1400 {
-            margin: 10px 0; 
+            margin: 5px 0; 
+            width: 200px;
+            height: 70px;
         }
 
         &:focus,
         &:hover{
             transform: scale(1.2);
-            background-image: url("../img/svg/logo-active.svg");
+            background-image: url("../img/svg/logoHeader-active.svg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -255,6 +254,9 @@
         display: block;
         border-bottom: 2px solid transparent;
         padding-bottom: 5px;
+
+        font-family:'TimesNewItalic', sans-serif;
+        font-weight: 800;
 
         transition: background 0.3s, border-image 0.3s, transform 0.3s;
     }

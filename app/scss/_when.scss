@@ -6,7 +6,7 @@
     }
 
     &__discription {
-        font-weight: 600;
+        font-weight: 400;
 
         @include px1400{
             font-size: 28px;
@@ -34,6 +34,10 @@
             &:not(:last-child){
                 margin-bottom: 3vh;
             }
+        }
+
+        &_name{
+            font-family:'TimesNewItalic', sans-serif;
         }
     }
 }

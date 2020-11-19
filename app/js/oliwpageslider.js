@@ -43,6 +43,8 @@ function pageslider(item, callback) {
 		textArray		= ['You can...', '... add some text ...', '... which depends of ...', '... slide ...', 'Oliw Page Slider'],
 		hrefArray		= 'layout';
 
+	let resultMouse;
+
 
 		if (hrefArray == 'layout') { // add hashes from nav
 			hrefArray = [];
@@ -216,32 +218,108 @@ function pageslider(item, callback) {
 	
 			};
 		}
-	
-		function scrollSlides(direction) {
-	
-			var $children = $pageActive.children[0];
-	
-			if ($children.clientHeight > winH) {
-				clientTopMove = Math.round( $children.getBoundingClientRect().top ),
-				childrenBtPos = -( $children.clientHeight - winH);
-	
-				if ( clientTopMove <= childrenBtPos && direction > 0) {
-					handle(direction, delayTime);
-				}
-				else if ( clientTopMove >= 0 && direction < 0) {
-					handle(direction, delayTime);
-				}
-				
+
+		function wheel(event){
+			var delta = 0;
+
+			if (!event) event = window.event; // Событие IE.
+			// Установим кроссбраузерную delta
+			if (event.wheelDelta) { 
+				// IE, Opera, safari, chrome - кратность дельта равна 120
+				delta = event.wheelDelta/120;
+			} else if (event.detail) { 
+				// Mozilla, кратность дельта равна 3
+				delta = -event.detail/3;
 			}
-			else {
-				handle(direction, delayTime);
+			
+			if (delta) {
+				// Отменим текущее событие - событие поумолчанию (скролинг окна).
+				
+				// если дельта больше 0, то колесо крутят вверх, иначе вниз
+				var dir = delta > 0 ? 'Up' : 'Down';
+
+				return dir;
 			}
 		}
+
+		document.querySelector('body').addEventListener('mousewheel', function(event){
+			resultMouse = wheel(event);
+		})
 	
-	
+		function scrollSlides(direction) {
+			var $children = $pageActive.children[0];
+
+			let page = document.querySelectorAll('.page');
+
+			page.forEach(function(e){
+				if(e.classList.contains('active')){
+					if(e.scrollHeight == e.offsetHeight){
+						if ($children.clientHeight > winH) {
+							clientTopMove = Math.round( $children.getBoundingClientRect().top ),
+							childrenBtPos = -( $children.clientHeight - winH);
+				
+							if ( clientTopMove <= childrenBtPos && direction > 0) {
+								handle(direction, delayTime);
+							}
+							else if ( clientTopMove >= 0 && direction < 0) {
+								handle(direction, delayTime);
+							}
+						}
+						else {
+							handle(direction, delayTime);
+						}
+					}else{
+						const scroll = e.scrollTop,
+							  scrollTop = 0,
+							  scrollBottom = e.scrollHeight,
+							  height = e.clientHeight;
+
+						let result = scroll + height;
+						result = result.toFixed(0);
+
+						
+						if(scroll == scrollTop){
+							if(resultMouse == "Up"){
+								if ($children.clientHeight > winH) {
+									clientTopMove = Math.round( $children.getBoundingClientRect().top ),
+									childrenBtPos = -( $children.clientHeight - winH);
+						
+									if ( clientTopMove <= childrenBtPos && direction > 0) {
+										handle(direction, delayTime);
+									}
+									else if ( clientTopMove >= 0 && direction < 0) {
+										handle(direction, delayTime);
+									}
+								}
+								else {
+									handle(direction, delayTime);
+								}
+							}
+						}
+						if(scrollBottom == result){
+							if(resultMouse == "Down"){
+								if ($children.clientHeight > winH) {
+									clientTopMove = Math.round( $children.getBoundingClientRect().top ),
+									childrenBtPos = -( $children.clientHeight - winH);
+						
+									if ( clientTopMove <= childrenBtPos && direction > 0) {
+										handle(direction, delayTime);
+									}
+									else if ( clientTopMove >= 0 && direction < 0) {
+										handle(direction, delayTime);
+									}
+								}
+								else {
+									handle(direction, delayTime);
+								}
+							}
+						}
+			 		}
+		 		}
+	 		})
+		}
 	
 		function toTop() {
-	
 			if ( pageActive != 0 ) {
 	
 				if (pageActive < pageCenter) {
@@ -269,7 +347,6 @@ function pageslider(item, callback) {
 			$body.setAttribute( 'data-pageslider-number', pageActive + 1 );
 	
 			if ($navLi !== null) {
-				console.log($navLi[pageActive])
 				$navLi[pageActive].classList.add('active');
 			}
 	

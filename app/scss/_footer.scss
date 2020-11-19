@@ -7,7 +7,7 @@
     width: 100vw;
     transform: translateY(80%);
     background-color: $DARK-GRAY;
-    opacity: 0.5;
+    opacity: 0.7;
     transition: opacity 0.3s , background-color,  transform 0.3s;
 
     &:hover{
@@ -50,6 +50,7 @@
 
     &__title {
         font-weight: 800;
+        font-family:'TimesNewItalic', sans-serif;
 
         @include px1400{
             font-size: 45px;
