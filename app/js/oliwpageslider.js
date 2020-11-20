@@ -150,12 +150,14 @@ function pageslider(item, callback) {
 
 			page.forEach(function(event){
 				if(event.classList.contains('active')){
-					if(event.scrollHeight == event.offsetHeight){
+					if(event.querySelector('.contain-page') == null){
+						scrollSlides(1);
+					}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
 						scrollSlides(1);
 					}else{
-						const scroll = event.scrollTop,
-							  scrollBottom = event.scrollHeight,
-							  height = event.clientHeight;
+						const scroll = event.querySelector('.contain-page').scrollTop,
+							  scrollBottom = event.querySelector('.contain-page').scrollHeight,
+							  height = event.querySelector('.contain-page').clientHeight;
 
 						let result = scroll + height;
 						result = result.toFixed(0);
@@ -173,13 +175,15 @@ function pageslider(item, callback) {
 
 			page.forEach(function(event){
 				if(event.classList.contains('active')){
-					if(event.scrollHeight == event.offsetHeight){
+					if(event.querySelector('.contain-page') == null){
+						scrollSlides(-1);
+					}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
 						scrollSlides(-1);
 					}else{
-						const scroll = event.scrollTop,
+						const scroll = event.querySelector('.contain-page').scrollTop,
 							  scrollTop = 0,
-							  scrollBottom = event.scrollHeight,
-							  height = event.clientHeight;
+							  scrollBottom = event.querySelector('.contain-page').scrollHeight,
+							  height = event.querySelector('.contain-page').clientHeight;
 
 						let result = scroll + height;
 						result = result.toFixed(0);

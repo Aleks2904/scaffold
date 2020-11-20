@@ -51,6 +51,11 @@
             margin: 5px 0; 
             width: 170px;
             height: 60px;
+
+            @include h320-459{
+                height: 45px;
+                width: 150px;
+            }
         }
 
         &:focus,

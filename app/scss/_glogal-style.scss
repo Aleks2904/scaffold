@@ -26,6 +26,15 @@ $paddingXContainer320: 15px;
     }
 }
 
+.contain-page{
+    @include px767 {
+        @include h320-459{
+            height: 65vh;
+            overflow-y: auto;
+        }
+    }
+}
+
 @mixin title{
     font-weight: 800;
 
@@ -47,11 +56,17 @@ $paddingXContainer320: 15px;
     @include px767{
         font-size: 26px;
         margin-bottom: 5vh;
+
+        @include h320-459{
+            font-size: 20px;
+
+            margin-bottom: 3vh;
+        }
     }
 }
 
 @mixin section{
-   min-height: 100vh;
+    height: 100vh;
 
     display: flex;
     align-items: center;

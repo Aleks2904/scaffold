@@ -58,6 +58,10 @@
             &:not(:last-child){
                 margin-bottom: 3vh;
             }
+
+            @include h320-459{
+                font-size: 14px;
+            }
         }
     }
 
@@ -89,6 +93,10 @@
             font-size: 18px;
             &:not(:last-child){
                 margin-bottom: 3vh;
+            }
+
+            @include h320-459{
+                font-size: 14px;
             }
         }
 
