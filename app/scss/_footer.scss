@@ -5,10 +5,21 @@
     padding: 2vh;
     z-index: 9999;
     width: 100vw;
-    transform: translateY(80%);
     background-color: $DARK-GRAY;
     opacity: 0.7;
     transition: opacity 0.3s , background-color,  transform 0.3s;
+
+    @include px1024{
+        transform: translateY(80%);
+    }
+
+    @include px768-1023{
+        transform: translateY(85%);
+    }
+
+    @include px767{
+        transform: translateY(85%);
+    }
 
     &:hover{
         opacity: 1;
@@ -35,15 +46,33 @@
             display: block;
 
             position: absolute;
+
+            transform: translateY(-50%);
             top: 50%;
             left: 5vw;
 
-            transform: translateY(-50%);
-
-            height: 90%;
-            width: 25vw;
-
             z-index: -1;
+
+            @include px1400 {
+                height: 90%;
+                width: 25vw;
+            }
+
+            @include px1024-1399 {
+                height: 74%;
+                width: 25vw;
+            }
+
+            @include px768-1023 {
+                height: 80%;
+                width: 35vw;
+            }
+
+            @include px767 {
+                height: 75%;
+                width: 40vw;
+                min-width: 250px;
+            }
         }
 
     }
@@ -51,14 +80,14 @@
     &__title {
         font-weight: 800;
         font-family:'TimesNewItalic', sans-serif;
+        margin-bottom: 10vh;
 
-        @include px1400{
-            font-size: 45px;
-            margin-bottom: 10vh;
+        @include px1920{
+            font-size: 65px;
         }
-    
-        @include px1024-1399{
-            font-size: 32px;
+
+        @include px1024-1919{
+            font-size: 45px;
         }
     
         @include px768-1023{
@@ -66,7 +95,7 @@
         }
     
         @include px767{
-            font-size: 26px;
+            font-size: 30px;
         }
 
         text-align: center;
@@ -83,24 +112,25 @@
     }
 
     &__item-disscription {
+        font-weight: 800;
+
         @include px1024{
             font-size: 26px;
-            font-weight: 600;
         }
 
         @include px768{
             font-size: 22px;
-            font-weight: 600;
         }
 
         @include px767{
             font-size: 18px;
-            font-weight: 600;
         }
     }
 
     &__item-link {
         display: inline-block;
+        font-weight: 800;
+        font-family: 'TimesNewItalic', sans-serif;
 
         transition: transform 0.3s;
 
@@ -111,44 +141,38 @@
         }
 
         @include px1024{
-            font-style: italic;
             font-size: 26px;
-            font-weight: 600;
         }
 
         @include px768{
-            font-style: italic;
             font-size: 22px;
-            font-weight: 600;
         }
 
         @include px767{
-            font-style: italic;
             font-size: 18px;
-            font-weight: 600;
         }
     }
 
     &__copywriter{
         margin-top: auto;
         text-align: center;
-        
+
+        font-weight: 800;
 
         @include px1024{
             font-size: 26px;
-            font-weight: 600;
         }
 
         @include px768-1023{
-            margin-bottom: 4vh;
             font-size: 22px;
-            font-weight: 600;
         }
 
         @include px767{
-            margin-bottom: 4vh;
             font-size: 20px;
-            font-weight: 600;
+        }
+
+        &_company{
+            font-family: 'TimesNewItalic',sans-serif;
         }
     }
 }

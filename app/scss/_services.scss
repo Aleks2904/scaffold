@@ -1,5 +1,13 @@
 .services {
-    padding: 13vh 0;
+    display: flex;
+    align-items: center;
+    @include px1400{
+        padding: 120px 0;
+    }
+
+    @include px1024-1399{
+        padding: 120px 0;
+    }
 
     @include px1399{
         background-image: url('../img/castom_img/desctop/desct_1.jpg');
@@ -8,53 +16,20 @@
         background-repeat: no-repeat;
 
         &::after{
-            content: '';
-            display: block;
-            position: absolute;
-            height: 200%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: $BLACK;
-            opacity: 0.4;
-            z-index: 4;
-        }
-    }
+            overflow: hidden;
 
-    &__wrap{
-        @include px1400{
-            display: none;
-        }
-
-        @include px1399{
-            // &::after{
-            //     content: '';
-            //     display: block;
-            //     position: absolute;
-            //     height: 100%;
-            //     top: 0;
-            //     right: 0;
-            //     bottom: 0;
-            //     left: 0;
-            //     background-color: $BLACK;
-            //     opacity: 0.4;
-            //     z-index: 4;
-            // }
-        }
-    }
-
-    &__container{
-        position: relative;
-        display: block;
-        z-index: 5;
-
-        @include px1400{
-            padding: 0;
-        }
-
-        @include px767{
-            padding-bottom: 10vh;
+            @include px1399{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $BLACK;
+                opacity: 0.4;
+                z-index: -4;
+            }
         }
     }
 
@@ -67,11 +42,13 @@
     }
 
     &__list {
-        border-top: 2px solid gray;
-        max-width: 1420px;
+
     }
 
     &__item{
+        &:nth-child(1){
+            border-top: 2px solid gray;
+        }
         border-bottom: 2px solid gray;
     }
 
@@ -81,11 +58,18 @@
         align-items: center;
         width: 100%;
 
+        position: relative;
+
         background-color: transparent;
         border: none;
         outline: none;
 
         cursor: pointer;
+
+        transition: color 0.3s;
+        font-weight: 800;
+        font-family:'TimesNewItalic', sans-serif;
+        text-align: left;
 
         &:hover > .services__item-btn-icon,
         &:focus > .services__item-btn-icon,
@@ -95,46 +79,43 @@
             transition: background-color 0.3s, opacity 0.3s;
         }
 
-        &:hover > .services__title-services,
-        &:focus > .services__title-services{
+        &:hover,
+        &:focus{
             color: $YELLOW;
             transition: color 0.3s;
         }
 
-        @include px1400{
-            padding: 30px 0;
+        @include px1920{
+            padding: 30px 30% 30px 1%;
+
+            font-size: 28px;
         }
 
-        @include px1399{
-            padding: 20px 0;
-        }
-    }
+        @include px1400-1919{
+            padding: 30px 30% 30px 1%;
 
-    &__title-services {
-        transition: color 0.3s;
-        text-align: left;
-
-        @include px1400{
             font-size: 22px;
-            max-width: 70%;
         }
 
-        @include px1399{
+        @include px768-1399{
+            padding: 30px 30% 30px 1%;
+
             font-size: 18px;
             color: white;
-            max-width: 70%;
         }
 
         @include px767{
+            padding: 30px 30% 30px 1%;
+
             font-size: 16px;
             color: white;
-            max-width: 84%;
         }
     }
 
     &__item-btn-icon {
         display: block;
-        position: relative;
+        position: absolute;
+        right: 1%;
         border-radius: 50%;
         background-color: gray;
 
@@ -228,8 +209,5 @@
 
             transition: transform 0.5s, opacity 0.5s;
         }
-    }
-
-    &__wrap {
     }
 }
