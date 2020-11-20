@@ -115,7 +115,9 @@
     &__item-btn-icon {
         display: block;
         position: absolute;
+        top: 50%;
         right: 1%;
+        transform: translateY(-50%);
         border-radius: 50%;
         background-color: gray;
 
