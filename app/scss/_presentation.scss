@@ -40,16 +40,9 @@
         width: 100vw;
 
         transform: translate(-50%, -50%);
+        top: 50vh;
 
         z-index: 2;
-
-        @include px768{
-            top: 50vh;
-        }
-
-        @include  px767{
-            top: 50vh;
-        }
     }
 
     &__title {
@@ -83,40 +76,7 @@
         }
 
         @include px767{
-            font-size: 20px;
-            width: 80%;
-            margin: 0 auto;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-    }
-
-    &__main-title{
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 800;
-
-        color: wheat;
-
-        //white-space: nowrap;
-
-        @include px1400{
-            font-size: 45px;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include px1024-1399{
-            font-size: 34px;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include px768-1023{
-            font-size: 34px;
+            font-size: 18px;
             width: 80%;
             margin: 0 auto;
             letter-spacing: 1px;
@@ -124,31 +84,65 @@
             margin-bottom: 10vh;
         }
 
-        @include px767{
-            font-size: 20px;
-            width: 80%;
-            margin: 0 auto;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        &_company{
-            font-family:'TimesNewItalic', sans-serif;
-           // white-space: nowrap;
+        @include h320-459{
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            width: 90%;
         }
     }
 
-    &__text-container{
-        
-    }
+    // &__main-title{
+    //     text-align: center;
+    //     text-transform: uppercase;
+    //     font-weight: 800;
 
-    &__text-list {
-        
-    }
+    //     color: wheat;
 
-    &__text-item {
-    }
+    //     @include px1400{
+    //         font-size: 45px;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include px1024-1399{
+    //         font-size: 34px;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include px768-1023{
+    //         font-size: 34px;
+    //         width: 80%;
+    //         margin: 0 auto;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include px767{
+    //         font-size: 20px;
+    //         width: 80%;
+    //         margin: 0 auto;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include h320-459{
+    //         font-size: 16px;
+    //         width: 90%;
+    //         margin: 0 auto;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 6vh;
+    //     }
+
+    //     &_company{
+    //         font-family:'TimesNewItalic', sans-serif;
+    //     }
+    // }
 
     &__text-discription {
         text-align: center;
@@ -177,6 +171,12 @@
 
         @include px767{
             font-size: 18px;
+            letter-spacing: 0.5px;
+            max-width: 90%;
+        }
+
+        @include h320-459{
+            font-size: 14px;
             letter-spacing: 0.5px;
             max-width: 90%;
         }
