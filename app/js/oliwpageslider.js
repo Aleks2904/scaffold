@@ -56,8 +56,6 @@ function pageslider(item, callback) {
 			}
 		}
 	
-	
-	
 		if (hrefArray) { // to active page
 			// read active block from nav
 	
@@ -86,8 +84,6 @@ function pageslider(item, callback) {
 	
 		sliderActive(pageActive);
 	
-	
-	
 		// Touch
 		document.addEventListener('touchstart', function(event) {
 			touchStartPoint = event.changedTouches[0].clientY;
@@ -95,14 +91,9 @@ function pageslider(item, callback) {
 	
 		}, false);
 	
-	
-	
 		document.addEventListener('touchmove', function(event) {
 			touchMovePoint = event.changedTouches[0].clientY;
-	
 		}, false);
-	
-	
 	
 		document.addEventListener('touchend', function(event) {
 	
@@ -126,19 +117,24 @@ function pageslider(item, callback) {
 			// 	}
 	
 			// }
-	
-			if (touchNowPoint.clientY < touchStartPoint) {
-				delta = 1;
-				scrollSlides(delta);
-			}
-			else {
-				delta = -1;
-				scrollSlides(delta);
+
+			const header = document.querySelector('#js-header'),
+				  footer = document.querySelector('#js-footer');
+
+			if(event.target == header || event.target.closest('#js-header') || event.target == footer || event.target.closest('#js-footer')){
+				return false;
+			}else{
+				if (touchNowPoint.clientY < touchStartPoint) {
+					delta = 1;
+					scrollSlides(delta);
+				}
+				else {
+					delta = -1;
+					scrollSlides(delta);
+				}
 			}
 	
 		}, false);
-	
-	
 	
 		//Keybord
 		document.addEventListener('keydown', function(event) {
@@ -201,7 +197,6 @@ function pageslider(item, callback) {
 		});
 	
 	
-	
 		if ( $prev ) { // click on "prev" button
 	
 			$prev.addEventListener('click', function(event) {
@@ -257,20 +252,29 @@ function pageslider(item, callback) {
 		function scrollSlides(direction) {
 			var $children = $pageActive.children[0];
 
-			if ($children.clientHeight > winH) {
-				clientTopMove = Math.round( $children.getBoundingClientRect().top ),
-				childrenBtPos = -( $children.clientHeight - winH);
-	
-				if ( clientTopMove <= childrenBtPos && direction > 0) {
+			const header = document.querySelector('#js-header'),
+				  style = window.getComputedStyle(header, null),
+				  footer = document.querySelector('#js-footer'),
+				  style2 = window.getComputedStyle(footer, null);
+
+			if(style.opacity == "1" || style2.opacity == "1"){
+				return false
+			}else{
+				if ($children.clientHeight > winH) {
+					clientTopMove = Math.round( $children.getBoundingClientRect().top ),
+					childrenBtPos = -( $children.clientHeight - winH);
+		
+					if ( clientTopMove <= childrenBtPos && direction > 0) {
+						handle(direction, delayTime);
+					}
+					else if ( clientTopMove >= 0 && direction < 0) {
+						handle(direction, delayTime);
+					}
+					
+				}
+				else {
 					handle(direction, delayTime);
 				}
-				else if ( clientTopMove >= 0 && direction < 0) {
-					handle(direction, delayTime);
-				}
-				
-			}
-			else {
-				handle(direction, delayTime);
 			}
 		}
 	
@@ -294,8 +298,6 @@ function pageslider(item, callback) {
 			}
 		}
 	
-	
-	
 		function sliderActive(pageActive) {
 	
 			$body.setAttribute( 'data-pageslider-progress', Math.round(100 / (pageLength - 1) * pageActive) );
@@ -316,8 +318,6 @@ function pageslider(item, callback) {
 				}
 			}, delayTime - 700);
 		}
-	
-	
 	
 		function fnPrevNav() {
 	
@@ -358,8 +358,6 @@ function pageslider(item, callback) {
 	
 		}
 	
-	
-	
 		function clickNav(item) {
 	
 			var i = item.num;
@@ -379,8 +377,6 @@ function pageslider(item, callback) {
 				handle(delta, animationTime, true, i, noActivePage);
 			}
 		}
-	
-	
 	
 		function keyNav(keyCode) {
 	
@@ -404,8 +400,6 @@ function pageslider(item, callback) {
 			}
 		}
 	
-	
-	
 		// delete all class active
 		function classClean() {
 	
@@ -417,8 +411,6 @@ function pageslider(item, callback) {
 				}
 			};
 		}
-	
-	
 	
 		function handle(delta, delay, nav, i, noActivePage) {
 	
@@ -582,8 +574,6 @@ function pageslider(item, callback) {
 			}
 		}
 	
-	
-	
 		function func() { // add class for animation and
 		//add active class for new slider
 	
@@ -603,5 +593,4 @@ function pageslider(item, callback) {
 	
 			$pageActive.classList.add('active');
 		}
-	
 	};
