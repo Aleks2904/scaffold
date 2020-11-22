@@ -1,13 +1,5 @@
 .services {
-    display: flex;
-    align-items: center;
-    @include px1400{
-        padding: 120px 0;
-    }
-
-    @include px1024-1399{
-        padding: 120px 0;
-    }
+    @include section;
 
     @include px1399{
         background-image: url('../img/castom_img/desctop/desct_1.jpg');

@@ -152,6 +152,7 @@ function pageslider(item, callback) {
 				if(event.classList.contains('active')){
 					if(event.querySelector('.contain-page') == null){
 						scrollSlides(1);
+						console.log("null")
 					}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
 						scrollSlides(1);
 					}else{
@@ -164,6 +165,7 @@ function pageslider(item, callback) {
 
 						if(scrollBottom == result){
 							scrollSlides(1);
+							console.log("result")
 						}
 			 		}
 		 		}

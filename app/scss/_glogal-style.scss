@@ -27,11 +27,20 @@ $paddingXContainer320: 15px;
 }
 
 .contain-page{
-    @include px767 {
-        @include h320-459{
-            height: 65vh;
-            overflow-y: auto;
-        }
+    overflow-y: auto;
+
+    &::-webkit-scrollbar { 
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f7efef;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #a5a2a2;
+        border-radius: 5px;
     }
 }
 

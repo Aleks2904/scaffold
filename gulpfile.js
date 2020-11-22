@@ -30,6 +30,9 @@ const jsFiles = [
         //scroll
     'app/js/scroll-castom.js',
 
+        //height
+    'app/js/height.js',
+
         //header
     'app/js/nav-header.js',
 

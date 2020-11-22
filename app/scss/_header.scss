@@ -221,11 +221,11 @@
         display: flex;
         order: 1;
 
-        @include h320-459{
-            flex-direction: column;
-            align-items: center;
-            margin-top: -8vh;
-        }
+        // @include h320-459{
+        //     flex-direction: column;
+        //     align-items: center;
+        //     margin-top: -8vh;
+        // }
 
         @include px1023{
             flex-direction: column;
