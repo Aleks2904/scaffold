@@ -111,47 +111,37 @@ function pageslider(item, callback) {
 
 			btnServices.forEach(function(e){
 				if(event.target == e || event.target.closest('.services__btn-services')){
-					result = false;
+					const trg = event.target;
+					let attr1,
+						attr2;
+
+					attr1 = trg.getAttribute("aria-expanded");
+
+					setTimeout(function(){
+						attr2 = trg.getAttribute("aria-expanded");
+
+						if(attr1 == attr2){
+							result = true;
+						}else{
+							result = false;
+						}
+					}, 1)
 				}
 			})
 
-			if(result == false){
-				return false;
-			}
-
-			if(event.target == header || event.target.closest('#js-header') || event.target == footer || event.target.closest('#js-footer')){
-				return false;
-			}
-
-			page.forEach(function(event){
-				if(event.classList.contains('active')){
-					if(event.querySelector('.contain-page') == null){
-						if (touchNowPoint.clientY < touchStartPoint) {
-							delta = 1;
-							scrollSlides(delta);
-						}
-						else {
-							delta = -1;
-							scrollSlides(delta);
-						}
-					}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
-						if (touchNowPoint.clientY < touchStartPoint) {
-							delta = 1;
-							scrollSlides(delta);
-						}
-						else {
-							delta = -1;
-							scrollSlides(delta);
-						}
-					}else{
-						const scroll = event.querySelector('.contain-page').scrollTop,
-							  scrollBottom = event.querySelector('.contain-page').scrollHeight,
-							  height = event.querySelector('.contain-page').clientHeight;
-
-						let result = scroll + height;
-						result = result.toFixed(0);
-
-						if(scrollBottom == result){
+			setTimeout(function(){
+				if(result == false){
+					result = true;
+					return false;
+				}
+	
+				if(event.target == header || event.target.closest('#js-header') || event.target == footer || event.target.closest('#js-footer')){
+					return false;
+				}
+	
+				page.forEach(function(event){
+					if(event.classList.contains('active')){
+						if(event.querySelector('.contain-page') == null){
 							if (touchNowPoint.clientY < touchStartPoint) {
 								delta = 1;
 								scrollSlides(delta);
@@ -160,11 +150,37 @@ function pageslider(item, callback) {
 								delta = -1;
 								scrollSlides(delta);
 							}
-						}
-			 		}
-		 		}
-			 })
+						}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
+							if (touchNowPoint.clientY < touchStartPoint) {
+								delta = 1;
+								scrollSlides(delta);
+							}
+							else {
+								delta = -1;
+								scrollSlides(delta);
+							}
+						}else{
+							const scroll = event.querySelector('.contain-page').scrollTop,
+								  scrollTop = 0,
+								  scrollBottom = event.querySelector('.contain-page').scrollHeight,
+								  height = event.querySelector('.contain-page').clientHeight;
 	
+							let result = scroll + height;
+							result = result.toFixed(0);
+	
+							if(scrollBottom == result){
+								delta = 1;
+								scrollSlides(delta);
+							}
+	
+							if(scroll == scrollTop){
+								delta = -1;
+								scrollSlides(delta);
+							}
+						 }
+					 }
+				 })	
+			} ,2)
 		}, false);
 	
 		//Keybord
