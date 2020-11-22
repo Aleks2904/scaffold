@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
        allHeight = hBody - ((hHeader * 2) + padding);
 
        containPage.forEach(function(e){
-        e.style.height = `${allHeight}px`;
+        e.style.maxHeight = `${allHeight}px`;
     })
     }
 
