@@ -121,7 +121,7 @@
         transition: background-color 0.3s, opacity 0.3s;
 
         &_rotate{
-            transform: rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
             transition: transform 0.3s;
         }
 
