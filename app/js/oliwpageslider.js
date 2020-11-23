@@ -211,7 +211,6 @@ function pageslider(item, callback) {
 
 						if(scrollBottom == result){
 							scrollSlides(1);
-							console.log("result")
 						}
 			 		}
 		 		}
@@ -223,20 +222,30 @@ function pageslider(item, callback) {
 
 			page.forEach(function(event){
 				if(event.classList.contains('active')){
-					if(event.querySelector('.contain-page') == null){
+					let containPage = event.querySelector('.contain-page');
+					const containPageAll = document.querySelectorAll('.contain-page');
+
+					if(containPage == null){
 						scrollSlides(-1);
-					}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
+					}else if(containPage.scrollHeight == containPage.offsetHeight){
+						containPageAll.forEach(function(e){
+							e.scrollTo(0, 0);
+						})
+
 						scrollSlides(-1);
 					}else{
-						const scroll = event.querySelector('.contain-page').scrollTop,
+						const scroll = containPage.scrollTop,
 							  scrollTop = 0,
-							  scrollBottom = event.querySelector('.contain-page').scrollHeight,
-							  height = event.querySelector('.contain-page').clientHeight;
+							  height = containPage.clientHeight;
 
 						let result = scroll + height;
 						result = result.toFixed(0);
 
 						if(scroll == scrollTop){
+							containPageAll.forEach(function(e){
+								e.scrollTo(0, 0);
+							})
+
 							scrollSlides(-1);
 						}
 			 		}
@@ -305,8 +314,8 @@ function pageslider(item, callback) {
 			var $children = $pageActive.children[0];
 
 			const header = document.querySelector('#js-header'),
-				  style = window.getComputedStyle(header, null),
 				  footer = document.querySelector('#js-footer'),
+				  style = window.getComputedStyle(header, null),
 				  style2 = window.getComputedStyle(footer, null);
 
 			if(style.opacity == "1" || style2.opacity == "1"){
