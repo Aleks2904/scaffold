@@ -9,6 +9,8 @@
     opacity: 0.7;
     transition: opacity 0.3s , background-color,  transform 0.3s;
 
+    outline: none;
+
     @include px1024{
         transform: translateY(80%);
     }
@@ -136,12 +138,18 @@
         font-weight: 800;
         font-family: 'TimesNewItalic', sans-serif;
 
-        transition: transform 0.3s;
+        padding: 2px;
+        border-bottom: 1.5px solid transparent;
+
+        outline: none;
+
+        transition: transform 0.3s, border-color 0.3s;
 
         &:hover,
         &:focus{
-            transform: translateX(10%) scale(1.2);
-            transition: transform 0.3s;
+            transform: translateX(15%) scale(1.3);
+            border-color: black;
+            transition: transform 0.3s, border-color 0.3s;
         }
 
         @include px1024{
@@ -178,5 +186,19 @@
         &_company{
             font-family: 'TimesNewItalic',sans-serif;
         }
+    }
+}
+
+.footer-active{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0.3s , background-color,  transform 0.3s;
+}
+
+.footer-container-active{
+    &::after{
+        background-image: url("../img/svg/logo-active.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }

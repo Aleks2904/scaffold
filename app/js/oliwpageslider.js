@@ -141,8 +141,14 @@ function pageslider(item, callback) {
 	
 				page.forEach(function(event){
 					if(event.classList.contains('active')){
+						const containPageAll = document.querySelectorAll('.contain-page')
 						if(event.querySelector('.contain-page') == null){
 							if (touchNowPoint.clientY < touchStartPoint) {
+
+								containPageAll.forEach(function(e){
+									e.scrollTo(0, 0);
+								})
+
 								delta = 1;
 								scrollSlides(delta);
 							}
@@ -152,6 +158,10 @@ function pageslider(item, callback) {
 							}
 						}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
 							if (touchNowPoint.clientY < touchStartPoint) {
+								containPageAll.forEach(function(e){
+									e.scrollTo(0, 0);
+								})
+
 								delta = 1;
 								scrollSlides(delta);
 							}
@@ -169,6 +179,10 @@ function pageslider(item, callback) {
 							result = result.toFixed(0);
 	
 							if(scrollBottom == result){
+								containPageAll.forEach(function(e){
+									e.scrollTo(0, 0);
+								})
+
 								delta = 1;
 								scrollSlides(delta);
 							}
@@ -256,7 +270,6 @@ function pageslider(item, callback) {
 		window.addEventListener('resize', function(event) {
 			winH = window.innerHeight || document.documentElement.clientHeight
 		});
-	
 	
 		if ( $prev ) { // click on "prev" button
 	
@@ -445,6 +458,8 @@ function pageslider(item, callback) {
 				// 87 - is arrow top
 				// 38 - is arrow bottom
 				delta = -1;
+
+				console.log("up");
 	
 				noActivePage = pageActive;
 	
@@ -456,8 +471,30 @@ function pageslider(item, callback) {
 				delta = 1;
 	
 				noActivePage = pageActive;
-	
-				scrollSlides(delta);
+
+
+				let page = document.querySelectorAll('.page');
+
+				page.forEach(function(event){
+					if(event.classList.contains('active')){
+						if(event.querySelector('.contain-page') == null){
+							scrollSlides(delta);
+						}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
+							scrollSlides(delta);
+						}else{
+							const scroll = event.querySelector('.contain-page').scrollTop,
+								scrollBottom = event.querySelector('.contain-page').scrollHeight,
+								height = event.querySelector('.contain-page').clientHeight;
+
+							let result = scroll + height;
+							result = result.toFixed(0);
+
+							if(scrollBottom == result){
+								scrollSlides(delta);
+							}
+						}
+					}
+				})
 			}
 		}
 	

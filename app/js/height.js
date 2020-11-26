@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const hHeader = header.clientHeight,
               hBody = body.clientHeight;
 
+        
+
        let  allHeight,
             padding;
 

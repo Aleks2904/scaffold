@@ -27,6 +27,9 @@ const jsFiles = [
     'node_modules/swiper/swiper-bundle.min.js',
     'app/js/webp.js',
 
+        //tab
+    'app/js/tab.js',
+
         //scroll
     'app/js/scroll-castom.js',
 

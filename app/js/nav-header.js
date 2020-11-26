@@ -21,15 +21,11 @@ document.addEventListener('DOMContentLoaded', function(){
         e.addEventListener('click', function(){
             close();
         })
-    })
 
-    function close(){
-        nav.classList.remove('header__nav_active');
-        body.classList.remove('open-modal');
-        header.classList.remove('header_active');
-        btnOpen.setAttribute('aria-expanded', 'false');
-        btnClose.setAttribute('aria-expanded', 'true');
-    };
+        e.addEventListener('touchend', function(){
+            close();
+        })
+    })
 
     btnClose.addEventListener('click', function(e){
         e.preventDefault();
@@ -49,5 +45,14 @@ document.addEventListener('DOMContentLoaded', function(){
         if(width >= 1024){
             close();
         }
+    };
+
+
+    function close(){
+        nav.classList.remove('header__nav_active');
+        body.classList.remove('open-modal');
+        header.classList.remove('header_active');
+        btnOpen.setAttribute('aria-expanded', 'false');
+        btnClose.setAttribute('aria-expanded', 'true');
     };
 })
