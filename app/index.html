@@ -144,16 +144,17 @@
             </div>
 
             <div class="presentation__content-block">
-                <h2 class="presentation__title">
-                    Наша компания занимается компенсационным лесовосстановлением
-                </h2>
-<!--
-                <h1 class="presentation__main-title">
+                <h1 class="visually-hidden ">
                     ООО <span class="presentation__main-title_company">
                             «Красноярский лесопитомник» 
                         </span>
                 </h1>
--->
+            <!--
+                <h2 class="presentation__title">
+                    Наша компания занимается компенсационным лесовосстановлением
+                </h2>
+
+            -->
                 <p class="presentation__text-discription">
                     Компенсационное лесовосстановление&nbsp;&mdash; ключевой компонент программы воспроизводства природных ресурсов, осуществляемой на&nbsp;основании подготовленного заранее проекта лесовосстановления.
                 </p>
@@ -161,26 +162,30 @@
         </section>
 
         <section class="aboutUs page">
-            <div class="container contain-page" tabindex="0">
-                <h2 class="visually-hidden">
-                    Чем мы занимаемся?
-                </h2>
+            <div id="js-about-us-container" class="aboutUs__container container contain-page" tabindex="0">
+                <div class="aboutUs__img-block"></div>
+
+                <div class="aboutUs__text-block">
+                    <h2 class="visually-hidden">
+                        Чем мы занимаемся?
+                    </h2>
+        <!--
+                    <p class="aboutUs__title">
+                        Основной сферой деятельности нашей организации является лесное хозяйство. 
+                    </p>
+        -->
+                    <p class="aboutUs__discription">
+                        ООО <span class="aboutUs__discription_company">&laquo;Красноярский лесопитомник&raquo;</span> оказывает полный комплекс услуг по&nbsp;компенсационному лесовосстановлению, начиная от&nbsp;подбора и&nbsp;проектирования лесного участка и&nbsp;до&nbsp;сдачи работ уполномоченному органу в&nbsp;области лесного хозяйства. 
+                    </p>
     
-                <p class="aboutUs__title">
-                    Основной сферой деятельности нашей организации является лесное хозяйство. 
-                </p>
-
-                <p class="aboutUs__discription">
-                    ООО <span class="aboutUs__discription_company">&laquo;Красноярский лесопитомник&raquo;</span> оказывает полный комплекс услуг по&nbsp;компенсационному лесовосстановлению, начиная от&nbsp;подбора и&nbsp;проектирования лесного участка и&nbsp;до&nbsp;сдачи работ уполномоченному органу в&nbsp;области лесного хозяйства. 
-                </p>
-
-                <p class="aboutUs__title-discription">
-                    Оказание услуг осуществляется на&nbsp;основании договора и&nbsp;в&nbsp;соответствии с&nbsp;доверенностью выданной заказчиком. 
-                </p>
-
-                <p class="aboutUs__title-discription">
-                    Услуги проводятся в&nbsp;соответствии с&nbsp;Лесным кодексом Российской Федерации по&nbsp;правилам, способам и&nbsp;методами, установленными действующим законодательством.
-                </p>
+                    <p class="aboutUs__title-discription">
+                        Оказание услуг осуществляется на&nbsp;основании договора и&nbsp;в&nbsp;соответствии с&nbsp;доверенностью выданной заказчиком. 
+                    </p>
+    
+                    <p class="aboutUs__title-discription">
+                        Услуги проводятся в&nbsp;соответствии с&nbsp;Лесным кодексом Российской Федерации по&nbsp;правилам, способам и&nbsp;методами, установленными действующим законодательством.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -206,7 +211,11 @@
                     Что мы можем вам предложить ?
                 </h2>
 
-                <ul class="services__list">
+                <p class="services__discription">
+                    Работы по&nbsp;компенсаицонному лесовостановлению состоят из&nbsp;следующих этапов:
+                </p>
+
+                <ul id="js-services-list" class="services__list">
                     <li class="services__item">
                         <button class="services__btn-services" aria-label="показать/скрыть подробности" type="button" aria-controls="services1" aria-expanded="false">
                             Определение площади компенсационного лесовосстановления и&nbsp;подача заявления о&nbsp;намерении провести работы по&nbsp;лесовосстановлению
@@ -339,7 +348,7 @@
         </section>
 
         <section class="price page">
-            <div class="container contain-page" tabindex="0">
+            <div class="price__container container contain-page" tabindex="0">
                 <h2 class="price__title visually-hidden">
                     Цены
                 </h2>

@@ -33,8 +33,13 @@
         }
     }
 
-    &__list {
+    &__discription{
+        @include title;
+    }
 
+    &__list {
+        height: 50vh;
+        overflow-y: auto;
     }
 
     &__item{

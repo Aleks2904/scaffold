@@ -5,6 +5,32 @@
     align-items:center;
     padding: 0 !important;
 
+    &__container{
+        position: relative;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 50%;
+            height: 100%;
+
+            z-index: -1;
+
+            background: url('../img/castom_img/prise/1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            shape-outside: polygon(0 75%, 40% 0, 100% 0, 100% 100%, 40% 100%);
+            clip-path: polygon(0 75%, 40% 0, 100% 0, 100% 100%, 40% 100%);
+        }
+    }
+
     &__title {
         @include title;
     }

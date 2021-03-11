@@ -207,64 +207,68 @@ function pageslider(item, callback) {
 		}, false);
 	
 		window.addEventListener('scrollDown', function(event) {
-			let page = document.querySelectorAll('.page');
+			if(checkDown()){
+				let page = document.querySelectorAll('.page');
 
-			page.forEach(function(event){
-				if(event.classList.contains('active')){
-					if(event.querySelector('.contain-page') == null){
-						scrollSlides(1);
-					}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
-						scrollSlides(1);
-					}else{
-						const scroll = event.querySelector('.contain-page').scrollTop,
-							  scrollBottom = event.querySelector('.contain-page').scrollHeight,
-							  height = event.querySelector('.contain-page').clientHeight;
-
-						let result = scroll + height;
-						result = result.toFixed(0);
-
-						if(scrollBottom == result){
+				page.forEach(function(event){
+					if(event.classList.contains('active')){
+						if(event.querySelector('.contain-page') == null){
 							scrollSlides(1);
+						}else if(event.querySelector('.contain-page').scrollHeight == event.querySelector('.contain-page').offsetHeight){
+							scrollSlides(1);
+						}else{
+							const scroll = event.querySelector('.contain-page').scrollTop,
+								scrollBottom = event.querySelector('.contain-page').scrollHeight,
+								height = event.querySelector('.contain-page').clientHeight;
+
+							let result = scroll + height;
+							result = result.toFixed(0);
+
+							if(scrollBottom == result){
+								scrollSlides(1);
+							}
 						}
-			 		}
-		 		}
-			 })
+					}
+				})
+			}
 		});
 	
 		window.addEventListener('scrollUp', function(event) {
-			let page = document.querySelectorAll('.page');
+			if(checkUp()){
+				let page = document.querySelectorAll('.page');
 
-			page.forEach(function(event){
-				if(event.classList.contains('active')){
-					let containPage = event.querySelector('.contain-page');
-					const containPageAll = document.querySelectorAll('.contain-page');
+				page.forEach(function(event){
+					if(event.classList.contains('active')){
+						let containPage = event.querySelector('.contain-page');
+						const containPageAll = document.querySelectorAll('.contain-page');
 
-					if(containPage == null){
-						scrollSlides(-1);
-					}else if(containPage.scrollHeight == containPage.offsetHeight){
-						containPageAll.forEach(function(e){
-							e.scrollTo(0, 0);
-						})
-
-						scrollSlides(-1);
-					}else{
-						const scroll = containPage.scrollTop,
-							  scrollTop = 0,
-							  height = containPage.clientHeight;
-
-						let result = scroll + height;
-						result = result.toFixed(0);
-
-						if(scroll == scrollTop){
+						if(containPage == null){
+							scrollSlides(-1);
+						}else if(containPage.scrollHeight == containPage.offsetHeight){
 							containPageAll.forEach(function(e){
 								e.scrollTo(0, 0);
 							})
 
 							scrollSlides(-1);
+						}else{
+							const scroll = containPage.scrollTop,
+								scrollTop = 0,
+								height = containPage.clientHeight;
+
+							let result = scroll + height;
+							result = result.toFixed(0);
+
+							if(scroll == scrollTop){
+								containPageAll.forEach(function(e){
+									e.scrollTo(0, 0);
+								})
+
+								scrollSlides(-1);
+							}
 						}
-			 		}
-		 		}
-			 })
+					}
+				})
+			}
 		});
 	
 		window.addEventListener('resize', function(event) {
@@ -690,5 +694,67 @@ function pageslider(item, callback) {
 			};
 	
 			$pageActive.classList.add('active');
+		}
+
+		function checkUp(){
+			const page = document.querySelectorAll('.page'),
+				  services = document.querySelector('.services');
+
+			let result = true;
+
+			page.forEach(function(event){
+				if(event.classList.contains('active')){
+					if(services.classList.contains('active')){
+						const container = event.querySelector('#js-services-list');
+						if(check(container)){
+							result = true;
+						}else{
+							result = false;
+						}
+					}
+				}
+			})
+
+			function check(block){
+				const scrollTop = block.scrollTop;
+
+				if(scrollTop == 0){
+					return true;
+				}
+			}
+
+			return result;
+		}
+
+		function checkDown(){
+			const page = document.querySelectorAll('.page'),
+				  services = document.querySelector('.services');
+
+			let result = true;
+
+			page.forEach(function(event){
+				if(event.classList.contains('active')){
+					if(services.classList.contains('active')){
+						const container = event.querySelector('#js-services-list');
+						if(check(container)){
+							result = true;
+						}else{
+							result = false;
+						}
+					}
+				}
+			})
+
+			function check(block){
+				const scrollHeight = block.scrollHeight,
+					  scrollTop = block.scrollTop,
+					  offsetHeight = block.offsetHeight;
+
+				if(scrollHeight - scrollTop == offsetHeight){
+					return true;
+				}
+			}
+
+			return result;
 		}
 	};

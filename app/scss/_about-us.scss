@@ -1,6 +1,10 @@
 .aboutUs{
     @include section;
 
+    &__container{
+        outline: none;
+    }
+
     &__title {
         @include title;
 
@@ -30,7 +34,7 @@
     }
 
     &__title-discription{
-        font-weight: 800;
+        font-weight: 400;
 
         @include px1400{
             font-size: 28px;
@@ -103,5 +107,19 @@
         &_company{
             font-family:'TimesNewItalic', sans-serif;
         }
+    }
+
+    &__img-block{
+       // height: 300px;
+        width: 30%;
+
+        float: right;
+        background: url('../img/castom_img/aboutUs/1.jpg');
+        background-size:cover;
+        background-repeat: no-repeat;
+
+        shape-outside: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+        shape-margin: 20px;
     }
 }

@@ -40,7 +40,7 @@
         width: 100vw;
 
         transform: translate(-50%, -50%);
-        top: 50vh;
+        top: 35vh;
 
         z-index: 2;
     }
@@ -145,20 +145,13 @@
     // }
 
     &__text-discription {
-        text-align: center;
         margin: 0 auto;
         font-weight: 600;
 
         color: wheat;
 
         @include px1024{
-            font-size: 30px;
-            letter-spacing: 0.5px;
-            max-width: 70%;
-        }
-
-        @include px1024-1399{
-            font-size: 30px;
+            font-size: 35px;
             letter-spacing: 0.5px;
             max-width: 70%;
         }
