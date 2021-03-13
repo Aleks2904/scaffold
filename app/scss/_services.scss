@@ -35,11 +35,17 @@
 
     &__discription{
         @include title;
+
+        @include px1399{
+            color: wheat;
+        }
     }
 
     &__list {
         height: 50vh;
         overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 10px;
     }
 
     &__item{
@@ -98,14 +104,14 @@
             padding: 30px 30% 30px 1%;
 
             font-size: 18px;
-            color: white;
+            color: wheat;
         }
 
         @include px767{
             padding: 30px 30% 30px 1%;
 
             font-size: 16px;
-            color: white;
+            color: wheat;
         }
     }
 

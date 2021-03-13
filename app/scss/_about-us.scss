@@ -1,93 +1,82 @@
 .aboutUs{
     @include section;
 
-    &__container{
-        outline: none;
-    }
+    // &__title {
+    //     @include title;
 
-    &__title {
-        @include title;
+    //     @include px1400{
+    //         &:not(:last-child){
+    //             margin-bottom: 3vh;
+    //         }
+    //     }
 
-        @include px1400{
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
+    //     @include px1024-1399{
+    //         &:not(:last-child){
+    //             margin-bottom: 3vh;
+    //         }
+    //     }
 
-        @include px1024-1399{
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
+    //     @include px768-1023{
+    //         &:not(:last-child){
+    //             margin-bottom: 3vh;
+    //         }
+    //     }
 
-        @include px768-1023{
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
+    //     @include px767{
+    //         &:not(:last-child){
+    //             margin-bottom: 3vh;
+    //         }
+    //     }
+    // }
 
-        @include px767{
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
-    }
+    // &__title-discription{
+    //     font-weight: 400;
 
-    &__title-discription{
-        font-weight: 400;
+    //     @include px1024{
+    //         font-size: 28px;
+    //         &:not(:last-child){
+    //             margin-bottom: 3vh;
+    //         }
+    //     }
 
-        @include px1400{
-            font-size: 28px;
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
+    //     @include px768-1023{
+    //         font-size: 20px;
+    //         &:not(:last-child){
+    //             margin-bottom: 3vh;
+    //         }
+    //     }
 
-        @include px1024-1399{
-            font-size: 24px;
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
+    //     @include px767{
+    //         font-size: 18px;
+    //         &:not(:last-child){
+    //             margin-bottom: 3vh;
+    //         }
 
-        @include px768-1023{
-            font-size: 20px;
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
-
-        @include px767{
-            font-size: 18px;
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-
-            @include h320-459{
-                font-size: 14px;
-            }
-        }
-    }
+    //         @include h320-459{
+    //             font-size: 14px;
+    //         }
+    //     }
+    // }
 
     &__discription {
         font-weight: 400;
 
         @include px1400{
-            font-size: 28px;
+            font-size: 32px;
             &:not(:last-child){
                 margin-bottom: 3vh;
             }
         }
 
         @include px1024-1399{
-            font-size: 24px;
+            font-size: 28px;
             &:not(:last-child){
                 margin-bottom: 3vh;
             }
         }
 
         @include px768-1023{
-            font-size: 20px;
+            font-size: 26px;
             &:not(:last-child){
                 margin-bottom: 3vh;
             }

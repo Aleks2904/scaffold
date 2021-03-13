@@ -40,56 +40,63 @@
         width: 100vw;
 
         transform: translate(-50%, -50%);
-        top: 35vh;
 
         z-index: 2;
-    }
 
-    &__title {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 800;
-
-        color: wheat;
-
-        @include px1400{
-            font-size: 40px;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include px1024-1399{
-            font-size: 34px;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include px768-1023{
-            font-size: 34px;
-            width: 80%;
-            margin: 0 auto;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
+        @include px768{
+            top: 35vh;
         }
 
         @include px767{
-            font-size: 18px;
-            width: 80%;
-            margin: 0 auto;
-            letter-spacing: 1px;
-
-            margin-bottom: 10vh;
-        }
-
-        @include h320-459{
-            font-size: 20px;
-            letter-spacing: 0.5px;
-            width: 90%;
+            top: 50%;
         }
     }
+
+    // &__title {
+    //     text-align: center;
+    //     text-transform: uppercase;
+    //     font-weight: 800;
+
+    //     color: wheat;
+
+    //     @include px1400{
+    //         font-size: 40px;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include px1024-1399{
+    //         font-size: 34px;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include px768-1023{
+    //         font-size: 34px;
+    //         width: 80%;
+    //         margin: 0 auto;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include px767{
+    //         font-size: 18px;
+    //         width: 80%;
+    //         margin: 0 auto;
+    //         letter-spacing: 1px;
+
+    //         margin-bottom: 10vh;
+    //     }
+
+    //     @include h320-459{
+    //         font-size: 20px;
+    //         letter-spacing: 0.5px;
+    //         width: 90%;
+    //     }
+    // }
 
     // &__main-title{
     //     text-align: center;
@@ -145,7 +152,6 @@
     // }
 
     &__text-discription {
-        margin: 0 auto;
         font-weight: 600;
 
         color: wheat;
@@ -153,7 +159,8 @@
         @include px1024{
             font-size: 35px;
             letter-spacing: 0.5px;
-            max-width: 70%;
+            width: 65%;
+            max-width: 900px;
         }
 
         @include px768-1023{
@@ -163,13 +170,13 @@
         }
 
         @include px767{
-            font-size: 18px;
+            font-size: 26px;
             letter-spacing: 0.5px;
             max-width: 90%;
         }
 
         @include h320-459{
-            font-size: 16px;
+            font-size: 20px;
             letter-spacing: 0.5px;
             max-width: 90%;
         }
