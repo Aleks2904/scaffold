@@ -157,22 +157,21 @@
         color: wheat;
 
         @include px1024{
-            font-size: 35px;
+            font-size: 55px;
             letter-spacing: 0.5px;
             width: 65%;
             max-width: 900px;
         }
 
         @include px768-1023{
-            font-size: 28px;
+            font-size: 45px;
             letter-spacing: 0.5px;
             max-width: 85%;
         }
 
         @include px767{
-            font-size: 26px;
+            font-size: 35px;
             letter-spacing: 0.5px;
-            max-width: 90%;
         }
 
         @include h320-459{

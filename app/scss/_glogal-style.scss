@@ -29,6 +29,7 @@ $paddingXContainer320: 15px;
 
 .contain-page{
     overflow-y: auto;
+    max-height: 90%;
 
     &::-webkit-scrollbar { 
         width: 6px;

@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const conteiner = document.querySelector('#js-about-us-container'),
-          imgBlock = document.querySelector('.aboutUs__img-block'),
-          heightImgBlock = 75;
+    const imgBlock = document.querySelectorAll('.aboutUs__img-block');
 
     function setHeight(){
-        const heightBlock = conteiner.offsetHeight,
-              heightImg = heightBlock / 100 * heightImgBlock;
-
-        imgBlock.style.height = `${heightImg}px`;
+        imgBlock.forEach((el)=>{
+            const container = el.parentElement,
+                  textHeight = container.querySelector('.aboutUs__discription').offsetHeight,
+                  imgHeimg = textHeight/100*90;
+    
+            el.style.height = `${imgHeimg}px`;
+    
+        })
     }
 
     setHeight();
