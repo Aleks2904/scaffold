@@ -47,6 +47,9 @@ const jsFiles = [
 
         //servisec
     'app/js/servisec.js',
+
+        //footer
+    'app/js/card.js',
 ]
 
 const cssFiles = [

@@ -19,8 +19,17 @@
     }
 
     &__container {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto 1fr;
         align-items: center;
+
+        @include px1400{
+            grid-gap: 60px;
+        }
+
+        @include px1024-1399{
+            grid-gap: 30px;
+        }
     }
 
     &__logo-link {
@@ -71,11 +80,11 @@
     }
 
     &__nav-open-btn{
-        @include px1024{
+        @include px1400{
             display: none;
         }
 
-        @include px1023{
+        @include px1399{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -126,17 +135,17 @@
             display: flex !important;
         }
 
-        @include px1024{
-            margin: 0 auto;
+        @include px1400{
+            width: 100%;
         }
 
-        @include px1023{
+        @include px1399{
             display: none;
             flex-direction: column;
 
             position: fixed;
 
-            background-color: $WHITE;
+            background-color: rgba($color: #000000, $alpha: .7);
             right: 0;
             top: 0;
 
@@ -145,7 +154,7 @@
             opacity: 1;
         }
 
-        @include px768-1023{
+        @include px768-1399{
             width: 50vw;
         }
 
@@ -155,11 +164,11 @@
     }
 
     &__nav-close-btn{
-        @include px1024{
+        @include px1400{
             display: none;
         }
 
-        @include px1023{
+        @include px1399{
             position: relative;
             order: -1;
 
@@ -193,7 +202,7 @@
     }
 
     &__nav-close-burger{
-        @include px1023{
+        @include px1399{
             display: block;
             position: absolute;
 
@@ -203,7 +212,7 @@
             width: 70%;
             height: 2px;
 
-            background-color: black;
+            background-color: $WHITE;
 
             transition: background-color 0.3s ;
 
@@ -221,9 +230,14 @@
         display: flex;
         order: 1;
 
-        @include px1023{
+        align-items: center;
+
+        @include px1400{
+            justify-content: space-between;
+        }
+
+        @include px1399{
             flex-direction: column;
-            align-items: center;
 
             @include h320-459{
                 margin-top: 0;
@@ -249,13 +263,7 @@
             transition: transform 0.4s;
         }
 
-        @include px1024{
-            &:not(:last-child){
-                margin-right: 5%;
-            }
-        }
-
-        @include px1023{
+        @include px1399{
             &:not(:last-child){
                 margin-bottom: 2vh;
             }
@@ -282,11 +290,15 @@
         transition: background 0.3s, border-image 0.3s, transform 0.3s;
 
         @include px1920{
-            font-size: 30px;
+            font-size: 25px;
         }
 
         @include px1400-1919{
-            font-size: 22px;
+            font-size: 20px;
+        }
+
+        @include px1399{
+            color: $WHITE;
         }
 
         @include px1024-1399{
