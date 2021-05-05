@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     const card = document.querySelector('.footer__card'),
-          modal = document.querySelector('.modal'),
-          body = document.querySelector('body');
+          modal = document.querySelector('.modal');
 
 
     card.addEventListener('click', function(e){
@@ -9,12 +8,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
         ymaps.ready(init);
     })    
-
-    body.addEventListener('click', function(e){
-        if(!e.target.closest('.modal') && !e.target.closest('.footer__card')){
-            modal.classList.remove('modal_active');
-        }
-    })
 
     function init(){
         const card = new ymaps.Map( modal, {

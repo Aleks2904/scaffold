@@ -1,12 +1,29 @@
 .new-services {
     @include section;
 
-    &__title {
+    &__title{
         @include title;
         text-align: center;
     }
 
-    &__discription {
+    &__text-container{
+        
+    }
+
+    &__img-block{
+        width: 40%;
+        float: right;
+
+        background: url('../img/castom_img/prise/1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        clip-path: polygon( 0 0, 100% 0, 100% 100%, 30% 100%);
+    }
+
+    &__discription{
         @include px1400{
             font-size: 28px;
             &:not(:last-child){
@@ -38,5 +55,53 @@
         &_company {
             font-family:'TimesNewItalic', sans-serif;
         }
+    }
+
+    &__btn{
+        cursor: pointer;
+        
+        margin-top: 30px;
+
+        font-size: 18px;
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    //form
+
+    &__form{
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .8);
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 5%;
+    }
+
+    &__form-title{
+        color: wheat;
+        margin: 0 auto;
+
+        margin-bottom: 20px;
+    }
+
+    &__form-label{
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form-label-text{
+        color: wheat;
+    }
+
+    &__form-input{
+        padding: 5px;
+    }
+
+    &__form-btn{
+        width: 150px;
     }
 }

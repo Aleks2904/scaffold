@@ -27,6 +27,9 @@ const jsFiles = [
     'node_modules/swiper/swiper-bundle.min.js',
     'app/js/webp.js',
 
+        //img height
+    'app/js/img-height.js',
+
         //tab
     'app/js/tab.js',
 
@@ -36,17 +39,20 @@ const jsFiles = [
         //height
     'app/js/height.js',
 
+        //modal close
+    'app/js/modal-close.js',
+
         //header
     'app/js/nav-header.js',
 
         //presentation
     'app/js/swiper-presentation.js',
 
-        //aboutUs
-    'app/js/about.js',
-
         //servisec
     'app/js/servisec.js',
+
+        //new-services
+    'app/js/new-services.js',
 
         //footer
     'app/js/card.js',
