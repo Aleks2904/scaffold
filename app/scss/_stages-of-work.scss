@@ -1,0 +1,159 @@
+.stages-of-work {
+    background: #ECF2E6;
+
+    @include px1024{
+        padding-top: 114px;
+        padding-bottom: 119px;
+    }
+
+    &__title {
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 19px;
+
+        text-transform: uppercase;
+
+        @include px1024{
+            margin-bottom:15px;
+        }
+    }
+
+    &__discription{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+
+        @include px1024{
+            margin-bottom: 31px;
+        }
+    }
+
+    &__list{
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 10px;
+    }
+
+    &__item{
+        &:nth-child(1){
+            border-top: 2px solid #9FBC8D;
+        }
+        border-bottom: 2px solid #9FBC8D;
+    }
+
+    &__btn{
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 19px;
+
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        position: relative;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        cursor: pointer;
+
+        transition: color 0.3s;
+
+        &:hover > .services__btn-icon,
+        &:focus > .services__btn-icon,
+        &:active > .services__btn-icon{
+            background-color: $DARK-GRAY;
+            opacity: 1;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+
+        &:hover,
+        &:focus{
+            color: $YELLOW;
+            transition: color 0.3s;
+        }
+
+        @include px1024{
+            padding: 28px 40px 28px 24px;
+
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 19px;
+        }
+    }
+
+    &__btn-counter{
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 19px;
+
+        margin-right: 18px;
+
+        color: #56A868;
+    }
+
+    &__btn-icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 2.2%;
+        transform: translateY(-50%);
+
+        opacity: 0.4;
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url('../img/svg/stages-of-work/needle.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transition: background-image 0.3s, opacity 0.3s;
+
+        &_rotate{
+            transform: translateY(-50%) rotate(180deg);
+            transition: transform 0.3s;
+        }
+
+    }
+
+    &__container-response {
+        display: none;
+        overflow: hidden;
+
+        @include px1024{
+            padding: 0 70px 28px;
+        }
+    }
+
+    &__response {
+        transform: translateX(-120%);
+        opacity: 0;
+
+        font-size: 16px;
+        line-height: 19px;
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+
+        transition: transform 0.5s, opacity 0.5s;
+
+        &_active1{
+            transform: translateX(0%);
+            opacity: 1;
+
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        &_active2{
+            transform: translateX(120%);
+            opacity: 0;
+
+            transition: transform 0.5s, opacity 0.5s;
+        }
+    }
+
+}

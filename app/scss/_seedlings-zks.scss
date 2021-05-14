@@ -1,0 +1,163 @@
+.seedlings-zks {
+    margin-top: 150px;
+    padding-bottom: 70px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+
+    &__img-block {
+        position: absolute;
+        padding-top: 17px;
+
+        height: 100%;
+        width: 41.8%;
+    }
+
+    &__img-container{
+        overflow: hidden;
+        border-radius: 14px; 
+        height: 100%;
+
+        &::after{
+            content: '';
+            display: block;
+
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+
+            width: 100%;
+            height: 98%;
+
+            background-color: transparent;
+
+            border: 1px solid #B7C7BE;
+            border-radius: 14px;
+
+            z-index: -1;
+        }
+    }
+
+    &__img{
+        object-fit: cover;
+        width: 100%;
+        height: 100% !important;
+    }
+
+    &__container{
+        
+    }
+
+    &__content-block{
+        width: 62.2%;
+
+        margin-left: auto;
+        margin-top: 43px;
+    }
+
+    &__title {
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 33px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 17px;
+    }
+
+    &__discription {
+        font-size: 16px;
+        line-height: 19px;
+
+        &:not(:last-child){
+            margin-bottom: 7px;
+        }
+
+
+        &_link {
+            color:#477A1E;
+        }
+    }
+
+    &__btn-block {
+        position: relative;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        background-color: #ECF2E6;
+        border-radius: 14px;
+
+        width: 100%;
+
+        margin-top: 72px;
+        
+        padding: 26px 31px;
+
+        &::after{
+            content: '';
+            display: block;
+
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+
+            width: 100%;
+            height: 100%;
+
+            border: 1px solid #ECF2E6;
+            border-radius: 14px;
+            background-color: transparent;
+
+            z-index: -1;
+        }
+
+        &::before{
+            content: '';
+            display: block;
+
+            width: 165px;
+            height: 222px;
+
+            position: absolute;
+            top: 63%;
+            left: -4px;
+
+            transform: translateY(-50%);
+
+            background-image: url('../img/seedlings-zks/hand.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__btn-title {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 19px;
+
+        margin-right: 10%;
+    }
+
+    &__btn {
+        cursor: pointer;
+
+        border: none;
+        outline: none;
+
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+
+        color: white;
+
+        background: #56A868;
+        border-radius: 5px;
+
+        padding: 13px 44px;
+    }
+}

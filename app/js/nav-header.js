@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     };
 
-
     function close(){
         nav.classList.remove('header__nav_active');
         body.classList.remove('open-modal');

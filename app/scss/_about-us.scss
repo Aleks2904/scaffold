@@ -1,156 +1,131 @@
-.aboutUs{
-    @include section;
+.aboutUs {
+    @include px1024{
+        margin-top: 101px;
+    }
 
-    // &__title {
-    //     @include title;
+    &__container {
+    }
 
-    //     @include px1400{
-    //         &:not(:last-child){
-    //             margin-bottom: 3vh;
-    //         }
-    //     }
+    &__title {
+        text-transform: uppercase;
 
-    //     @include px1024-1399{
-    //         &:not(:last-child){
-    //             margin-bottom: 3vh;
-    //         }
-    //     }
+        @include px1024{
+            font-size: 33px;
+            font-weight: 600;
+            line-height: 19px;
 
-    //     @include px768-1023{
-    //         &:not(:last-child){
-    //             margin-bottom: 3vh;
-    //         }
-    //     }
-
-    //     @include px767{
-    //         &:not(:last-child){
-    //             margin-bottom: 3vh;
-    //         }
-    //     }
-    // }
-
-    // &__title-discription{
-    //     font-weight: 400;
-
-    //     @include px1024{
-    //         font-size: 28px;
-    //         &:not(:last-child){
-    //             margin-bottom: 3vh;
-    //         }
-    //     }
-
-    //     @include px768-1023{
-    //         font-size: 20px;
-    //         &:not(:last-child){
-    //             margin-bottom: 3vh;
-    //         }
-    //     }
-
-    //     @include px767{
-    //         font-size: 18px;
-    //         &:not(:last-child){
-    //             margin-bottom: 3vh;
-    //         }
-
-    //         @include h320-459{
-    //             font-size: 14px;
-    //         }
-    //     }
-    // }
-    &__text-container{
-        overflow: hidden;
-
-        @include px1400{
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
+            margin-bottom: 21px;
         }
+    }
 
-        @include px1024-1399{
-            &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
+    &__discription {
+        @include px1024{
+            font-size: 16px;
+            line-height: 19px;
 
-        @include px768-1023{
             &:not(:last-child){
-                margin-bottom: 3vh;
-            }
-        }
-
-        @include px767{
-            &:not(:last-child){
-                margin-bottom: 3vh;
+                margin-bottom: 9px;
             }
         }
     }
 
-    &__discription{
-        grid-area: text;
-        line-height: 44px;
+    &__list {
+        @include px1024{
+            display: flex;
+            justify-content: space-evenly;
 
+            margin-top: 35px;
+            margin-bottom: 39px;
+
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        background-color:#ECF2E6;
+        border-radius: 5px;
+
+        &::after{
+            content: '';
+            display: block;
+
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+
+            background-color: transparent;
+
+            border: 1px solid #B7C7BE;
+            border-radius: 5px;
+        }
+
+        @include px1024{
+            max-width: 28%;
+            height: 207px;
+
+            padding: 0 30px 0 50px;
+        }
+
+        &:nth-child(1) .aboutUs__item-title::before{
+            background-image: url('../img/svg/about/about-1.svg');
+        }
+
+        &:nth-child(2) .aboutUs__item-title::before{
+            background-image: url('../img/svg/about/about-2.svg');
+        }
+
+        &:nth-child(3) .aboutUs__item-title::before{
+            background-image: url('../img/svg/about/about-3.svg');
+        }
+    }
+
+    &__item-container{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__item-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 17px;
+
+        padding-left: 42px;
+
+        margin-bottom: 8px;
+
+        max-width: 80%;
+
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+
+            height: 34px;
+            width: 34px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    &__item-text {
+        font-size: 14px;
         font-weight: 400;
+        line-height: 19px;
 
-        @include px1400{
-            font-size: 32px;
-        }
-
-        @include px1024-1399{
-            font-size: 28px;
-        }
-
-        @include px768-1023{
-            font-size: 26px;
-        }
-
-        @include px767{
-            font-size: 18px;
-
-            @include h320-459{
-                font-size: 14px;
-            }
-        }
-
-        &_company{
-            font-family:'TimesNewItalic', sans-serif;
-        }
-    }
-
-    &__img-block{
-        grid-area: img;
-        width: 30%;
-
-        background-size:cover !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-
-        &_1{
-            float: right;
-
-            shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-
-            background: url('../img/castom_img/aboutUs/1.jpg');
-        }
-
-        &_2{
-            float: left;
-
-            shape-outside: polygon(0 0, 70% 0%, 100% 50%, 70% 100%, 0 100%);
-            clip-path: polygon(0 0, 70% 0%, 100% 50%, 70% 100%, 0 100%);
-
-            background: url('../img/castom_img/aboutUs/2.jpg');
-        }
-
-        &_3{
-            float: right;
-
-            shape-outside: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-
-            background: url('../img/castom_img/aboutUs/3.jpg');
-        }
-
-        shape-margin: 20px;
+        margin-left: -3px;
     }
 }

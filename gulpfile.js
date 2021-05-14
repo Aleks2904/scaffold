@@ -21,45 +21,17 @@ var gulp         = require('gulp'), // Подключаем Gulp
 const jsFiles = [ 
         //libs
     'node_modules/jquery/dist/jquery.min.js',
-    //'node_modules/jquery-scrollify/jquery.scrollify.js',
-    'app/js/wheel-indicator.js',
-    'app/js/oliwpageslider.js',
-    'node_modules/swiper/swiper-bundle.min.js',
     'app/js/webp.js',
-
-        //img height
-    'app/js/img-height.js',
-
-        //tab
-    'app/js/tab.js',
-
-        //scroll
-    'app/js/scroll-castom.js',
-
-        //height
-    'app/js/height.js',
-
-        //modal close
-    'app/js/modal-close.js',
 
         //header
     'app/js/nav-header.js',
 
-        //presentation
-    'app/js/swiper-presentation.js',
+        //stages-of-work
 
-        //servisec
-    'app/js/servisec.js',
-
-        //new-services
-    'app/js/new-services.js',
-
-        //footer
-    'app/js/card.js',
+    'app/js/stages-of-work.js',
 ]
 
 const cssFiles = [
-    'node_modules/swiper/swiper-bundle.min.css',
     'app/css/libs/normalize.css',
     'app/css/fonts.css',
     'app/scss/main.scss'

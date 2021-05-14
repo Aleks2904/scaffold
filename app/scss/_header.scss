@@ -2,10 +2,12 @@
     position: fixed;
     top: 0;
     z-index: 9999;
-    width: 100vw;
+    width: 100%;
     background-color: $DARK-GRAY;
     opacity: 0.8;
     transition: opacity 0.3s, background-color 0.3s;
+
+    padding: 14px 0;
 
     &_active{
         background-color: rgba($color: $DARK-GRAY, $alpha: 0);
@@ -19,64 +21,7 @@
     }
 
     &__container {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center;
 
-        @include px1400{
-            grid-gap: 60px;
-        }
-
-        @include px1024-1399{
-            grid-gap: 30px;
-        }
-    }
-
-    &__logo-link {
-        display: block;
-
-        outline: none;
-
-        background-image: url("../img/svg/logoHeader.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-
-        transition: background-image 0.3s, transform 0.3s;
-
-        @include px1920 {
-            margin: 5px 0; 
-            width: 300px;
-            height: 100px;
-        }
-
-        @include px768-1919 {
-            margin: 5px 0; 
-            width: 200px;
-            height: 70px;
-        }
-
-        @include px767 {
-            margin: 5px 0; 
-            width: 170px;
-            height: 60px;
-
-            @include h320-459{
-                height: 45px;
-                width: 150px;
-            }
-        }
-
-        &:focus,
-        &:hover{
-            transform: scale(1.2);
-            background-image: url("../img/svg/logoHeader-active.svg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-
-            transition: background-image 0.3s, transform 0.3s;
-        }
     }
 
     &__nav-open-btn{
@@ -131,11 +76,33 @@
     }
 
     &__nav {
+        position: relative;
+
         &_active{
-            display: flex !important;
+            display: flex;
         }
 
-        @include px1400{
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 16%;
+            height: 64px;
+
+            background-image: url('../img/svg/logo-white.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+        @include px1024{
+            display: flex;
+            justify-content: space-between;
             width: 100%;
         }
 
@@ -228,11 +195,10 @@
 
     &__nav-list {
         display: flex;
-        order: 1;
-
         align-items: center;
 
-        @include px1400{
+        @include px1024{
+            width: 37%;
             justify-content: space-between;
         }
 
@@ -249,6 +215,7 @@
     }
 
     &__nav-item {
+        grid-area: li;
         &:focus > .header__nav-link,
         &:hover > .header__nav-link{
             background: linear-gradient(0deg, rgba(34,174,195,1) 39%, rgba(177,253,45,1) 100%);
@@ -284,22 +251,17 @@
         border-bottom: 2px solid transparent;
         padding-bottom: 5px;
 
-        font-family:'TimesNewItalic', sans-serif;
-        font-weight: 800;
+        font-weight: 600;
 
         transition: background 0.3s, border-image 0.3s, transform 0.3s;
 
-        @include px1920{
-            font-size: 25px;
+        @include px1024{
+            font-size: 17px;
+            line-height: 20px;
+
+            margin-top: 10px;
         }
 
-        @include px1400-1919{
-            font-size: 20px;
-        }
-
-        @include px1399{
-            color: $WHITE;
-        }
 
         @include px1024-1399{
             font-size: 18px;

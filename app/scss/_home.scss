@@ -1,0 +1,26 @@
+.home {
+    @include px768{
+        background-image: url('../img/home/1920.jpg');
+    }
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__container{
+        padding: 352px 0 332px;
+    }
+
+    &__discription{
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 82px;
+
+        color: $WHITE;
+
+        text-transform: uppercase;
+
+        text-align: center;
+    }
+
+}

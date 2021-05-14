@@ -1,25 +1,37 @@
 /* Times New Roman Regular */
 
 @font-face {
-  font-family: 'TimesNew';
+  font-family: 'ProximaNova';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Times New Roman Regular'), local('TimesNewRomanRegular'),
-       url('../fonts/TimesNew-400.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/TimesNew-400.woff') format('woff'), /* Modern Browsers */
+  src: local('ProximaNova'),
+       url('../fonts/ProximaNova-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ProximaNova-Regular.woff') format('woff'), /* Modern Browsers */
+}
+
+/* Times New Roman Regular it*/
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ProximaNova'),
+       url('../fonts/ProximaNova-RegularIt.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ProximaNova-RegularIt.woff') format('woff'), /* Modern Browsers */
 }
 
 /* Times New Roman Regular itelic */
 
 @font-face {
-  font-family: 'TimesNewItalic';
-  font-style: italic;
-  font-weight: 400;
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 600;
   font-display: swap;
-  src: local('Times New Roman Italicr'), local('TimesNewRomanItalic'),
-       url('../fonts/TimesNew-400-italic.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/TimesNew-400-italic.woff') format('woff'), /* Modern Browsers */
+  src: local('ProximaNova'),
+       url('../fonts/ProximaNova-Semibold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ProximaNova-Semibold.woff') format('woff'), /* Modern Browsers */
 }
 
 
@@ -27,25 +39,14 @@
 
 
 @font-face {
-  font-family: 'TimesNew';
+  font-family: 'ProximaNova';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-display: swap;
-  src: local('Times New Roman Bold'), local('TimesNewRomanBold'),
-       url('../fonts/TimesNew-800.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/TimesNew-800.woff') format('woff'), /* Modern Browsers */
+  src: local('ProximaNova'),
+       url('../fonts/ProximaNova-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ProximaNova-Bold.woff') format('woff'), /* Modern Browsers */
 }
 
-/* Times New Roman Bold Italic */
 
-
-@font-face {
-  font-family: 'TimesNewItalic';
-  font-style: italic;
-  font-weight: 800;
-  font-display: swap;
-  src: local('Times New Roman Bold Italic'), local('TimesNewRomanBoldItalic'),
-       url('../fonts/TimesNew-800-Italic.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/TimesNew-800-Italic.woff') format('woff'), /* Modern Browsers */
-}
 

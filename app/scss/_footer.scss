@@ -1,155 +1,83 @@
 .footer {
-    position: fixed;
-    display: flex;
-    bottom: 0;
-    padding: 2vh;
-    z-index: 9999;
-    width: 100vw;
-    background-color: $DARK-GRAY;
-    opacity: 0.7;
-    transition: opacity 0.3s , background-color,  transform 0.3s;
-
-    outline: none;
-
-    @include px1024{
-        transform: translateY(80%);
-    }
-
-    @include px768-1023{
-        transform: translateY(85%);
-    }
-
-    @include px767{
-        transform: translateY(85%);
-    }
-
-    @include h320-459{
-        transform: translateY(80%);
-    }
-
-    &:hover{
-        opacity: 1;
-        transform: translateY(0%);
-        transition: opacity 0.3s , background-color,  transform 0.3s;
-    }
-
-    &:hover > .footer__container::after{
-        background-image: url("../img/svg/logo-active.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+    margin-top: 127px;
+    padding-bottom: 10px;
 
     &__container{
-        height: 100%;
-        width: 100%;
-        position: relative;
+       display: flex;
+       justify-content: space-between;
 
-        display: flex;
-        flex-direction: column;
-
-        &::after{
-            content: "";
-            display: block;
-
-            position: absolute;
-
-            transform: translateY(-50%);
-            top: 50%;
-            left: 5vw;
-
-            z-index: -1;
-
-            @include px1400 {
-                height: 90%;
-                width: 25vw;
-            }
-
-            @include px1024-1399 {
-                height: 74%;
-                width: 25vw;
-            }
-
-            @include px768-1023 {
-                height: 80%;
-                width: 35vw;
-            }
-
-            @include px767 {
-                height: 75%;
-                width: 40vw;
-                min-width: 250px;
-            }
-        }
-
-    }
-
-    &__title {
-        font-weight: 800;
-        font-family:'TimesNewItalic', sans-serif;
-        margin-bottom: 10vh;
-
-        @include px1920{
-            font-size: 65px;
-        }
-
-        @include px1024-1919{
-            font-size: 45px;
-        }
-    
-        @include px768-1023{
-            font-size: 32px;
-        }
-    
-        @include px767{
-            font-size: 30px;
-        }
-
-        text-align: center;
     }
 
     &__content{
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: 20%;
+        padding-top: 40px;
+        width: 35%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 19px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 39px;
     }
 
     &__list {
-        margin-bottom: 15vh;
+        margin-bottom: 32px;
     }
 
     &__item {
+        position: relative;
+        padding-left: 24px;
+
+        &:nth-child(1)::after{
+            background-image: url('../img/svg/footer/icon_location.svg');
+        }
+
+        &:nth-child(2)::after{
+            background-image: url('../img/svg/footer/icon_email.svg');
+        }
+
+        &:nth-child(3)::after{
+            background-image: url('../img/svg/footer/icon_phone.svg');
+        }
+
         &:not(:last-child){
-            margin-bottom: 3vh;
+            margin-bottom: 12px;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+
+            top: 48%;
+            left: 1px;
+
+            transform: translateY(-50%);
+
+            width: 14px;
+            height: 14px;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
     }
 
     &__item-disscription {
-        font-weight: 800;
+        font-size: 16px;
+        line-height: 19px;
 
-        @include px1024{
-            font-size: 26px;
-        }
-
-        @include px768{
-            font-size: 22px;
-        }
-
-        @include px767{
-            font-size: 18px;
-        }
     }
 
     &__item-link {
-        display: inline-block;
-        font-weight: 800;
-        font-family: 'TimesNewItalic', sans-serif;
-
-        padding: 2px;
-        border-bottom: 1.5px solid transparent;
-
-        outline: none;
-
-        transition: transform 0.3s, border-color 0.3s;
+        font-size: 16px;
+        line-height: 19px;
 
         &:hover,
         &:focus{
@@ -157,70 +85,46 @@
             border-color: black;
             transition: transform 0.3s, border-color 0.3s;
         }
-
-        @include px1024{
-            font-size: 26px;
-        }
-
-        @include px768{
-            font-size: 22px;
-        }
-
-        @include px767{
-            font-size: 18px;
-        }
     }
 
-    &__card{
-        position: relative;
-
-        background-image: url('../img/card/card.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        margin-top: -25px;
-
+    &__btn{
         cursor: pointer;
+        
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
 
-        &::after{
-            content: "";
-            display: block;
+        color: white;
 
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+        width: 305px;
+        height: 45px;
+        
+        background: #56A868;
 
-            width: 100%;
-            height: 100%;
+        border: none;
+        border-radius: 5px;
 
-            background-color: rgba($color: #000000, $alpha: .5);
+        &:not(:last-child){
+            margin-bottom: 14px;
         }
     }
 
     &__copywriter{
-        margin-top: auto;
-        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 19px;
 
-        font-weight: 800;
+        margin-top: 17px;
+        margin-left: 6px;
+    }
 
-        @include px1024{
-            font-size: 26px;
-        }
+    &__card{
+        width: 64%;
 
-        @include px768-1023{
-            font-size: 22px;
-        }
-
-        @include px767{
-            font-size: 20px;
-        }
-
-        &_company{
-            font-family: 'TimesNewItalic',sans-serif;
-        }
+        background-image: url('../img/card/card.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
 
