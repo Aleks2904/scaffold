@@ -34,7 +34,8 @@ const jsFiles = [
     'app/js/nav-header.js',
 
         //stages-of-work
-    'app/js/stages-of-work.js',
+    'app/js/stages-of-work-list.js',
+    'app/js/stages-of-work-parallax.js',
 
         //плавный скролл
     'app/js/smooth-scrolling.js',
