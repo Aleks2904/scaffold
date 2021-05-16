@@ -166,97 +166,83 @@
 
         &:nth-child(1){
             background-image: url('../img/stages-of-work/parallax/layer-1.png');
-            
-            left: -10%;
-            top: 0;
-            width: 110%;
-            height: 100%;
-      
+            width: 753.31px;
+            height: 753.31px;
 
+            top: -13%;
+            left: -18%;
         }
 
         &:nth-child(2){
             background-image: url('../img/stages-of-work/parallax/layer-2.png');
-            
-            left: -10%;
-            top: 0;
-            width: 110%;
-            height: 100%;
+            width: 138.83px;
+            height: 189.56px;
+
+            top: 9%;
+            left: 6%;
         }
 
         &:nth-child(3){
             background-image: url('../img/stages-of-work/parallax/layer-3.png');
+            width: 334.51px;
+            height: 468.04px;
 
-            left: -10%;
-            top: 0;
-            width: 110%;
-            height: 100%;
+            top: 19%;
+            left: -5%;
         }
 
         &:nth-child(4){
-            background-image: url('../img/stages-of-work/parallax/left-bottom-limb.png');
+            background-image: url('../img/stages-of-work/parallax/layer-4.png');
             width: 753.31px;
             height: 753.31px;
 
-            bottom: 0;
-            left: 0;
-
-            transform: translate(-48%, 30%);
+            bottom: -42%;
+            left: -19%;
         }
 
         &:nth-child(5){
-            background-image: url('../img/stages-of-work/parallax/left-bottom-bump.png');
+            background-image: url('../img/stages-of-work/parallax/layer-5.png');
             width: 134.54px;
             height: 188.24px;
 
-            bottom:  0;
-            left: 0;
-
-            transform: translate(-20%, -150%) scale(2);
+            bottom: 8%;
+            left: 9%;
         }
 
         &:nth-child(6){
-            background-image: url('../img/stages-of-work/parallax/right-top-limb.png');
+            background-image: url('../img/stages-of-work/parallax/layer-6.png');
             width: 764.78px;
             height: 701.77px;
 
-            top: 0;
-            right: 0;
-
-            transform: translate(30%, -24%) scale(1.2);
+            top: -13%;
+            right: -19%;
         }
 
         &:nth-child(7){
-            background-image: url('../img/stages-of-work/parallax/right-top-bump.png');
+            background-image: url('../img/stages-of-work/parallax/layer-7.png');
             width: 214.56px;
             height: 292.95px;
 
-            top: 0;
-            right: 0;
-
-            transform: translate(-120%, -40%);
+            top: -10%;
+            right: 12%;
         }
 
         &:nth-child(8){
-            background-image: url('../img/stages-of-work/parallax/right-centr-limb.png');
+            background-image: url('../img/stages-of-work/parallax/layer-8.png');
             width: 217.71px;
             height: 503.18px;
 
-            bottom: 0;
-            right: 0;
-
-            transform: translate(40%, 0%);
+            top: 42%;
+            right: -10%;
         }
 
         &:nth-child(9){
-            background-image: url('../img/stages-of-work/parallax/right-centr-bump.png');
-            width: 197.64px;    
+            background-image: url('../img/stages-of-work/parallax/layer-9.png');
+            width: 197.64px;
             height: 254.11px;
 
-            bottom: 0;
-            right: 0;
-
-            transform: translate(40%, -78%);
+            top: 64%;
+            right: -11%;
         }
 
         background-repeat: no-repeat;
