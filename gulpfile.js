@@ -37,6 +37,9 @@ const jsFiles = [
     'app/js/stages-of-work-list.js',
     'app/js/stages-of-work-parallax.js',
 
+        //форма
+    'app/js/form.js',
+
         //плавный скролл
     'app/js/smooth-scrolling.js',
     
