@@ -21,9 +21,9 @@ $( document ).ready(function() {
   };
 
   moveItItem.prototype.update = function(scrollTop){
-    var pos = scrollTop / this.speed/2;
+    var pos = scrollTop / this.speed;
 
-    this.el.css('transform', 'translate(' + -pos + 'px,' + -pos + 'px)');
+    this.el.css('transform', 'translateY(' + -pos + 'px)' );
   };
 
   $(function(){
