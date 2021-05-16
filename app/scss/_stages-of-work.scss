@@ -165,36 +165,32 @@
         position: absolute;
 
         &:nth-child(1){
-            background-image: url('../img/stages-of-work/parallax/left-top-limb.png');
-            width: 750px;
-            height: 750px;
-
+            background-image: url('../img/stages-of-work/parallax/layer-1.png');
+            
+            left: -10%;
             top: 0;
-            left: 0;
+            width: 110%;
+            height: 100%;
+      
 
-            transform: translate(-55%, -40%);
         }
 
         &:nth-child(2){
-            background-image: url('../img/stages-of-work/parallax/left-top-bump.png');
-            width: 300.51px;
-            height: 360.04px;
-
+            background-image: url('../img/stages-of-work/parallax/layer-2.png');
+            
+            left: -10%;
             top: 0;
-            left: 0;
-
-            transform: translate(-15%, -28%);
+            width: 110%;
+            height: 100%;
         }
 
         &:nth-child(3){
-            background-image: url('../img/stages-of-work/parallax/left-centr-bump.png');
-            width: 334.51px;
-            height: 468.04px;
+            background-image: url('../img/stages-of-work/parallax/layer-3.png');
 
+            left: -10%;
             top: 0;
-            left: 0;
-
-            transform: translate(-55%, 7%);
+            width: 110%;
+            height: 100%;
         }
 
         &:nth-child(4){
@@ -265,6 +261,6 @@
 
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
     }
 }

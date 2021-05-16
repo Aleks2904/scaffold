@@ -204,15 +204,15 @@
         </section>
 
         <section id="stages-of-work" class="stages-of-work">
-            <div class="stages-of-work__parallax-item" data-scroll-speed="250"></div>
-            <div class="stages-of-work__parallax-item" data-scroll-speed="160"></div>
-            <div class="stages-of-work__parallax-item" data-scroll-speed="175"></div>
-            <div class="stages-of-work__parallax-item" data-scroll-speed="280"></div>
+            <div class="stages-of-work__parallax-item" data-speed="2"></div>
+            <div class="stages-of-work__parallax-item" data-speed="6"></div>
+            <div class="stages-of-work__parallax-item" data-speed="10"></div>
+      <!--      <div class="stages-of-work__parallax-item" data-scroll-speed="280"></div>
             <div class="stages-of-work__parallax-item" data-scroll-speed="150"></div>
             <div class="stages-of-work__parallax-item" data-scroll-speed="290"></div>
             <div class="stages-of-work__parallax-item" data-scroll-speed="164"></div>
             <div class="stages-of-work__parallax-item" data-scroll-speed="295"></div>
-            <div class="stages-of-work__parallax-item" data-scroll-speed="158"></div>
+            <div class="stages-of-work__parallax-item" data-scroll-speed="158"></div> -->
 
             <div class="stages-of-work__container container">
                 <h2 class="stages-of-work__title">
@@ -468,16 +468,28 @@
                         Отправьте нам заявку, чтобы получить консультацию и&nbsp;узнать стоимость услуг с&nbsp;учетом особенностей участка и&nbsp;прочих факторов:
                     </h3>
 
-                    <label class="price__form-label">
+                    <label class="price__form-label">  
                         <input class="price__form-input" type="text" placeholder="Ваше имя:" required>
+
+                        <svg class="price__form-icon" viewbox="0 0 12 12">
+                            <use xlink:href="img/svg/price/icon_name.svg#name"></use> 
+                        </svg>
                     </label>
 
                     <label class="price__form-label">
                         <input class="price__form-input" type="tel" placeholder="Ваш телефон:" required>
+
+                        <svg class="price__form-icon" viewbox="0 0 12 12">
+                            <use xlink:href="img/svg/price/icon_phone.svg#phone"></use> 
+                        </svg>
                     </label>
 
                     <label class="price__form-label">
                         <input class="price__form-input" type="email" placeholder="Ваш e-mail:" required>
+
+                        <svg class="price__form-icon" viewbox="0 0 12 14">
+                            <use xlink:href="img/svg/price/icon_email.svg#email"></use> 
+                        </svg>
                     </label>
 
                     <button class="price__form-btn" type="submit">

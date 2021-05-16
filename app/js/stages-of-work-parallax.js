@@ -1,32 +1,10 @@
 $( document ).ready(function() {
-    $.fn.moveIt = function(){
-        var $window = $(window);
-        var instances = [];
-        
-        $(this).each(function(){
-          instances.push(new moveItItem($(this)));
-        });
-        
-        window.onscroll = function(){
-          var scrollTop = $window.scrollTop();
-          instances.forEach(function(inst){
-            inst.update(scrollTop);
-          });
-        }
-      }
-      
-      var moveItItem = function(el){
-        this.el = $(el);
-        this.speed = parseInt(this.el.attr('data-scroll-speed'));
-      };
-      
-      moveItItem.prototype.update = function(scrollTop){
-        var pos = scrollTop - this.speed;
+    function parallax(e){
+      this.querySelectorAll('.stages-of-work__parallax-item').forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
+        layer.style.transform = `translate(${e.clientX*speed/1000}px, ${e.clientX*speed/900}px)`;
+      })
+    }
 
-        this.el.css('transform', 'translateY(' - pos + 'px)');
-      };
-      
-      $(function(){
-        $('[data-scroll-speed]').moveIt();
-    });
+    document.addEventListener('mousemove', parallax);
 });
