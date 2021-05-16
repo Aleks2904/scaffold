@@ -19,16 +19,26 @@ var gulp         = require('gulp'), // Подключаем Gulp
     browserSync   = require('browser-sync').create();
 
 const jsFiles = [ 
-        //libs
+            //libs
+        //фокус при клики
+    'node_modules/focus-visible/dist/focus-visible.min.js',
+        
+        //jq
     'node_modules/jquery/dist/jquery.min.js',
+
+        //проверка на поддержку webP img
     'app/js/webp.js',
 
         //header
+    'app/js/nav-header-desctop.js',
     'app/js/nav-header.js',
 
         //stages-of-work
-
     'app/js/stages-of-work.js',
+
+        //плавный скролл
+    'app/js/smooth-scrolling.js',
+    
 ]
 
 const cssFiles = [
