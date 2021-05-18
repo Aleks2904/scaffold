@@ -140,6 +140,17 @@
 
         &_link {
             color:#477A1E;
+            border-bottom: 1px solid transparent;
+
+            transition: border-color 0.3s,  transform 0.3s, color 0.3s;
+
+            &:hover,
+            &:focus{
+                color: #5DCE76;
+                border-color: #5DCE76;
+
+                transition: border-color 0.3s, color 0.3s;
+            }
         }
     }
 

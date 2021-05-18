@@ -16,9 +16,6 @@ document.addEventListener('DOMContentLoaded', function(){
         let width = imgContainer.clientWidth,
             height = imgContainer.clientHeight;
 
-        console.log(paddingTop)
-        console.log(height)
-
         height = height - paddingTop;
     
         fakeContainer.style.width = width + 'px';
