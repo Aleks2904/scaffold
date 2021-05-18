@@ -26,11 +26,11 @@
     }
 
     &__nav-open-btn{
-        @include px1400{
+        @include px1024{
             display: none;
         }
 
-        @include px1399{
+        @include px1023{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -108,12 +108,20 @@
         }
 
         @include px1024{
-            display: flex;
+            display: grid;
             justify-content: space-between;
             width: 100%;
         }
 
-        @include px1399{
+        @include px1400{
+            grid-template-columns: repeat(2, 37%);
+        }
+
+        @include px1024-1399{
+            grid-template-columns: repeat(2, 40%);
+        }
+
+        @include px1023{
             display: none;
             flex-direction: column;
 
@@ -128,7 +136,7 @@
             opacity: 1;
         }
 
-        @include px768-1399{
+        @include px768-1023{
             width: 50vw;
         }
 
@@ -138,11 +146,11 @@
     }
 
     &__nav-close-btn{
-        @include px1400{
+        @include px1024{
             display: none;
         }
 
-        @include px1399{
+        @include px1023{
             position: relative;
             order: -1;
 
@@ -202,14 +210,10 @@
 
     &__nav-list {
         display: flex;
+        justify-content: space-between;
         align-items: center;
 
-        @include px1024{
-            width: 37%;
-            justify-content: space-between;
-        }
-
-        @include px1399{
+        @include px1023{
             flex-direction: column;
 
             @include h320-459{
@@ -222,9 +226,7 @@
     }
 
     &__nav-item {
-        grid-area: li;
-
-        @include px1399{
+        @include px1023{
             &:not(:last-child){
                 margin-bottom: 2vh;
             }
@@ -237,7 +239,6 @@
                 }
             }
         }
-
     }
 
     &__nav-link {
@@ -280,17 +281,19 @@
         transition: border-color 0.4s, transform .4s, color .4s;
 
         @include px1024{
-            font-size: 17px;
-            line-height: 20px;
-
             margin-top: 10px;
-
 
             color: white;
         }
 
+        @include px1400{
+            font-size: 17px;
+            line-height: 20px;
+        }
+
         @include px1024-1399{
-            font-size: 18px;
+            font-size: 14px;
+            line-height: 16px;
         }
 
         @include px768-1023{

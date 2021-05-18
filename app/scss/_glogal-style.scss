@@ -16,33 +16,14 @@ $paddingXContainer: 15px;
     
 }
 
-@mixin title{
-    font-weight: 800;
-
-    @include px1400{
-        font-size: 45px;
-        margin-bottom: 8vh;
+@mixin noteFocuseBtn {
+    &:focus:not(.focus-visible) {
+        background-color: #56A868;
+        color: white;
     }
 
-    @include px1024-1399{
-        font-size: 32px;
-        margin-bottom: 8vh;
-    }
-
-    @include px768-1023{
-        font-size: 32px;
-        margin-bottom: 7vh;
-    }
-
-    @include px767{
-        font-size: 26px;
-        margin-bottom: 5vh;
-
-        @include h320-459{
-            font-size: 20px;
-
-            margin-bottom: 3vh;
-        }
+    &:focus:not(.focus-visible)::after{
+        opacity: 0;
     }
 }
 

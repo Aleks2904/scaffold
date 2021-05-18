@@ -1,60 +1,122 @@
 .seedlings-zks {
-    margin-top: 150px;
     padding-bottom: 70px;
 
-    position: relative;
-    overflow: hidden;
-
-    display: flex;
-
-    &__img-block {
-        position: absolute;
-        padding-top: 17px;
-
-        height: 100%;
-        width: 36.8%;
+    @include px1400{
+        margin-top: 158px;
     }
 
-    &__img-container{
+    @include px1024-1399{
+        margin-top: 100px;
+    }
+
+    &__wrap{
+        position: relative;
+        padding-bottom: 75px;
+    }
+
+    &__container {
+        @include px1024{
+            padding-top: 40px;
+        }
+
+        @include px1400{
+            display: grid;
+            grid-template-areas: 'img text';
+            grid-template-columns: 1fr 62.2%;
+            justify-content: space-between;
+        }
+    }
+
+    &__img-wrap{
+        grid-area: img;
+
         overflow: hidden;
-        border-radius: 14px; 
-        height: 100%;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 38.3vw;
+
+        border-radius:  0 14px 14px 0;
+
+        @include px1400{
+            height: 100%;
+        }
+
+        @include px1024-1399{
+            height: 50%;
+        }
+    }
+
+    &__img-block {
+        position: relative;
+
+        margin-top: 14px;
+        margin-right: 12px;
+
+        border-radius:  0 14px 14px 0;
 
         &::after{
             content: '';
             display: block;
 
             position: absolute;
-            bottom: 10px;
-            left: 10px;
 
-            width: 100%;
-            height: 98%;
+            left: -10px;
+            right: -10px;
+            top: -10px;
+            bottom: 20px;
 
-            background-color: transparent;
 
             border: 1px solid #B7C7BE;
-            border-radius: 14px;
+            box-sizing: border-box;
+            border-radius:  0 14px 14px 0;
 
             z-index: -1;
+        }
+
+        @include px1400{
+            height: 98%;
+        }
+
+        @include px1024-1399{
+            height: 95%;
         }
     }
 
     &__img{
-        object-fit: cover;
+        border-radius: 0 14px 14px 0;
+        height: 100%;
         width: 100%;
-        height: 100% !important;
-    }
-
-    &__container{
-        
+        object-fit: cover;
     }
 
     &__content-block{
-        width: 62.2%;
 
-        margin-left: auto;
-        margin-top: 43px;
+        @include px1400{
+            grid-area: text;
+
+            max-width: 56vw;
+    
+            margin-left: auto;
+        }
+
+        @include px1024-1399{
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    &__img-fake{
+        @include px1400{
+            display: none;
+        }
+
+        @include px1024-1399{
+            display: block;
+            float: left;
+        }
     }
 
     &__title {
@@ -140,7 +202,7 @@
         font-weight: 600;
         line-height: 19px;
 
-        margin-right: 10%;
+        margin-right: 6%;
     }
 
     &__btn {
@@ -192,7 +254,11 @@
             border-color: #5DCE76;
             transform: translate(5px, -5px);
             transition: border-color 0.4s, transform 0.4s;
+
+            opacity: 1;
         }
+
+        @include noteFocuseBtn;
 
         &:active{
             transform: scale(0.9);

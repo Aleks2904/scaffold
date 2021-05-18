@@ -7,8 +7,7 @@
 
     transform: translate(-50%, -50%);
 
-    width: 618px;
-    height: 383px;
+    width: 563px;
 
     background: #FFFFFF;
     border-radius: 11px;
@@ -33,12 +32,14 @@
         outline: none;
         border: none;
 
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
 
         margin-left: auto;
-        margin-right: 20px;
-        margin-top: 20px;
+        margin-right: 14px;
+        margin-top: 15px;
+
+        transition: transform 0.3s;
 
         &::after,
         &::before{
@@ -52,6 +53,8 @@
 
             width: 100%;
             height: 1px;
+
+            transition: background-color 0.3s;
         }
 
         &::after{
@@ -61,20 +64,35 @@
         &::before{
             transform: translate(-50%, -50%) rotate(-45deg);
         }
+
+        &:focus::after,
+        &:focus::before,
+        &:hover::after,
+        &:hover::before{
+            background-color: red;
+            transition: background-color 0.3s;
+        }
+
+        &:active{
+            transform: scale(0.9);
+            transition: transform .3s;
+        }
+        
     }
 
     &__form {
-        padding: 22px 75px 22px;
+        padding: 19px 69px 19px 67px;
         display: flex;
         flex-direction: column;
     }
 
     &__form-title {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 600;
         line-height: 19px;
+        letter-spacing: -0.2px;
 
-        margin-bottom: 25px;
+        margin-bottom: 12px;
     }
 
     &__form-label {
@@ -82,12 +100,10 @@
         padding-left: 29px;
         padding-bottom: 6px;
 
-        width: 71%;
-
         border-bottom: 1px solid #8EAC8F;
 
         &:not(:last-child){
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
     }
 
@@ -127,11 +143,11 @@
     &__form-icon {
         position: absolute;
         top: 38%;
-        left: 6px;
+        left: 5px;
         transform: translateY(-50%);
 
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 11px;
 
         fill:#56A868;
 
@@ -146,20 +162,22 @@
         cursor: pointer;
 
         text-align: center;
-        width: 326px;
-        height: 45px;
+        width: 287px;
+        height: 40px;
         
         background: #56A868;
         border-radius: 5px;
 
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         line-height: 19px;
+        
 
         color: white;
 
-        margin-top: 13px;
+        margin-top: 8px;
         margin-bottom: 17px;
+        margin-left: 1px;
 
         transition: background-color 0.4s, transform 0.4s;
 
@@ -191,7 +209,12 @@
             border-color: #5DCE76;
             transform: translate(5px, -5px);
             transition: border-color 0.4s, transform 0.4s;
+
+            opacity: 1;
         }
+        
+        @include noteFocuseBtn;
+
 
         &:active{
             transform: scale(0.9);
@@ -202,20 +225,32 @@
     &__form-check {
         position: relative;
 
-        font-size: 13px;
+        user-select:none;
+
+        font-size: 12px;
         line-height: 15px;
 
         color: #527735;
 
-        padding-left: 15px;
+        padding-left: 18px;
+
+        opacity: 0;
+
+        transition: opacity .3s;
+
+        &_active{
+            opacity: 1;
+
+            transition: opacity .3s;
+        }
 
         &::after{
             content: '';
             display: block;
 
             position: absolute;
-            left: 2px;
-            top: 2px;
+            left: 6px;
+            top: 1px;
             transform: translateX(-50%);
 
             width: 10px;

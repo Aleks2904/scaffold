@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const form = document.querySelector('#form');
+    const form = document.querySelector('#form'),
+          body = document.querySelector('body');
 
     const objectServices = {
         title: 'Отправьте нам заявку, чтобы получить консультацию и&nbsp;узнать стоимость услуг с&nbsp;учетом особенностей участка и&nbsp;прочих факторов:',
@@ -27,10 +28,34 @@ document.addEventListener('DOMContentLoaded', function(){
 
     form.addEventListener('click', function(e){
         if(e.target.id == 'js-form-close-btn'){
-            console.log(e.target.id)
             form.innerHTML = '';
             form.classList.remove('form_active');
         }
+    })
+    body.addEventListener('click', function(e){
+        if(!form.contains(e.target) && !e.target.classList.contains('btn-open-modal')){
+            form.innerHTML = '';
+            form.classList.remove('form_active');
+        }
+    })
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        form.querySelector('.form__form').reset();
+
+        const formStatys = form.querySelector('.form__form-check');
+
+        formStatys.innerHTML = 'Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.';
+        formStatys.classList.add('form__form-check_active');
+
+        setTimeout(()=>{
+            formStatys.classList.remove('form__form-check_active');
+        },3000)
+
+        setTimeout(()=>{
+            formStatys.innerHTML = 'Cтатус заявки'
+        },3000)
     })
 
     function formСreation(object){
@@ -74,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     </button>
 
                     <span class="form__form-check">
-                        Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+                        Cтатус
                     </span>
                 </form>
             </div>

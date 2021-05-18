@@ -57,6 +57,7 @@
 
         display: flex;
         align-items: center;
+        text-align: left;
         width: 100%;
 
         position: relative;
@@ -102,7 +103,7 @@
         position: absolute;
         top: 50%;
         right: 2.2%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(180deg);
 
         opacity: 0.4;
 
@@ -117,8 +118,7 @@
         transition: background-image 0.3s, opacity 0.3s;
 
         &_rotate{
-            transform: translateY(-50%) rotate(180deg);
-            transition: transform 0.3s;
+            transform: translateY(-50%) rotate(00deg);
         }
 
     }

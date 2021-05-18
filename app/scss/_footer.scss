@@ -1,6 +1,13 @@
 .footer {
-    margin-top: 127px;
     padding-bottom: 10px;
+
+    @include px1400{
+        margin-top: 127px;
+    }
+
+    @include px1024-1399{
+        margin-top: 10px;
+    }
 
     &__container{
        display: flex;
@@ -155,7 +162,11 @@
             border-color: #5DCE76;
             transform: translate(5px, -5px);
             transition: border-color 0.4s, transform 0.4s;
+
+            opacity: 1;
         }
+
+        @include noteFocuseBtn;
 
         &:active{
             transform: scale(0.9);

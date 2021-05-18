@@ -1,20 +1,49 @@
 .compensatory-reforestation {
-    position: relative;
+    @include px1400{
+        margin-top: 145px;
+        padding-bottom: 148px;
+    }
 
-    margin-top: 156px;
-    padding-bottom: 183px;
+    @include px1024-1399{
+        margin-top: 70px;
+    }
+
+    &__wrap{
+        position: relative;
+
+        @include px1400{
+            padding-bottom: 37px;
+        }
+    }
+
+    &__container {
+        @include px1024{
+            padding-top: 37px;
+
+            display: grid;
+            grid-template-columns: 61% 1fr;
+            justify-content: space-between;
+        }
+    }
+
+    &__img-wrap{
+        overflow: hidden;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        width: 38.7vw;
+        height: 100%;
+
+        border-radius: 14px 0 0 14px;
+    }
 
     &__img-block {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 41.3%;
-        height: 81.4%;
+        position: relative;
 
-        background-image: url('../img/compensatory-reforestation/1.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size:cover;
+        margin-top: 12px;
+        height: 100%;
 
         border-radius: 14px 0 0 14px;
 
@@ -37,25 +66,25 @@
         }
     }
 
-    &__container {
-        @include px1024{
-            padding-top: 32px;
-        }
+    &__img{
+        border-radius: 14px 0 0 14px;
+        width: 100%;
+        height: 100%;
     }
 
-    &__content-container{
-        max-width: 60.8%;
+    &__content-block{
+        max-width: 56vw;
     }
 
     &__title {
         font-size: 33px;
         font-weight: 600;
-        line-height: 19px;
+        line-height: 33px;
 
         text-transform: uppercase;
 
         @include px1024{
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
     }
 
@@ -66,20 +95,27 @@
 
         @include px1024{
             &:not(:last-child){
-                margin-bottom: 7px;
+                margin-bottom: 9px;
             }
         }
     }
 
     &__post-container{
-        position: relative;
-
         background: #ECF2E6;
         border-radius: 5px;
 
         @include px1024{
-            margin-top: 27px;
-            padding: 41px 32px 43px 39px;
+            margin-top: 28px;
+            padding: 42px 32px 48px 39px;
+        }
+
+        @include px1400{
+            position: relative;
+        }
+
+        @include px1024-1399{
+            position: absolute;
+            left: 0;
         }
 
         &:after{
@@ -106,7 +142,7 @@
         line-height: 19px;
 
         @include px1024{
-            margin-bottom: 9px;
+            margin-bottom: 10px;
         }
     }
 
@@ -121,7 +157,7 @@
 
         @include px1024{
             &:not(:last-child){
-                margin-bottom: 7px;
+                margin-bottom: 10px;
             }
         }
 

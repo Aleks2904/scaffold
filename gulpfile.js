@@ -33,9 +33,18 @@ const jsFiles = [
     'app/js/nav-header-desctop.js',
     'app/js/nav-header.js',
 
+        //compensatory-reforestation
+    'app/js/compensatory-reforestation-save-height.js',
+
         //stages-of-work
     'app/js/stages-of-work-list.js',
     'app/js/stages-of-work-parallax.js',
+
+        //price
+    'app/js/price-submit-form.js',
+
+        //preparation-of-seeds
+    'app/js/preparation-of-seeds-img.js',
 
         //форма
     'app/js/form.js',

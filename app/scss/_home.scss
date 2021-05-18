@@ -13,7 +13,6 @@
 
     &__discription{
         font-weight: 400;
-        font-size: 80px;
         line-height: 82px;
 
         color: $WHITE;
@@ -21,6 +20,13 @@
         text-transform: uppercase;
 
         text-align: center;
-    }
 
+        @include px1400{
+            font-size: 80px;
+        }
+
+        @include px1024-1399{
+            font-size: 62px;
+        }
+    }
 }
