@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     const header = document.querySelector('#js-header'),
-          navLogo = document.querySelector('#js-nav-header'),
+          navBar = document.querySelector('#js-nav-header'),
           link = document.querySelectorAll('.header__nav-link'),
           minDesktopWidth = 1024;
 
@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function(){
                width = window.innerWidth;
         if(posTop !== 0 && width >= minDesktopWidth){
             header.classList.add('header_scroll');
-            navLogo.classList.add('header__nav_scroll');
+            navBar.classList.add('header__nav_scroll');
             link.forEach((el)=>{
                 el.classList.add('header__nav-link_scroll')
             })
         }else{
             header.classList.remove('header_scroll');
-            navLogo.classList.remove('header__nav_scroll');
+            navBar.classList.remove('header__nav_scroll');
             link.forEach((el)=>{
                 el.classList.remove('header__nav-link_scroll')
             })
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 const item = el.getAttribute("href");
 
                 if (item.length){ 
-                    const link = document.querySelector(`a[href="${item}"]`)
+                    const link = navBar.querySelector(`a[href="${item}"]`)
                     link.classList.remove('header__nav-link_active');
 
                     return item; 
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       cur = cur[0].id;
 
-       const linkActive = document.querySelector(`a[href="#${cur}"]`);
+       const linkActive = navBar.querySelector(`a[href="#${cur}"]`);
        linkActive.classList.add('header__nav-link_active');
     }
 })
