@@ -190,12 +190,19 @@
     }
 
     &__card{
-        position: absolute;
-        top: 130px;
-        left: 0;
+        @include px1024{
+            height: 361px;
+            width: 60%;
+        }
 
-        width: 100%;
-        height: 200px;
+        @include px1023{
+            position: absolute;
+            top: 130px;
+            left: 0;
+
+            width: 100%;
+            height: 200px;
+        }
 
         background-image: url('../img/card/card.jpg');
         background-position: center;

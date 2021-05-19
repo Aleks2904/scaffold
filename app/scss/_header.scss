@@ -336,14 +336,6 @@
             transition: transform .4s;
         }
 
-        &_scroll{
-            color:#000 !important;
-            &:focus,
-            &:hover {
-                border-color: #9CBF2D;
-            }
-        }
-
         &_active{
             color: #9CBF2D !important;
             border-color: #9CBF2D !important;
@@ -368,8 +360,6 @@
             margin-top: 10px;
 
             color: white;
-
-            color:#000 !important;
         }
 
         @include px1400{
@@ -399,6 +389,14 @@
         @include px767{
             font-size: 13px;
             line-height: 18px;
+        }
+
+        &_scroll{
+            color:#000 !important;
+            &:focus,
+            &:hover {
+                border-color: #9CBF2D;
+            }
         }
     }
 
