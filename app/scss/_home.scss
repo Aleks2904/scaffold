@@ -1,11 +1,12 @@
 .home {
-    @include px768{
-        background-image: url('../img/home/1920.jpg');
-    }
+    position: relative;
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    &__bg{
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        z-index: -1;
+    }
 
     &__container{
         padding: 352px 0 332px;
@@ -27,6 +28,12 @@
 
         @include px1024-1399{
             font-size: 62px;
+        }
+
+        @include px1023{
+            font-weight: 600;
+            font-size: 35px;
+            line-height: 41px;
         }
     }
 }

@@ -5,12 +5,19 @@ document.addEventListener('DOMContentLoaded', function(){
     window.addEventListener('resize', saveHeight);
     
     function saveHeight(){
-        const width = document.documentElement.clientWidth,
+        const width = window.innerWidth,
               imgContainer = document.querySelector('.compensatory-reforestation__img-wrap'),
-              block = document.querySelector('.compensatory-reforestation'),
-              pb = 148;
+              block = document.querySelector('.compensatory-reforestation');
 
-        if(width < 1384){
+        let pb;
+
+        if(width > 1023){
+            pb = 148;
+        }else{
+            pb = 80
+        }
+
+        if(width < 1400){
             const heightTextContainer = document.querySelector('.compensatory-reforestation__main-text-container').clientHeight;
             let paddingTop = document.querySelector('.compensatory-reforestation__container');
 

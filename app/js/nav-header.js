@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function(){
         e.preventDefault();
 
         nav.classList.add('header__nav_active');
-        body.classList.add('open-modal');
-        header.classList.add('header_active');
         btnOpen.setAttribute('aria-expanded', 'true');
         btnClose.setAttribute('aria-expanded', 'false');
 
@@ -49,8 +47,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function close(){
         nav.classList.remove('header__nav_active');
-        body.classList.remove('open-modal');
-        header.classList.remove('header_active');
         btnOpen.setAttribute('aria-expanded', 'false');
         btnClose.setAttribute('aria-expanded', 'true');
     };

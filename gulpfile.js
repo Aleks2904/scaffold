@@ -43,8 +43,8 @@ const jsFiles = [
         //price
     'app/js/price-submit-form.js',
 
-        //preparation-of-seeds
-    'app/js/preparation-of-seeds-img.js',
+        //seedlings-zks
+    'app/js/seedlings-zks-img.js',
 
         //форма
     'app/js/form.js',

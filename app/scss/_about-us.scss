@@ -7,29 +7,45 @@
         margin-top: 70px;
     }
 
+    @include px1023{
+        margin-top: 38px;
+    }
+
     &__container {
     }
 
     &__title {
         text-transform: uppercase;
+        font-weight: 600;
 
         @include px1024{
             font-size: 33px;
-            font-weight: 600;
             line-height: 19px;
 
             margin-bottom: 22px;
         }
+
+        @include px1023{
+            font-size: 22px;
+            line-height: 19px;
+
+            margin-bottom: 8px;
+        }
     }
 
     &__discription {
+        &:not(:last-child){
+            margin-bottom: 9px;
+        }
+
         @include px1024{
             font-size: 16px;
             line-height: 19px;
+        }
 
-            &:not(:last-child){
-                margin-bottom: 9px;
-            }
+        @include px1023{
+            font-size: 14px;
+            line-height: 18px;
         }
     }
 
@@ -40,6 +56,11 @@
 
             margin-top: 39px;
             margin-bottom: 39px;
+        }
+
+        @include px1023{
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     }
 
@@ -80,6 +101,14 @@
             max-width: 30%;
 
             padding: 25px;
+        }
+
+        @include px1023{
+            padding: 30px 30px 30px 50px;
+
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
         }
 
         &:nth-child(1) .aboutUs__item-title::before{
@@ -136,5 +165,9 @@
         line-height: 19px;
 
         margin-left: -3px;
+
+        @include px1023{
+            margin-top: 18px;
+        }
     }
 }

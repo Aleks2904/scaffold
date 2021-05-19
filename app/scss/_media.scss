@@ -29,7 +29,7 @@
 }
 
 @mixin px1024 {
-    @media (min-width: 1024px){
+    @media (min-width: 1023px){
         @content;
     }
 }
@@ -41,13 +41,13 @@
 }
 
 @mixin px1024-1919 {
-    @media (min-width: 1024px) and (max-width: 1919px){
+    @media (min-width: 1023px) and (max-width: 1919px){
         @content;
     }
 }
 
 @mixin px1024-1399 {
-    @media (min-width: 1024px) and (max-width: 1399px){
+    @media (min-width: 1023px) and (max-width: 1399px){
         @content;
     }
 }

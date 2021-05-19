@@ -1,9 +1,9 @@
 .stages-of-work {
     position: relative;
-    background: #ECF2E6;
     overflow: hidden;
 
     @include px1024{
+        background: #ECF2E6;
         padding-top: 114px;
         padding-bottom: 119px;
     }
@@ -14,24 +14,38 @@
     }
 
     &__title {
-        font-size: 33px;
         font-weight: 600;
-        line-height: 19px;
-
         text-transform: uppercase;
 
         @include px1024{
+            line-height: 35px;
+            font-size: 33px;
+
             margin-bottom:15px;
+        }
+
+        @include px1023{
+            font-size: 22px;
+            line-height: 19px;
+
+            margin-bottom: 8px;
         }
     }
 
     &__discription{
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19px;
 
         @include px1024{
+            font-size: 16px;
+            line-height: 19px;
+
             margin-bottom: 31px;
+        }
+
+        @include px1023{
+            font-size: 14px;
+            line-height: 18px;
+
+            margin-bottom: 16px;
         }
     }
 
@@ -51,9 +65,7 @@
     }
 
     &__btn{
-        font-size: 19px;
         font-weight: 600;
-        line-height: 19px;
 
         display: flex;
         align-items: center;
@@ -83,8 +95,14 @@
             padding: 24px 40px 24px 24px;
 
             font-size: 19px;
-            font-weight: 600;
-            line-height: 19px;
+            line-height: 21px;
+        }
+
+        @include px1023{
+            padding: 24px 40px 24px 24px;
+
+            font-size: 14px;
+            line-height: 16px;
         }
     }
 
@@ -130,6 +148,10 @@
         @include px1024{
             padding: 0 70px 28px;
         }
+
+        @include px1023{
+            padding: 0 30px 28px;
+        }
     }
 
     &__response {
@@ -151,107 +173,121 @@
 
             transition: transform 0.7s, opacity 0.5s;
         }
+
     }
 
     &__response-text{
-        font-size: 16px;
-        line-height: 19px;
-
         &:not(:last-child){
             margin-bottom: 5px;
+        }
+
+        @include px1024{
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @include px1023{
+            font-size: 14px;
+            line-height: 18px;
         }
     }
 
     //parallax
 
     &__parallax-item{
-        position: absolute;
+        @include px1024{
+            position: absolute;
 
-        &:nth-child(1){
-            background-image: url('../img/stages-of-work/parallax/layer-1.png');
-            width: 643px;
-            height: 604px;
+            &:nth-child(1){
+                background-image: url('../img/stages-of-work/parallax/layer-1.png');
+                width: 643px;
+                height: 604px;
 
-            top: 170px;
-            left: -370px;
+                top: 170px;
+                left: -370px;
+            }
+
+            &:nth-child(2){
+                background-image: url('../img/stages-of-work/parallax/layer-2.png');
+                width: 177px;
+                height: 165px;
+
+                top: 130px;
+                left: -9px;
+            }
+
+            &:nth-child(3){
+                background-image: url('../img/stages-of-work/parallax/layer-3.png');
+                width: 343px;
+                height: 399px;
+
+                top: 261px;
+                left: -214px;
+            }
+
+            &:nth-child(4){
+                background-image: url('../img/stages-of-work/parallax/layer-4.png');
+                width: 531px;
+                height: 878px;
+
+                bottom: -507px;
+                left: -310px;
+            }
+
+            &:nth-child(5){
+                background-image: url('../img/stages-of-work/parallax/layer-5.png');
+                width: 142px;
+                height: 149px;
+
+                bottom: -77px;
+                left: -28px;
+            }
+
+            &:nth-child(6){
+                background-image: url('../img/stages-of-work/parallax/layer-6.png');
+                width: 698px;
+                height: 755px;
+
+                top: -30px;
+                right: -180px;
+            }
+
+            &:nth-child(7){
+                background-image: url('../img/stages-of-work/parallax/layer-7.png');
+                width: 284px;
+                height: 248px;
+
+                top: 0px;
+                right: 260px;
+            }
+
+            &:nth-child(8){
+                background-image: url('../img/stages-of-work/parallax/layer-8.png');
+                width: 253px;
+                height: 455px;
+
+                top: 405px;
+                right: -110px;
+            }
+
+            &:nth-child(9){
+                background-image: url('../img/stages-of-work/parallax/layer-9.png');
+                width: 237px;
+                height: 258px;
+
+                top: 535px;
+                right: -94px;
+            }
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            transform: translateY(0);
         }
 
-        &:nth-child(2){
-            background-image: url('../img/stages-of-work/parallax/layer-2.png');
-            width: 177px;
-            height: 165px;
-
-            top: 130px;
-            left: -9px;
+        @include px1023{
+            display: none;
         }
-
-        &:nth-child(3){
-            background-image: url('../img/stages-of-work/parallax/layer-3.png');
-            width: 343px;
-            height: 399px;
-
-            top: 261px;
-            left: -214px;
-        }
-
-        &:nth-child(4){
-            background-image: url('../img/stages-of-work/parallax/layer-4.png');
-            width: 531px;
-            height: 878px;
-
-            bottom: -507px;
-            left: -310px;
-        }
-
-        &:nth-child(5){
-            background-image: url('../img/stages-of-work/parallax/layer-5.png');
-            width: 142px;
-            height: 149px;
-
-            bottom: -77px;
-            left: -28px;
-        }
-
-        &:nth-child(6){
-            background-image: url('../img/stages-of-work/parallax/layer-6.png');
-            width: 698px;
-            height: 755px;
-
-            top: -30px;
-            right: -180px;
-        }
-
-        &:nth-child(7){
-            background-image: url('../img/stages-of-work/parallax/layer-7.png');
-            width: 284px;
-            height: 248px;
-
-            top: 0px;
-            right: 260px;
-        }
-
-        &:nth-child(8){
-            background-image: url('../img/stages-of-work/parallax/layer-8.png');
-            width: 253px;
-            height: 455px;
-
-            top: 405px;
-            right: -110px;
-        }
-
-        &:nth-child(9){
-            background-image: url('../img/stages-of-work/parallax/layer-9.png');
-            width: 237px;
-            height: 258px;
-
-            top: 535px;
-            right: -94px;
-        }
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-
-        transform: translateY(0);
     }
 }

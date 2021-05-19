@@ -8,6 +8,10 @@
         margin-top: 70px;
     }
 
+    @include px1023{
+        margin-top: 50px;
+    }
+
     &__wrap{
         position: relative;
 
@@ -77,14 +81,22 @@
     }
 
     &__title {
-        font-size: 33px;
         font-weight: 600;
-        line-height: 33px;
 
         text-transform: uppercase;
 
         @include px1024{
+            font-size: 33px;
+            line-height: 35px;
+
             margin-bottom: 10px;
+        }
+
+        @include px1023{
+            font-size: 22px;
+            line-height: 25px;
+
+            margin-bottom: 20px;
         }
     }
 
@@ -93,10 +105,8 @@
         font-weight: 400;
         line-height: 19px;
 
-        @include px1024{
-            &:not(:last-child){
-                margin-bottom: 9px;
-            }
+        &:not(:last-child){
+            margin-bottom: 9px;
         }
     }
 
@@ -104,18 +114,18 @@
         background: #ECF2E6;
         border-radius: 5px;
 
-        @include px1024{
-            margin-top: 28px;
-            padding: 42px 32px 48px 39px;
-        }
-
         @include px1400{
             position: relative;
         }
 
-        @include px1024-1399{
+        @include px768-1399{
             position: absolute;
             left: 0;
+        }
+
+        @include px768{
+            margin-top: 28px;
+            padding: 42px 32px 48px 39px;
         }
 
         &:after{
@@ -141,9 +151,7 @@
         font-weight: 600;
         line-height: 19px;
 
-        @include px1024{
-            margin-bottom: 10px;
-        }
+        margin-bottom: 10px;
     }
 
     &__post-description {
@@ -155,11 +163,8 @@
             font-style: italic;
         }
 
-        @include px1024{
-            &:not(:last-child){
-                margin-bottom: 10px;
-            }
+        &:not(:last-child){
+            margin-bottom: 10px;
         }
-
     }
 }

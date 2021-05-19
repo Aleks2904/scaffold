@@ -7,10 +7,16 @@
         margin-top: 80px;
     }
 
+    @include px1023{
+        margin-top: 80px;
+    }
+
     &__container{
-        display: grid;
-        grid-template-columns: 37% 59%;
-        justify-content: space-between;
+        @include px1024{
+            display: grid;
+            grid-template-columns: 37% 59%;
+            justify-content: space-between;
+        }
     }
 
     &__content-block{
@@ -18,24 +24,46 @@
     }
 
     &__title {
-        font-size: 33px;
         font-weight: 600;
-        line-height: 19px;
-
         text-transform: uppercase;
 
-        margin-bottom: 17px;
+        @include px1024{
+            font-size: 33px;
+            line-height: 35px;
+
+            margin-bottom: 17px;
+        }
+
+        @include px1023{
+            font-size: 22px;
+            line-height: 24px;
+
+            margin-bottom: 20px;
+        }
     }
 
     &__list-discription {
-        font-size: 16px;
-        line-height: 19px;
-
         margin-bottom: 7px;
+
+        @include px768{
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @include px767{
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 
     &__list {
-        margin-bottom: 33px;
+        @include px1024{
+            margin-bottom: 33px;
+        }
+
+        @include px1023{
+            margin-bottom: 25px;
+        }
     }
 
     &__item {
@@ -72,9 +100,19 @@
     }
 
     &__discription {
-        font-size: 16px;
         font-weight: 600;
-        line-height: 19px;
+
+        @include px1024{
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @include px1023{
+            font-size: 14px;
+            line-height: 18px;
+
+            margin-bottom: 25px;
+        }
     }
 
         //форм

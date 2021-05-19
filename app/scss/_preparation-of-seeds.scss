@@ -7,26 +7,48 @@
         margin-top: 100px;
     }
 
+    @include px1023{
+        margin-top: 80px;
+    }
+
     &__container {
     }
 
     &__title {
+        font-weight: 600;
         text-transform: uppercase;
 
-        font-size: 33px;
-        font-weight: 600;
-        line-height: 19px;
-
         margin-bottom: 19px;
+
+        @include px1024{
+            font-size: 33px;
+            line-height: 35px;
+
+            margin-bottom: 19px;
+        }
+
+        @include px1023{
+            font-size: 22px;
+            line-height: 24px;
+
+            margin-bottom: 10px;
+        }
 
     }
 
     &__discription {
-        font-size: 16px;
-        line-height: 19px;
-
         &:not(:last-child){
             margin-bottom: 7px;
+        }
+
+        @include px1024{
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @include px1023{
+            font-size: 14px;
+            line-height: 18px;
         }
     }
 }

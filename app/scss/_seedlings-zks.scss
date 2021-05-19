@@ -9,6 +9,10 @@
         margin-top: 100px;
     }
 
+    @include px1023{
+        margin-top: 80px;
+    }
+
     &__wrap{
         position: relative;
         padding-bottom: 75px;
@@ -113,30 +117,45 @@
             display: none;
         }
 
-        @include px1024-1399{
+        @include px768-1399{
             display: block;
             float: left;
         }
     }
 
     &__title {
-        font-size: 33px;
         font-weight: 600;
-        line-height: 33px;
-
         text-transform: uppercase;
 
-        margin-bottom: 17px;
+        @include px1024{
+            font-size: 33px;
+            line-height: 33px;
+
+            margin-bottom: 17px;
+        }
+
+        @include px1023{
+            font-size: 22px;
+            line-height: 25px;
+
+            margin-bottom: 11px;
+        }
     }
 
     &__discription {
-        font-size: 16px;
-        line-height: 19px;
-
         &:not(:last-child){
             margin-bottom: 7px;
         }
 
+        @include px1024{
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @include px1023{
+            font-size: 14px;
+            line-height: 18px;
+        }
 
         &_link {
             color:#477A1E;
@@ -164,11 +183,9 @@
         background-color: #ECF2E6;
         border-radius: 14px;
 
-        width: 100%;
-
         margin-top: 72px;
         
-        padding: 26px 31px;
+        padding: 26px 31px 26px 20%;
 
         &::after{
             content: '';
@@ -206,14 +223,34 @@
             background-repeat: no-repeat;
             background-size: contain;
         }
+
+        @include px1400{  
+            width: 100%;
+        }
+
+        @include px1024-1399{
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @include px768-1023{
+            width: 100%;
+        }
     }
 
     &__btn-title {
-        font-size: 17px;
         font-weight: 600;
-        line-height: 19px;
-
         margin-right: 6%;
+
+        @include px1024{
+            font-size: 17px;
+            line-height: 19px;
+        }
+
+        @include px1023{
+            font-size: 15px;
+            line-height: 18px;
+        }
     }
 
     &__btn {
