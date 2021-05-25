@@ -103,8 +103,16 @@
             padding: 25px;
         }
 
-        @include px1023{
+        @include px768-1023{
             padding: 30px 30px 30px 50px;
+
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+        }
+
+        @include px767{
+            padding: 24px;
 
             &:not(:last-child){
                 margin-bottom: 20px;
@@ -142,8 +150,6 @@
 
         margin-bottom: 8px;
 
-        max-width: 80%;
-
         &::before{
             content: '';
             display: block;
@@ -157,6 +163,10 @@
             background-position: center;
             background-size: contain;
         }
+
+        @include px768{
+            max-width: 80%;
+        }
     }
 
     &__item-text {
@@ -166,7 +176,7 @@
 
         margin-left: -3px;
 
-        @include px1023{
+        @include px768-1023{
             margin-top: 18px;
         }
     }

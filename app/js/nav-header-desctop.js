@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const  posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop,
                width = window.innerWidth;
 
+               console.log(width)
+
         
             if(posTop !== 0 && width >= minDesktopWidth){
                 header.classList.add('header_scroll');

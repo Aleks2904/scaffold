@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function(){
           nav = document.querySelector('#js-nav-header'),
           body = document.querySelector('body'),
           header = document.querySelector('#js-header'),
-          link = document.querySelectorAll('.header__nav-link');
+          link = document.querySelectorAll('.header__nav-link'),
+          openCard = document.querySelectorAll('.open-card');
 
     btnOpen.addEventListener('click', function(e){
         e.preventDefault();
@@ -13,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function(){
         btnOpen.setAttribute('aria-expanded', 'true');
         btnClose.setAttribute('aria-expanded', 'false');
 
+    })
+
+    openCard.forEach(function(e){
+        e.addEventListener('click', function(){
+            close();
+        })
     })
 
     link.forEach(function(e){

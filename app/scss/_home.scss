@@ -10,7 +10,13 @@
     }
 
     &__container{
-        padding: 352px 0 332px;
+        @include px1024{
+            padding: 352px 0 332px;
+        }
+
+        @include px1023{
+            padding: 220px 0 191px;
+        }
     }
 
     &__discription{

@@ -27,6 +27,17 @@ $paddingXContainer: 15px;
     }
 }
 
+.card{
+    overflow: hidden;
+    
+    width: 70vw !important;
+    height: 70vh;
+}
+
+.open-card{
+    cursor: pointer;
+}
+
 
 .visually-hidden {
     position: absolute;

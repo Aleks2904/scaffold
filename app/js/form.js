@@ -30,12 +30,15 @@ document.addEventListener('DOMContentLoaded', function(){
         if(e.target.id == 'js-form-close-btn'){
             form.innerHTML = '';
             form.classList.remove('form_active');
+            form.classList.remove('card');
         }
     })
+
     body.addEventListener('click', function(e){
-        if(!form.contains(e.target) && !e.target.classList.contains('btn-open-modal')){
+        if(!form.contains(e.target) && !e.target.classList.contains('btn-open-modal')  && !e.target.classList.contains('open-card')){
             form.innerHTML = '';
             form.classList.remove('form_active');
+            form.classList.remove('card');
         }
     })
 

@@ -46,8 +46,14 @@ const jsFiles = [
         //seedlings-zks
     'app/js/seedlings-zks-img.js',
 
+        //высота для картинки на мобилки в зкс и компенсационном
+    'app/js/img-height-seedlings-and-compensatory.js',
+
         //форма
     'app/js/form.js',
+
+        //карта
+    'app/js/card.js',
 
         //плавный скролл
     'app/js/smooth-scrolling.js',

@@ -8,6 +8,10 @@
         padding-bottom: 119px;
     }
 
+    @include px767{
+        margin-top: 50px;
+    }
+
     &__container{
         position: relative;
         z-index: 1;
@@ -149,8 +153,12 @@
             padding: 0 70px 28px;
         }
 
-        @include px1023{
+        @include px768-1023{
             padding: 0 30px 28px;
+        }
+
+        @include px767{
+            padding: 10px 0 28px;
         }
     }
 

@@ -79,7 +79,7 @@
             transition: border-color 0.4s;
         }
 
-        &:hover + .footer__item-icon{
+        &:hover .footer__item-icon{
             fill:#5DCE76;
             transition: border-color 0.4s;
         }
@@ -96,6 +96,25 @@
         border-bottom: 2px solid transparent;
 
         transition: border-color 0.4s;
+
+        &:focus{
+            border-color:#5DCE76;
+            transition: border-color 0.4s;
+        }
+
+        &:focus + .footer__item-icon{
+            fill:#5DCE76;
+            transition: border-color 0.4s;
+        }
+
+        &:focus:not(.focus-visible) {
+            border-color:transparent;
+        }
+
+        &:focus:not(.focus-visible) + .footer__item-icon{
+            fill:#56A868;
+        }
+
     }
 
     &__item-icon{
@@ -197,7 +216,7 @@
 
         @include px1023{
             position: absolute;
-            top: 130px;
+            top: 140px;
             left: 0;
 
             width: 100%;

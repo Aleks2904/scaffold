@@ -38,11 +38,14 @@
 
         position: absolute;
         left: 0;
-        top: 0;
-
-        width: 38.3vw;
 
         border-radius:  0 14px 14px 0;
+
+        @include px768{
+            top: 0;
+    
+            width: 38.3vw;
+        }
 
         @include px1400{
             height: 100%;
@@ -51,15 +54,22 @@
         @include px1024-1399{
             height: 50%;
         }
+
+        @include px767{
+            width: calc(100% - 15px);
+        }
     }
 
     &__img-block {
         position: relative;
 
-        margin-top: 14px;
         margin-right: 12px;
 
         border-radius:  0 14px 14px 0;
+
+        margin-top: 12px;
+        height: calc(100% - 12px);
+
 
         &::after{
             content: '';
@@ -78,14 +88,6 @@
             border-radius:  0 14px 14px 0;
 
             z-index: -1;
-        }
-
-        @include px1400{
-            height: 98%;
-        }
-
-        @include px1024-1399{
-            height: 95%;
         }
     }
 
@@ -139,6 +141,10 @@
             line-height: 25px;
 
             margin-bottom: 11px;
+        }
+
+        @include px767{
+            padding-bottom: 367px;
         }
     }
 
@@ -213,8 +219,6 @@
             height: 222px;
 
             position: absolute;
-            top: 63%;
-            left: -4px;
 
             transform: translateY(-50%);
 
@@ -222,6 +226,16 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+
+            @include px768{
+                top: 63%;
+                left: -4px;
+            }
+
+            @include px767{
+                top: 45%;
+                left: -5px;
+            }
         }
 
         @include px1400{  
@@ -236,11 +250,17 @@
         @include px768-1023{
             width: 100%;
         }
+
+        @include px767{
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            height: 133px;
+        }
     }
 
     &__btn-title {
         font-weight: 600;
-        margin-right: 6%;
 
         @include px1024{
             font-size: 17px;
@@ -250,6 +270,15 @@
         @include px1023{
             font-size: 15px;
             line-height: 18px;
+        }
+
+        @include px768{
+            margin-right: 6%;
+        }
+
+        @include px767{
+            margin-left: 35%;
+            margin-bottom: 5px;
         }
     }
 
@@ -311,6 +340,10 @@
         &:active{
             transform: scale(0.9);
             transition: transform 0.4s;
+        }
+
+        @include px767{
+            min-width: 85%;
         }
     }
 }
