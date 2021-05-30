@@ -216,11 +216,18 @@
 
         @include px1023{
             position: absolute;
-            top: 140px;
             left: 0;
 
             width: 100%;
             height: 200px;
+        }
+
+        @include px480-1023{
+            top: 150px;
+        }
+
+        @include px479{
+            top: 165px;
         }
 
         background-image: url('../img/card/card.jpg');

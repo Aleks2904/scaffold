@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
             pb = 80
         }
 
-        if(width < 1400 && width > 767){
+        if(width < 1400 && width > 479){
             const heightTextContainer = document.querySelector('.compensatory-reforestation__main-text-container').clientHeight;
             let paddingTop = document.querySelector('.compensatory-reforestation__container');
 
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             block.style.paddingBottom = padding + 'px';
 
-        }else if(width < 768){
+        }else if(width < 480){
             const title = document.querySelector('.compensatory-reforestation__title');
 
             //высота
@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function(){
             
             block.style.paddingBottom = 0;
         }else{
-            imgContainer.style.height = '100%';
             block.style.paddingBottom = pb + 'px';
         }
         

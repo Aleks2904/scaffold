@@ -176,7 +176,7 @@
             left: 0;
         }
 
-        &::after{
+        &::before{
             content: '';
             display: block;
 
@@ -203,9 +203,19 @@
 
                 background-image: url('../img/price/branch-mobail.png');
                 background-position: top center;
-                background-size: contain;
+                background-size: cover;
             }
         }  
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(rgba(236, 242, 230, 0) 15%, rgba(236, 242, 230, 0.5) 25%, rgba(236, 242, 230, 1));
+        }
     }
 
     &__form-title {
@@ -299,7 +309,6 @@
         cursor: pointer;
 
         text-align: center;
-        width: 326px;
         height: 45px;
         
         background: #56A868;
@@ -350,6 +359,10 @@
         &:active{
             transform: scale(0.9);
             transition: transform 0.4s;
+        }
+
+        @include px768{
+            width: 326px;
         }
     }
 

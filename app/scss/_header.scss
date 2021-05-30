@@ -99,6 +99,9 @@
             top: 0;
 
             opacity: 1;
+
+            max-height: 100vh;
+            overflow: auto;
         }
 
         &_active{

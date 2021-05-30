@@ -43,10 +43,8 @@ const jsFiles = [
         //price
     'app/js/price-submit-form.js',
 
-        //seedlings-zks
-    'app/js/seedlings-zks-img.js',
-
         //высота для картинки на мобилки в зкс и компенсационном
+    'app/js/seedlings-zks-and-compensatory-reforestation-img.js',
     'app/js/img-height-seedlings-and-compensatory.js',
 
         //форма

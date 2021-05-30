@@ -15,6 +15,7 @@
 
     &__wrap{
         position: relative;
+        
         padding-bottom: 75px;
     }
 
@@ -41,10 +42,11 @@
 
         border-radius:  0 14px 14px 0;
 
-        @include px768{
+        @include px480{
             top: 0;
     
             width: 38.3vw;
+            min-width: 280px;
         }
 
         @include px1400{
@@ -55,7 +57,7 @@
             height: 50%;
         }
 
-        @include px767{
+        @include px479{
             width: calc(100% - 15px);
         }
     }
@@ -99,7 +101,6 @@
     }
 
     &__content-block{
-
         @include px1400{
             grid-area: text;
 
@@ -119,7 +120,7 @@
             display: none;
         }
 
-        @include px768-1399{
+        @include px480-1399{
             display: block;
             float: left;
         }
@@ -143,7 +144,7 @@
             margin-bottom: 11px;
         }
 
-        @include px767{
+        @include px479{
             padding-bottom: 367px;
         }
     }
@@ -175,6 +176,10 @@
                 border-color: #5DCE76;
 
                 transition: border-color 0.3s, color 0.3s;
+            }
+
+            @include px480-767{
+                word-break: break-all;
             }
         }
     }

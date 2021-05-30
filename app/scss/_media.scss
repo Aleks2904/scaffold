@@ -76,8 +76,38 @@
     }
 }
 
+@mixin px480-1399 {
+    @media (min-width: 480px) and (max-width: 1399px){
+        @content;
+    }
+}
+
+@mixin px480-1023 {
+    @media (min-width: 480px) and (max-width: 1023px){
+        @content;
+    }
+}
+
+@mixin px480{
+    @media (min-width: 480px){
+        @content;
+    }
+}
+
+@mixin px480-767 {
+    @media (min-width: 480px) and (max-width: 767px){
+        @content;
+    }
+}
+
 @mixin px767 {
     @media(max-width: 767px){
+        @content;
+    }
+}
+
+@mixin px479 {
+    @media(max-width: 479px){
         @content;
     }
 }

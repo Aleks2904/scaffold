@@ -23,7 +23,9 @@
     &__container {
         @include px1024{
             padding-top: 37px;
+        }
 
+        @include px1400{
             display: grid;
             grid-template-columns: 61% 1fr;
             justify-content: space-between;
@@ -39,12 +41,22 @@
 
         border-radius: 14px 0 0 14px;
 
-        @include px768{
-            width: 38.7vw;
+        @include px480{
+            top: 0;
+    
+            width: 38.3vw;
+            min-width: 270px;
+        }
+
+        @include px1400{
             height: 100%;
         }
 
-        @include px767{
+        @include px1024-1399{
+            height: 50%;
+        }
+
+        @include px479{
             width: calc(100% - 15px);
         }
     }
@@ -83,8 +95,19 @@
     }
 
     &__content-block{
-        @include px768{
+        @include px1400{
             max-width: 56vw;
+        }
+    }
+
+    &__img-fake{
+        @include px1400{
+            display: none;
+        }
+
+        @include px480-1399{
+            display: block;
+            float: right;
         }
     }
 
@@ -106,6 +129,15 @@
 
             margin-bottom: 20px;
         }
+
+        @include px767{
+            display: -webkit-box;
+           word-break: break-all;
+        }
+
+        @include px479{
+            padding-bottom: 367px;
+        }
     }
 
     &__description{
@@ -126,17 +158,17 @@
             position: relative;
         }
 
-        @include px768-1399{
+        @include px480-1399{
             position: absolute;
             left: 0;
         }
 
-        @include px768{
+        @include px480{
             margin-top: 28px;
             padding: 42px 32px 48px 39px;
         }
 
-        @include px767{
+        @include px479{
             position: relative;
             padding: 23px 19px;
             margin-top: 20px;

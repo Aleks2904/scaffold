@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function heightSetting (title, imgContainer){
         width = window.innerWidth;
 
-        if(width < 768){
+        if(width < 480){
             title.style.paddingBottom = 0;
 
             const titleHeight = title.clientHeight;
@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function(){
             title.style.paddingBottom = imgHeight + marginTopImg + 'px';
             imgContainer.style.height = imgHeight + 'px';
             imgContainer.style.top = marginTopImg + titleHeight + 'px';
-        }else{
-
         }
     }
 

@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function(){
             close();
         })
 
-        e.addEventListener('touchend', function(){
-            close();
-        })
+        // e.addEventListener('touchend', function(){
+        //     close();
+        // })
     })
 
     btnClose.addEventListener('click', function(e){
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function(){
         
         if(width >= 1024){
             close();
+
         }
     };
 
