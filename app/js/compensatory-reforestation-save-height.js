@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         if(width < 1400 && width > 479){
+            const imgFake = document.querySelector('.compensatory-reforestation__img-fake');
+            imgFake.style.height = 0;
+            
             const heightTextContainer = document.querySelector('.compensatory-reforestation__main-text-container').clientHeight;
             let paddingTop = document.querySelector('.compensatory-reforestation__container');
 
@@ -25,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             paddingTop = Number(paddingTop);
 
-            const height = heightTextContainer + paddingTop;
+            const height = (heightTextContainer + paddingTop);
 
             imgContainer.style.height = height  + 'px';
 

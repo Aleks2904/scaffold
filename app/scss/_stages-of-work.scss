@@ -150,11 +150,11 @@
         overflow: hidden;
 
         @include px1024{
-            padding: 0 70px 28px;
+            padding: 10px 70px 28px;
         }
 
         @include px768-1023{
-            padding: 0 30px 28px;
+            padding: 10px 30px 28px;
         }
 
         @include px767{

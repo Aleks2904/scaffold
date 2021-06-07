@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
     const openCard = document.querySelectorAll('.open-card'),
           form = document.querySelector('#form'),
-          defoltCard = document.querySelector('.footer__card');
+          defoltCard = document.querySelector('.footer__card'),
+          body = document.querySelector('body');
 
     openCard.forEach( el => {
         el.addEventListener('click', function(e){ 
@@ -10,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function(){
             ymaps.ready(init(form));
 
             form.classList.add('form_active');
-            form.classList.add('card');    
+            form.classList.add('card');  
+            body.classList.add('open-modal');  
         })
     })
 

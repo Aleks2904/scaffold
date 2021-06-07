@@ -54,7 +54,7 @@
         }
 
         @include px1024-1399{
-            height: 50%;
+            height: 48%;
         }
 
         @include px479{
@@ -266,6 +266,7 @@
 
     &__btn-title {
         font-weight: 600;
+        z-index: 1;
 
         @include px1024{
             font-size: 17px;
@@ -283,7 +284,7 @@
 
         @include px767{
             margin-left: 35%;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
     }
 
@@ -303,8 +304,6 @@
 
         background: #56A868;
         border-radius: 5px;
-
-        padding: 13px 44px;
 
         transition: background-color 0.4s, transform 0.4s;
 
@@ -347,8 +346,13 @@
             transition: transform 0.4s;
         }
 
+        @include px768{
+            padding: 13px 44px;
+        }
+
         @include px767{
             min-width: 85%;
+            padding: 8px 30px;
         }
     }
 }

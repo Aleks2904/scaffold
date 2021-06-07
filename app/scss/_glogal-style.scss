@@ -38,7 +38,6 @@ $paddingXContainer: 15px;
     cursor: pointer;
 }
 
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -54,4 +53,26 @@ $paddingXContainer: 15px;
     content: "";
     clear: both;
     display: table;
+}
+
+.open-modal{
+    &::after{
+        content: '';
+        display: block;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        
+        width: 100vw;
+        height: 100vh;
+
+        background-color: black;
+
+        opacity: 0.5;
+
+        z-index: 1;
+    }
 }

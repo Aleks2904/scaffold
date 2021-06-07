@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){
         btnOpen.setAttribute('aria-expanded', 'true');
         btnClose.setAttribute('aria-expanded', 'false');
 
+        animationNavOpen();
+
     })
 
     openCard.forEach(function(e){
@@ -26,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function(){
         e.addEventListener('click', function(){
             close();
         })
-
-        // e.addEventListener('touchend', function(){
-        //     close();
-        // })
     })
 
     btnClose.addEventListener('click', function(e){
@@ -49,13 +47,42 @@ document.addEventListener('DOMContentLoaded', function(){
         
         if(width >= 1024){
             close();
-
         }
     };
 
     function close(){
-        nav.classList.remove('header__nav_active');
-        btnOpen.setAttribute('aria-expanded', 'false');
-        btnClose.setAttribute('aria-expanded', 'true');
+        animationNavClose();
+        setTimeout(()=>{
+            nav.classList.remove('header__nav_active');
+            btnOpen.setAttribute('aria-expanded', 'false');
+            btnClose.setAttribute('aria-expanded', 'true');
+        },600)
     };
+
+    function animationNavOpen(){
+        const width = document.documentElement.clientWidth;
+        
+        if(width >= 1024){
+            nav.classList.remove('header__nav-block_active');
+
+            nav.style.transform = 'translateX(0%)';
+
+        }else{
+            nav.style.transform = 'translateX(0%)';
+            nav.style.transition = 'transform 0.7s'
+        }
+    }
+
+    function animationNavClose(){
+        const width = document.documentElement.clientWidth;
+        
+        if(width >= 1024){
+            nav.classList.remove('header__nav-block_active');
+
+            nav.style.transform = 'translateX(0%)';
+        }else{
+            nav.style.transform = 'translateX(150%)';
+            nav.style.transition = 'transform 0.7s'
+        }
+    }
 })

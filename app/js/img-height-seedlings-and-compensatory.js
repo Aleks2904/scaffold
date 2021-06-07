@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', function(){
           imgHeight = 300,
           marginTopImg = 5;
 
+    let defoltWidth = window.innerWidth;
+
     function heightSetting (title, imgContainer){
-        width = window.innerWidth;
+        const width = window.innerWidth;
+        title.style.paddingBottom = 0;
 
         if(width < 480){
-            title.style.paddingBottom = 0;
-
             const titleHeight = title.clientHeight;
     
             title.style.paddingBottom = imgHeight + marginTopImg + 'px';
@@ -21,9 +22,12 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     window.addEventListener('resize', ()=>{
-        heightSetting(titleCompensatory, imgContainerCompensatory);
-        heightSetting(titleZKS, imgContainerZKS);
-        location.reload();
+        if(defoltWidth != window.innerWidth){
+            heightSetting(titleCompensatory, imgContainerCompensatory);
+            heightSetting(titleZKS, imgContainerZKS);
+            location.reload();
+        
+        }
     })
 
     heightSetting(titleCompensatory, imgContainerCompensatory);

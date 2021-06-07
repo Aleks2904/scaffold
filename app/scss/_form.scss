@@ -7,19 +7,30 @@
 
     transform: translate(-50%, -50%);
 
-    width: 563px;
-
     background: #FFFFFF;
     border-radius: 11px;
 
-    z-index: 10;
+    @include px768{
+        width: 563px;
+    }
+
+    @include px767{
+        width: 90vw;
+        max-width: 563px;
+    }
 
     &_active{
+        overflow: hidden;
         display: block;
+        z-index: 1000000;
+
+        animation: formOpen .3s normal linear 1;
     }
 
     &__container {
-        
+        opacity: 1;
+
+        animation: containerOpen .6s normal linear 1;
     }
 
     &__close {
@@ -93,6 +104,10 @@
         letter-spacing: -0.2px;
 
         margin-bottom: 12px;
+
+        @include px480{
+            white-space: nowrap;
+        }
     }
 
     &__form-label {
@@ -115,6 +130,8 @@
 
         font-size: 15px;
         line-height: 19px;
+
+        width: 100%;
 
         &::placeholder{
             font-size: 13px;
@@ -162,7 +179,8 @@
         cursor: pointer;
 
         text-align: center;
-        width: 287px;
+        width: 100%;
+        max-width: 287px;
         height: 40px;
         
         background: #56A868;
@@ -230,16 +248,29 @@
         font-size: 12px;
         line-height: 15px;
 
-        color: #527735;
-
         padding-left: 18px;
 
         opacity: 0;
 
         transition: opacity .3s;
 
-        &_active{
+        &_processing{
             opacity: 1;
+            color: black;
+
+            transition: opacity .3s;
+        }
+
+        &_accomplished{
+            opacity: 1;
+            color: #527735;
+
+            transition: opacity .3s;
+        }
+
+        &_error{
+            opacity: 1;
+            color: red;
 
             transition: opacity .3s;
         }
@@ -261,5 +292,36 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+    }
+}
+
+@keyframes formOpen{
+    0%{
+        width: 1%;
+    }
+
+    100%{
+        @include px768{
+            width: 563px;
+        }
+    
+        @include px767{
+            width: 90vw;
+            max-width: 563px;
+        }
+    }
+}
+
+@keyframes containerOpen{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
     }
 }
